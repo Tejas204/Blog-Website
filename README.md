@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# Blog website
+
+![](src/Images/Blog-website-home-page.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
