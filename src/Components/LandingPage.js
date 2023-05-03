@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { navbarItems } from '../data'
 import heroImage from '../Images/knowledge-home.png'
 import {RxHamburgerMenu} from 'react-icons/rx'
+import Footer from './Footer'
 
 const LandingPage = () => {
 
@@ -60,6 +61,9 @@ console.log(dropDownVisibility);
             {/* Hero image */}
             <img src={heroImage} className='h-[534px] w-[686px]'></img>
         </div>
+
+        {/* Footer */}
+        <Footer/>
 
         
 
