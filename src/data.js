@@ -3,7 +3,7 @@ export let navbarItems = [
         name: 'Home'
     },
     {
-        name: 'All blogs'
+        name: 'Blogs'
     },
     {
         name: 'Subscriptions'
