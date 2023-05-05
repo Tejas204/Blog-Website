@@ -6,7 +6,7 @@ const Footer = () => {
     // Parent footer div
     <div className='grid grid-cols-1 md:grid-cols-3 bg-[#1A1A1D] p-4 mt-4'>
         {/* Logo div */}
-        <div className='space-y-2 p-4 md:border-r-2 border-[#FCCF47] border-opacity-30'>
+        <div className='space-y-4 p-4 md:border-r-2 border-[#FCCF47] border-opacity-30'>
             {/* hero logo and information */}
             <p className='text-4xl text-[#FCCF47]'>Blogger.io</p>
             <p className='text-[#f8f8f8f8]'>Create and share your knowldege about almost anything in the world.
@@ -17,7 +17,7 @@ const Footer = () => {
             <ul className='space-x-4 flex flex-row'>
                 {footerIcons.map((footerIcon, index) => {
                     return(
-                        <li className='text-[#FCCF47] text-3xl'>{footerIcon.icon}</li>
+                        <li className='text-[#FCCF47] text-3xl hover:cursor-pointer hover:scale-150 duration-100 ease-in-out'>{footerIcon.icon}</li>
                     )
                 })}
             </ul>
@@ -29,7 +29,7 @@ const Footer = () => {
             <ul className='space-y-3 flex flex-col'>
                 {navbarItems.map((navbarItem, index) => {
                     return (
-                        <li className='text-[#f8f8f8] hover:text-[#FCCF47] duration-100'>{navbarItem.name}</li>
+                        <li className='text-[#f8f8f8] hover:text-[#FCCF47] hover:cursor-pointer duration-100'>{navbarItem.name}</li>
                     )
                 })}
             </ul>
