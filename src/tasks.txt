@@ -1,4 +1,4 @@
-FUnctionalities:
+Functionalities:
 1. Create a blog
 2. Delete a blog, if created by the user
 3. Edit a blog, if created by the user
@@ -10,3 +10,10 @@ FUnctionalities:
     b. Sort by Z-a
     c. Sort by Rating
     d. Sort by likes
+
+** ------------------------------------------------------------------- **
+
+Tasks:-
+1. Create login and register pages
+2. Create routes
+3. Set up authentication
