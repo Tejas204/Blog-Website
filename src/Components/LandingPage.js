@@ -41,8 +41,6 @@ console.log(dropDownVisibility);
         {/* Navbar ends */}
 
 
-        {/* h-[534px] w-[686px] */}
-
         {/* Hero image and section */}
         <div className='flex flex-col md:flex-row items-center justify-center'>
             
