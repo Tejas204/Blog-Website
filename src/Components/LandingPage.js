@@ -16,8 +16,13 @@ console.log(dropDownVisibility);
         {/* Navbar */}
             <nav className='flex flex-col gap-y-2 md:flex-row md:gap-x-[25%] lg:gap-x-[45%] xl:gap-x-[55%] sticky top-0 z-10 p-4 bg-[#ffffff] backdrop-filter backdrop-blur-lg bg-opacity-10 border-b border-gray-200'>
                 {/* Logo */}
-                <div className='text-2xl text-[#1a1a1d] font-bold hover:cursor-pointer'>
-                    Blogger.io
+                <div className='flex flex-row items-center space-x-1 hover:cursor-pointer'>
+                    <div className='bg-[#FCCF47] rounded-lg p-1'>
+                        <p className='text-[#1A1A1D] font-semibold text-2xl'>B.io</p>
+                    </div>
+                    <div className='text-2xl text-[#1a1a1d] font-bold '>
+                        Blogger.io
+                    </div>
                 </div>
 
                 {/* Navlinks */}
@@ -26,7 +31,7 @@ console.log(dropDownVisibility);
                         return(
                         // li to be replaced by navlink
                         <li className='font-semibold text-lg text-[#1A1A1D] hover:cursor-pointer hover:border-b-2 hover:border-[#FCCF47] duration-100
-                            hover:border-t-2 hover:border-[#FCCF47] duration-100' key={index}>
+                            hover:border-t-2' key={index}>
                             {navItem.name}
                         </li>
                         )
@@ -51,7 +56,7 @@ console.log(dropDownVisibility);
                 <p className='text-xl sm:text-2xl md:text-3xl font-semibold text-[#FCCF47] mt-4'>Knowledge shared is power multiplied</p>
 
                 {/* CTA */}
-                <button className=' p-1 sm:p-2 md:p-3 md:text-md sm:text-lg md:text-xl rounded-xl bg-[#fccf47] text-[#1a1a1d]] mt-4 hover:shadow-xl hover:-translate-y-2 duration-300'>
+                <button className=' p-1 sm:p-2 md:p-3 md:text-md sm:text-lg md:text-xl rounded-xl bg-[#fccf47] text-[#1a1a1d]] mt-4 hover:shadow-xl hover:scale-105 duration-300'>
                     Get Started
                 </button>
             </div>
