@@ -5,7 +5,7 @@ const LoginPage = () => {
     <div className='bg-[#1a1a1d] relative overflow-hidden'>
 
         {/* blobs */}
-        <div className='absolute -top-24 left-14 rounded-full filter mix-blend-normal blur-2xl bg-gradient-to-b from-[#fff01f] to-[#ffcf47] h-96 w-96 opacity-20'></div>
+        <div className='absolute -top-24 left-14 rounded-full filter mix-blend-normal blur-2xl bg-gradient-to-b from-[#fff01f] to-[#ffcf47] h-80 w-80 opacity-20'></div>
         
         <div className='absolute -bottom-36 -left-20 rounded-full filter mix-blend-normal blur-2xl bg-gradient-to-t from-[#fdaf05] to-[#ffcf47] h-1/2 w-1/4 opacity-20'></div>
         <div className='absolute -bottom-36 -left-20 rounded-full filter mix-blend-normal blur-2xl bg-gradient-to-t from-[#fff01f] to-[#ffcf47] h-1/2 w-1/4 opacity-20'></div>
@@ -17,16 +17,16 @@ const LoginPage = () => {
         {/* Parent div */}
         <div className='flex flex-col justify-center items-center h-screen relative'>
 
-            {/* Logo div -- visible only on small devices */}
-            <div>
-                <p className='text-[#FCCF47] font-semibold text-3xl md:hidden mt-[10%]'>Blogger.io</p>
-            </div>
-
             {/* Login and Information div */}
             <div className='grid grid-cols-1 md:grid-cols-2 h-3/4 md:h-5/6 w-[80%] p-2'>
 
                 {/* Login div */}
                 <div className='flex flex-col items-center justify-center space-y-10 bg-[#ffffff] backdrop-filter backdrop-blur-lg bg-opacity-10'>
+
+                    {/* Logo div -- visible only on small devices */}
+                    <div className='bg-[#FCCF47] rounded-lg p-2 hover:shadow-md hover:shadow-[#FCCF47] ease-in-out duration-200'>
+                        <p className='text-[#1A1A1D] font-semibold text-3xl mt-[10%]'>B.io</p>
+                    </div>
                     
                     {/* Sing in text */}
                     <p className='text-xl font-semibold text-[#f8f8f8]'>Sign in</p>
@@ -42,7 +42,7 @@ const LoginPage = () => {
 
             {/* Information div -- not visible on small devices*/}
             <div className='hidden md:flex md:flex-col md:bg-[#FCCF47] md:p-4 md:justify-center backdrop-filter backdrop-blur-lg md:bg-opacity-90'>
-                <p className='text-[#1A1A1D] text-3xl font-semibold'>Start off where you left</p>
+                <p className='text-[#1A1A1D] text-3xl font-semibold'>Start off where you left!</p>
                 <p className='text-[#1A1A1D]'>Discover amazing blogs on technology, food, movies and much more!</p>
             </div>
         </div>
