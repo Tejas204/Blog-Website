@@ -1,6 +1,6 @@
 # Blog website
 
-![](src/Images/Blog-website-home-page.png)
+![](src/Images/UI.png)
 ![](src/Images/LoginPage.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
