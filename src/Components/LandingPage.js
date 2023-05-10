@@ -14,14 +14,14 @@ console.log(dropDownVisibility);
     // Parent div
     <div>
         {/* Navbar */}
-            <nav className='flex flex-col gap-y-2 md:flex-row md:gap-x-[25%] lg:gap-x-[45%] xl:gap-x-[55%] sticky top-0 z-10 p-4 bg-white backdrop-filter backdrop-blur-lg bg-opacity-10 border-b border-gray-200'>
+            <nav className='flex flex-col gap-y-2 md:flex-row md:gap-x-[25%] lg:gap-x-[45%] xl:gap-x-[55%] sticky top-0 z-10 p-4 bg-[#ffffff] backdrop-filter backdrop-blur-lg bg-opacity-10 border-b border-gray-200'>
                 {/* Logo */}
-                <div className='text-2xl text-[#24AFC1] font-bold hover:cursor-pointer'>
+                <div className='text-2xl text-[#1a1a1d] font-bold hover:cursor-pointer'>
                     Blogger.io
                 </div>
 
                 {/* Navlinks */}
-                <ul className={`flex flex-col gap-y-4 md:flex-row md:gap-x-12 md:static md:h-auto relative ${dropDownVisibility ? 'top-0' : 'top-[-500px] h-0.5'}`}>
+                <ul className={`flex flex-col gap-y-4 md:flex-row md:gap-x-12 md:static md:h-auto relative ${dropDownVisibility ? 'top-0' : 'top-[-500px] h-0.5'} ease-in-out`}>
                     {navbarItems.map((navItem, index)=>{
                         return(
                         // li to be replaced by navlink
@@ -51,7 +51,7 @@ console.log(dropDownVisibility);
                 <p className='text-xl sm:text-2xl md:text-3xl font-semibold text-[#FCCF47] mt-4'>Knowledge shared is power multiplied</p>
 
                 {/* CTA */}
-                <button className=' p-1 sm:p-2 md:p-3 md:text-md sm:text-lg md:text-xl rounded-xl bg-[#24AFC1] text-white mt-4 hover:shadow-xl hover:-translate-y-2 duration-300'>
+                <button className=' p-1 sm:p-2 md:p-3 md:text-md sm:text-lg md:text-xl rounded-xl bg-[#fccf47] text-[#1a1a1d]] mt-4 hover:shadow-xl hover:-translate-y-2 duration-300'>
                     Get Started
                 </button>
             </div>

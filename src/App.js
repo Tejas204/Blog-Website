@@ -4,6 +4,7 @@ import LandingPage from './Components/LandingPage';
 import NoMatch from './Components/NoMatch';
 import { Routes,Route } from 'react-router-dom';
 import LoginPage from './Components/LoginPage';
+import RegisterationPage from './Components/RegisterationPage';
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
 
         {/* Route for Login page */}
         <Route path='login' element={<LoginPage/>}></Route>
+
+        {/* Route for Registration Page */}
+        <Route path='registration' element={<RegisterationPage/>}></Route>
 
         {/* No match route */}
         <Route path='*' element={<NoMatch/>}></Route>
