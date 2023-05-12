@@ -2,19 +2,24 @@ import {TiSocialTwitterCircular, TiSocialFacebookCircular, TiSocialLinkedinCircu
 
 export let navbarItems = [
     {
-        name: 'Home'
+        name: 'Home',
+        goTo: '/'
     },
     {
-        name: 'Blogs'
+        name: 'Blogs',
+        goTo: 'blogs'
     },
     {
-        name: 'Subscriptions'
+        name: 'Subscriptions',
+        goTo: 'subscriptions'
     },
     {
-        name: 'Login'
+        name: 'Login',
+        goTo: 'login'
     },
     {
-        name: 'Register'
+        name: 'Register',
+        goTo: 'registration'
     }
 ]
 

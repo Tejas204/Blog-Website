@@ -3,6 +3,7 @@ import { navbarItems } from '../data'
 import heroImage from '../Images/knowledge-home.png'
 import {RxHamburgerMenu} from 'react-icons/rx'
 import Footer from './Footer'
+import { NavLink } from 'react-router-dom'
 
 const LandingPage = () => {
 
@@ -30,10 +31,10 @@ console.log(dropDownVisibility);
                     {navbarItems.map((navItem, index)=>{
                         return(
                         // li to be replaced by navlink
-                        <li className='font-semibold text-lg text-[#1A1A1D] hover:cursor-pointer hover:border-b-2 hover:border-[#FCCF47] duration-100
-                            hover:border-t-2' key={index}>
+                        <NavLink className='font-semibold text-lg text-[#1A1A1D] hover:cursor-pointer hover:border-b-2 hover:border-[#FCCF47] duration-100
+                            hover:border-t-2' key={index} to={navItem.goTo}>
                             {navItem.name}
-                        </li>
+                        </NavLink>
                         )
                         
                     })}
