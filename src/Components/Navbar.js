@@ -13,7 +13,7 @@ console.log(dropDownVisibility);
 
   return (
     <div>
-        <nav className='flex flex-col gap-y-2 md:flex-row md:gap-x-[25%] lg:gap-x-[45%] xl:gap-x-[55%] sticky top-0 z-10 p-4 bg-[#ffffff] backdrop-filter backdrop-blur-lg bg-opacity-10 border-b border-gray-200'>
+        <nav className='flex flex-col gap-y-2 md:flex-row md:gap-x-[25%] lg:gap-x-[45%] xl:gap-x-[55%]'>
                 {/* Logo */}
                 <div className='flex flex-row items-center space-x-1 hover:cursor-pointer'>
                     <div className='bg-[#FCCF47] rounded-lg p-1'>

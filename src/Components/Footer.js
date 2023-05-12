@@ -1,5 +1,6 @@
 import React from 'react'
 import { footerIcons, navbarItems } from '../data'
+import { NavLink } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -29,7 +30,7 @@ const Footer = () => {
             <ul className='space-y-3 flex flex-col'>
                 {navbarItems.map((navbarItem, index) => {
                     return (
-                        <li className='text-[#f8f8f8] hover:text-[#FCCF47] hover:cursor-pointer duration-100'>{navbarItem.name}</li>
+                        <NavLink to={navbarItem.goTo} className='text-[#f8f8f8] hover:text-[#FCCF47] hover:cursor-pointer duration-100'>{navbarItem.name}</NavLink>
                     )
                 })}
             </ul>

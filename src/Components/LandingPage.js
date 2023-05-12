@@ -1,9 +1,6 @@
 import React, { useState } from 'react'
-
 import heroImage from '../Images/knowledge-home.png'
-
 import Footer from './Footer'
-
 import Navbar from './Navbar'
 
 const LandingPage = () => {
@@ -14,7 +11,9 @@ const LandingPage = () => {
     // Parent div
     <div>
         {/* Navbar */}
+        <div className='sticky top-0 z-10 p-4 bg-[#ffffff] backdrop-filter backdrop-blur-lg bg-opacity-10 border-b border-gray-200'>
             <Navbar></Navbar>
+        </div>
         {/* Navbar ends */}
 
 
