@@ -3,11 +3,23 @@
 ![](src/Images/UI.png)
 ![](src/Images/LoginPage.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple blog website where users can post their blogs in various categories. This website is designed using ReactJS, React Router Dom for
+navigation, Firebase for authentication and Tailwind CSS for styling. 
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+1. Create a new blog
+2. Edit existing blogs created by the logged in user
+3. Delete blogs created by logged in user
+4. Add comments
+5. Rate a blog
+6. Like a blog
+7. Sort and filter the blogs according to the requirement
+8. Basic security using Firebase authentication
+
+## Details
+
+In this project, you will run into:
 
 ### `npm start`
 
