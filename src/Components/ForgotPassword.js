@@ -1,7 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 
 const ForgotPassword = () => {
+
+// This react hook will display a help text stating "A password reset link has been sent to your mail"
+const [displayPasswordResetBanner, passwordResetBanner] = useState(false);
+console.log(displayPasswordResetBanner);
+
+
   return (
     <div className='bg-[#1a1a1d] relative overflow-hidden'>
 
@@ -33,16 +39,24 @@ const ForgotPassword = () => {
                     {/* Forgot Password text */}
                     <p className='text-xl font-semibold text-[#f8f8f8]'>Forgot Password?</p>
 
+                    {/* Password reset email sent banner */}
+                    <div className={`p-3 bg-[#fccf47] text-[#1a1a1d] rounded-lg ${displayPasswordResetBanner ? 'visible' : 'hidden'}
+                        transition duration-500 ease-in-out`}>
+                        <p>Check your inbox for further instructions</p>
+                    </div>
+
                     {/* Forgot Password form */}
                     <form className='flex flex-col items-center space-y-10 md:space-y-5'>
-                            <input type='text' placeholder='Enter your email...' className='h-[100%] w-[100%] md:w-[150%] bg-transparent ring-2 ring-[#FCCF47] rounded-lg p-2 text-[#f8f8f8]'></input>
-                            <button type='submit' className=' w-[100%] md:w-[150%] p-1 sm:p-2 md:p-3 md:text-md sm:text-lg md:text-xl rounded-xl bg-[#FCCF47] text-[#1a1a1d] mt-4 hover:shadow-xl hover:scale-105 duration-300'>Submit</button>
-
-                            {/* Routes to registration page when clicked */}
-                            <NavLink to='/registration' className='text-[#fccf47]'>Register?</NavLink>
+                            <input type='text' placeholder='Enter your email...' className='h-[100%] w-[125%] md:w-[135%] lg:w-[150%] bg-transparent ring-2 ring-[#FCCF47] rounded-lg p-2 text-[#f8f8f8]'></input>
+                            <button type='button' className=' w-[125%] md:w-[135%] lg:w-[150%] p-2 sm:p-2 md:p-3 md:text-md sm:text-lg md:text-xl rounded-xl bg-[#FCCF47] text-[#1a1a1d] mt-4 hover:shadow-xl hover:scale-105 duration-300'
+                                onClick={() => passwordResetBanner(!displayPasswordResetBanner)}>Submit
+                            </button>
 
                             {/* Forgot password link */}
                             <NavLink to='/login' className='text-[#fccf47]'>Login?</NavLink>
+
+                            {/* Routes to registration page when clicked */}
+                            <NavLink to='/registration' className='text-[#fccf47]'>Register?</NavLink>
                     </form>
                 </div>
 
