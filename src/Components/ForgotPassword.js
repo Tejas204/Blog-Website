@@ -1,8 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import Navbar from './Navbar'
 
-const LoginPage = () => {
+const ForgotPassword = () => {
   return (
     <div className='bg-[#1a1a1d] relative overflow-hidden'>
 
@@ -19,10 +18,10 @@ const LoginPage = () => {
         {/* Parent div */}
         <div className='flex flex-col justify-center items-center h-screen relative'>
 
-            {/* Login and Information div */}
+            {/* Forgot password and Information div */}
             <div className='grid grid-cols-1 md:grid-cols-2 h-3/4 md:h-5/6 w-[80%] p-2'>
 
-                {/* Login div */}
+                {/* Forgot password div */}
                 <div className='flex flex-col items-center justify-center space-y-10 bg-[#ffffff] backdrop-filter backdrop-blur-lg bg-opacity-10'>
 
                     {/* Logo div -- visible on all devices */}
@@ -31,32 +30,32 @@ const LoginPage = () => {
                         <NavLink to='/' className='text-[#1A1A1D] font-semibold text-3xl mt-[10%]'>B.io</NavLink>
                     </div>
                     
-                    {/* Sing in text */}
-                    <p className='text-xl font-semibold text-[#f8f8f8]'>Sign in</p>
+                    {/* Forgot Password text */}
+                    <p className='text-xl font-semibold text-[#f8f8f8]'>Forgot Password?</p>
 
-                    {/* Sign in form */}
+                    {/* Forgot Password form */}
                     <form className='flex flex-col items-center space-y-10 md:space-y-5'>
                             <input type='text' placeholder='Enter your email...' className='h-[100%] w-[100%] md:w-[150%] bg-transparent ring-2 ring-[#FCCF47] rounded-lg p-2 text-[#f8f8f8]'></input>
-                            <input type='password' placeholder='Enter your password...' className='h-[100%] md:w-[150%] bg-transparent ring-2 ring-[#FCCF47] rounded-lg p-2 text-[#f8f8f8]'></input>
                             <button type='submit' className=' w-[100%] md:w-[150%] p-1 sm:p-2 md:p-3 md:text-md sm:text-lg md:text-xl rounded-xl bg-[#FCCF47] text-[#1a1a1d] mt-4 hover:shadow-xl hover:scale-105 duration-300'>Submit</button>
 
                             {/* Routes to registration page when clicked */}
                             <NavLink to='/registration' className='text-[#fccf47]'>Register?</NavLink>
 
                             {/* Forgot password link */}
-                            <NavLink to='/forgot-password' className='text-[#fccf47]'>Forgot password?</NavLink>
+                            <NavLink to='/login' className='text-[#fccf47]'>Login?</NavLink>
                     </form>
                 </div>
 
             {/* Information div -- not visible on small devices*/}
             <div className='hidden md:flex md:flex-col md:bg-[#FCCF47] md:p-4 md:justify-center backdrop-filter backdrop-blur-lg md:bg-opacity-90 space-y-4'>
-                <p className='text-[#1A1A1D] text-3xl font-semibold'>Start off where you left!</p>
-                <p className='text-[#1A1A1D]'>Discover amazing blogs on technology, food, movies and much more!</p>
+                <p className='text-[#1A1A1D] text-3xl font-semibold'>Don't worry!</p>
+                <p className='text-[#1A1A1D]'>We are working to get you back on track.</p>
             </div>
+
         </div>
     </div>
 </div>
   )
 }
 
-export default LoginPage
+export default ForgotPassword

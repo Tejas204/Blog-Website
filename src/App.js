@@ -5,6 +5,7 @@ import NoMatch from './Components/NoMatch';
 import { Routes,Route } from 'react-router-dom';
 import LoginPage from './Components/LoginPage';
 import RegisterationPage from './Components/RegisterationPage';
+import ForgotPassword from './Components/ForgotPassword';
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
 
         {/* Route for Registration Page */}
         <Route path='registration' element={<RegisterationPage/>}></Route>
+
+        {/* Route for forgot password */}
+        <Route path='forgot-password' element={<ForgotPassword/>}></Route>
 
         {/* No match route */}
         <Route path='*' element={<NoMatch/>}></Route>
