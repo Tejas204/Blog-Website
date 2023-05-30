@@ -19,7 +19,7 @@ const LoginPage = () => {
             <div className='grid grid-cols-1 md:grid-cols-2 h-3/4 md:h-5/6 w-[80%] p-2'>
 
                 {/* Login div */}
-                <div className='flex flex-col items-center justify-center space-y-4 md:space-y-10 bg-[#ffffff] backdrop-filter backdrop-blur-lg bg-opacity-5 border-2 border-gray-200'>
+                <div className='flex flex-col items-center justify-center space-y-4 md:space-y-10 bg-[#ffffff] backdrop-filter backdrop-blur-lg bg-opacity-5'>
 
                     {/* Logo div -- visible on all devices */}
                     {/* Routes back to landing page */}
