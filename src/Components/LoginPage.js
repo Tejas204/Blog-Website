@@ -7,23 +7,23 @@ const LoginPage = () => {
     <div className='bg-[#1a1a1d] relative overflow-hidden'>
 
         {/* blobs */}
-        {/* <div className='absolute -top-24 left-14 rounded-full filter mix-blend-normal blur-2xl bg-gradient-to-b from-[#fff01f] to-[#ffcf47] h-80 w-80 opacity-20'></div>
+        <div className='absolute top-8 left-32 rounded-full filter mix-blend-normal bg-gradient-to-tr from-[#1a1a1d] to-[#d4d4d5] h-24 w-24 opacity-20 shadow-2xl shadow-black'></div>
         
-        <div className='absolute -bottom-36 -left-20 rounded-full filter mix-blend-normal blur-2xl bg-gradient-to-t from-[#fdaf05] to-[#ffcf47] h-1/2 w-1/4 opacity-20'></div>
-        <div className='absolute -bottom-36 -left-20 rounded-full filter mix-blend-normal blur-2xl bg-gradient-to-t from-[#fff01f] to-[#ffcf47] h-1/2 w-1/4 opacity-20'></div>
+        <div className='absolute -bottom-32 -left-12 rounded-full filter mix-blend-normal bg-gradient-to-tr from-[#1a1a1d] to-[#d4d4d5] h-80 w-80 opacity-20 shadow-2xl shadow-black'></div>
+        {/* <div className='absolute -bottom-36 -left-20 rounded-full filter mix-blend-normal blur-2xl bg-gradient-to-t from-[#fff01f] to-[#ffcf47] h-1/2 w-1/4 opacity-20'></div> */}
 
-        <div className='absolute top-1/4 -right-60 rounded-full filter mix-blend-normal blur-2xl bg-gradient-to-l from-[#fff01f] to-[#ffcf47] h-1/2 w-1/2 opacity-20'></div>
-        <div className='absolute top-1/4 -right-60 rounded-full filter mix-blend-normal blur-2xl bg-gradient-to-l from-[#fff01f] to-[#ffcf47] h-1/2 w-1/2 opacity-20'></div> */}
+        <div className='absolute top-1/2 right-2 rounded-full filter mix-blend-normal bg-gradient-to-tr from-[#1a1a1d] to-[#ffffff] h-32 w-32 opacity-20 shadow-2xl shadow-black'></div>
+        {/* <div className='absolute top-1/4 -right-60 rounded-full filter mix-blend-normal blur-2xl bg-gradient-to-l from-[#fff01f] to-[#ffcf47] h-1/2 w-1/2 opacity-20'></div> */}
 
 
         {/* Parent div */}
-        <div className='flex flex-col justify-center items-center h-screen relative'>
+        <div className='flex flex-col justify-center items-center h-screen relative z-10'>
 
             {/* Login and Information div */}
             <div className='grid grid-cols-1 md:grid-cols-2 h-3/4 md:h-5/6 w-[80%] p-2'>
 
                 {/* Login div */}
-                <div className='flex flex-col items-center justify-center space-y-10 bg-[#ffffff] backdrop-filter backdrop-blur-lg bg-opacity-10'>
+                <div className='flex flex-col items-center justify-center space-y-10 bg-[#ffffff] backdrop-filter backdrop-blur-lg bg-opacity-5 border-2 border-gray-200'>
 
                     {/* Logo div -- visible on all devices */}
                     {/* Routes back to landing page */}

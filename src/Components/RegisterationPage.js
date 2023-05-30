@@ -6,13 +6,13 @@ const RegisterationPage = () => {
     <div className='bg-[#1a1a1d] relative overflow-hidden'>
 
         {/* blobs */}
-        <div className='absolute -top-24 left-14 rounded-full filter mix-blend-normal blur-2xl bg-gradient-to-b from-[#fff01f] to-[#ffcf47] h-80 w-80 opacity-20'></div>
+        {/* <div className='absolute -top-24 left-14 rounded-full filter mix-blend-normal blur-2xl bg-gradient-to-b from-[#fff01f] to-[#ffcf47] h-80 w-80 opacity-20'></div>
         
         <div className='absolute -bottom-36 -left-20 rounded-full filter mix-blend-normal blur-2xl bg-gradient-to-t from-[#fdaf05] to-[#ffcf47] h-1/2 w-1/4 opacity-20'></div>
         <div className='absolute -bottom-36 -left-20 rounded-full filter mix-blend-normal blur-2xl bg-gradient-to-t from-[#fff01f] to-[#ffcf47] h-1/2 w-1/4 opacity-20'></div>
 
         <div className='absolute top-1/4 -right-60 rounded-full filter mix-blend-normal blur-2xl bg-gradient-to-l from-[#fff01f] to-[#ffcf47] h-1/2 w-1/2 opacity-20'></div>
-        <div className='absolute top-1/4 -right-60 rounded-full filter mix-blend-normal blur-2xl bg-gradient-to-l from-[#fff01f] to-[#ffcf47] h-1/2 w-1/2 opacity-20'></div>
+        <div className='absolute top-1/4 -right-60 rounded-full filter mix-blend-normal blur-2xl bg-gradient-to-l from-[#fff01f] to-[#ffcf47] h-1/2 w-1/2 opacity-20'></div> */}
 
 
         {/* Parent div */}
