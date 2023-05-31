@@ -1,7 +1,7 @@
 # Blog website
 
 ![](src/Images/UI.png)
-![](src/Images/LoginPage.png)
+![](src/Images/blog-website-laptop.png)
 
 This is a simple blog website where users can post their blogs in various categories. This website is designed using ReactJS, React Router Dom for
 navigation, Firebase for authentication and Tailwind CSS for styling. 
