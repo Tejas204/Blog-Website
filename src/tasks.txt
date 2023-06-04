@@ -15,8 +15,10 @@ Functionalities:
 
 Tasks:-
 1. Create login and register pages -- done
-2. Create routes
+2. Create routes -- done
 3. Set up authentication
+  a. Learn more about auth context
+  b. learn more about useContext hook
 
 ** ------------------------------------------------------------------- **
 
