@@ -6,6 +6,7 @@ import { Routes,Route } from 'react-router-dom';
 import LoginPage from './Components/LoginPage';
 import RegisterationPage from './Components/RegisterationPage';
 import ForgotPassword from './Components/ForgotPassword';
+import Blogs from './Components/Blogs';
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
 
         {/* Route for forgot password */}
         <Route path='forgot-password' element={<ForgotPassword/>}></Route>
+
+        {/* Route for blogs page */}
+        <Route path='blogs' element={<Blogs/>}></Route>
 
         {/* No match route */}
         <Route path='*' element={<NoMatch/>}></Route>

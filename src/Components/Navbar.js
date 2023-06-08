@@ -28,7 +28,6 @@ console.log(dropDownVisibility);
                 <ul className={`flex flex-col gap-y-4 md:flex-row md:gap-x-12 md:static md:h-auto relative ${dropDownVisibility ? 'top-0' : 'top-[-500px] h-0.5'} ease-in-out`}>
                     {navbarItems.map((navItem, index)=>{
                         return(
-                        // li to be replaced by navlink
                         <NavLink className='font-semibold text-lg text-[#1A1A1D] hover:cursor-pointer hover:border-b-2 hover:border-[#FCCF47] duration-100
                             hover:border-t-2' key={index} to={navItem.goTo}>
                             {navItem.name}
