@@ -5,11 +5,11 @@ import { footerIcons } from '../data'
 
 const VerticalNavbar = () => {
   return (
-    <div className='flex flex-col space-y-6 p-2 items-center w-[100%] h-screen bg-[#1a1a1d]'>
+    <div className='flex flex-col gap-y-6 md:gap-y-8 lg:gap-y-10 p-2 items-center w-[100%] h-screen bg-[#1a1a1d]'>
 
         {/* The div contains the brand logo  */}
-        <div className='bg-[#FCCF47] rounded-lg p-2 max-w-[20%] text-center'>
-            <p className='text-[#1A1A1D] font-semibold text-2xl'>B.io</p>
+        <div className='bg-[#FCCF47] rounded-lg p-1 md:p-2 w-[60%] md:w-[30%] lg:w-[20%] text-center'>
+            <p className='text-[#1A1A1D] font-semibold text-sm md:text-xl lg;text-2xl'>B.io</p>
         </div>
 
         {/* The div contains vertical navlinks */}
@@ -17,7 +17,7 @@ const VerticalNavbar = () => {
                     {navbarItems.map((navItem, index)=>{
                         return(
                             <div className='w-[100%] p-3 hover:border-l-[#fccf47] hover:border-l-8 hover:bg-[#fccf47] hover:bg-opacity-25 duration-200 ease-in-out'>
-                                <NavLink className='w-[100%] text-xl text-[#ffffff] hover:cursor-pointer' key={index} to={navItem.goTo}>
+                                <NavLink className='w-[100%] md:text-lg lg:text-xl text-[#ffffff] hover:cursor-pointer' key={index} to={navItem.goTo}>
                                     {navItem.name}
                                 </NavLink>
                             </div>
@@ -26,13 +26,11 @@ const VerticalNavbar = () => {
         </div>
 
         {/* The div contains social media links */}
-        <div className='flex flex-col items-center space-y-3 border-t-2 border-t-[#fccf47] p-6 mt-4'>
-            {/* The paragraph tag contains contact us text */}
-            <p className='text-xl text-[#fccf47]'>Contact us</p>
-            <ul className='flex flex-row space-x-20'>
+        <div className='flex flex-col items-center space-y-3 border-t-2 border-t-[#fccf47] w-[100%] p-1'>
+            <ul className='flex flex-col gap-y-6 md:flex-row md:space-x-10'>
                 {footerIcons.map((footerIcon, index) => {
                     return(
-                        <li className='text-[#FCCF47] text-5xl hover:cursor-pointer hover:scale-125 duration-100 ease-in-out'>{footerIcon.icon}</li>
+                        <li className='text-[#FCCF47] text-2xl md:text-3xl lg:text-5xl hover:cursor-pointer hover:scale-125 duration-100 ease-in-out'>{footerIcon.icon}</li>
                     )
                 })}
             </ul>
