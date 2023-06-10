@@ -15,8 +15,12 @@ Functionalities:
 
 Tasks:-
 
-3. Create blog pages
+3. Create blog pages -- WIP
+  a. add vertial navbar -- done
+  b. add icons when small
+
 4. Implement create a blog, sorting functionality.
+
 5. Set up authentication
   a. Learn more about auth context
   b. learn more about useContext hook
