@@ -15,11 +15,13 @@ Functionalities:
 
 Tasks:-
 
-3. Create blog pages -- WIP
-  a. add vertial navbar -- done
-  b. add icons when small
 
 4. Implement create a blog, sorting functionality.
+  a. set up card design
+  b. place blog cards in grid
+  c. create button for a blog
+  d. add categories
+
 
 5. Set up authentication
   a. Learn more about auth context
@@ -31,6 +33,9 @@ Completed
 
 1. Create login and register pages -- done
 2. Create routes -- done
+3. Create blog pages -- done
+  a. add vertial navbar -- done
+  b. add icons when small -- done
 
 ** ------------------------------------------------------------------- **
 
