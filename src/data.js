@@ -1,25 +1,32 @@
 import {TiSocialTwitterCircular, TiSocialFacebookCircular, TiSocialLinkedinCircular} from 'react-icons/ti'
+import {MdLogin, MdBook, MdHome, MdFilterList, MdVerifiedUser} from "react-icons/md"
+
 
 export let navbarItems = [
     {
         name: 'Home',
-        goTo: '/'
+        goTo: '/',
+        icon: <MdHome/>
     },
     {
         name: 'Blogs',
-        goTo: 'blogs'
+        goTo: '/blogs',
+        icon: <MdBook/>
     },
     {
         name: 'Subscriptions',
-        goTo: 'subscriptions'
+        goTo: '/subscriptions',
+        icon: <MdFilterList/>
     },
     {
         name: 'Login',
-        goTo: 'login'
+        goTo: '/login',
+        icon: <MdLogin/>
     },
     {
         name: 'Register',
-        goTo: 'registration'
+        goTo: '/registration',
+        icon: <MdVerifiedUser/>
     }
 ]
 
