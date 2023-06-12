@@ -31,7 +31,7 @@ const LoginPage = () => {
 
                     {/* Logo div -- visible on all devices */}
                     {/* Routes back to landing page */}
-                    <div className='bg-[#FCCF47] md:top-0 rounded-lg p-2 hover:shadow-md hover:shadow-[#FCCF47] ease-in-out duration-300'>
+                    <div className='bg-[#FCCF47] md:top-0 rounded-lg p-2 hover:ring-offset-2 hover:ring-offset-[#1A1A1D] hover:ring-2 hover:ring-[#fccf47] ease-in-out duration-300'>
                         <NavLink to='/' className='text-[#1A1A1D] font-semibold text-3xl mt-[10%]'>B.io</NavLink>
                     </div>
                     

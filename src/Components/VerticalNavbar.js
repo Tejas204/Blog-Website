@@ -9,8 +9,8 @@ const VerticalNavbar = () => {
     <div className='flex flex-col gap-y-6 md:gap-y-8 lg:gap-y-10 p-2 items-center w-[100%] h-screen bg-[#1a1a1d]'>
 
         {/* The div contains the brand logo  */}
-        <div className='bg-[#FCCF47] rounded-lg p-1 md:p-2 w-[60%] md:w-[30%] lg:w-[20%] text-center'>
-            <p className='text-[#1A1A1D] font-semibold text-sm md:text-xl lg;text-2xl'>B.io</p>
+        <div className='bg-[#FCCF47] rounded-lg p-1 md:p-2 w-[60%] md:w-[30%] lg:w-[20%] text-center hover:ring-offset-2 hover:ring-offset-[#1A1A1D] hover:ring-2 hover:ring-[#fccf47] ease-in-out duration-300'>
+            <NavLink to='/' className='text-[#1A1A1D] font-semibold text-sm md:text-xl lg;text-2xl'>B.io</NavLink>
         </div>
 
         {/* The div contains vertical navlinks */}
