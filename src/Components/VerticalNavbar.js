@@ -18,11 +18,11 @@ const VerticalNavbar = () => {
                     {navbarItems.map((navItem, index)=>{
                         return(
                             // This div contains the navigation icons and links
-                            <div className='flex flex-row w-[100%] p-3 hover:border-l-[#fccf47] hover:border-l-8 hover:bg-[#fccf47] hover:bg-opacity-25 duration-150 ease-in-out'>
+                            <div className='flex flex-row items-center justify-center md:items-start md:justify-start w-[100%] p-3 hover:border-l-[#fccf47] hover:border-l-8 hover:bg-[#fccf47] hover:bg-opacity-25 duration-150 ease-in-out'>
 
                                 {/* Navigation icons are visible only on small screens */}
                                 <div>
-                                    <NavLink className='w-[100%] text-xl text-[#ffffff] hover:cursor-pointerm md:hidden' key={index} to={navItem.goTo}>
+                                    <NavLink className='w-[100%] text-2xl text-[#ffffff] hover:cursor-pointerm md:hidden' key={index} to={navItem.goTo}>
                                         {navItem.icon}
                                     </NavLink>
                                 </div>
