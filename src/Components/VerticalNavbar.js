@@ -40,7 +40,7 @@ const VerticalNavbar = () => {
 
         {/* The div contains social media links */}
         <div className='flex flex-col items-center space-y-3 border-t-2 border-t-[#fccf47] w-[100%] p-1'>
-            <ul className='flex flex-col gap-y-6 md:flex-row md:space-x-10'>
+            <ul className='flex flex-col gap-y-6 md:flex-row md:space-x-7'>
                 {footerIcons.map((footerIcon, index) => {
                     return(
                         <li className='text-[#FCCF47] text-2xl md:text-3xl lg:text-5xl hover:cursor-pointer hover:scale-125 duration-100 ease-in-out'>{footerIcon.icon}</li>
