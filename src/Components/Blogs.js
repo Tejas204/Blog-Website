@@ -19,14 +19,17 @@ const Blogs = () => {
 
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[80%] relative left-[20%]'>
         {/******* Card begins ********/}
-              <div className='col-span-1 p-10'>
+              <div className='col-span-1 p-4 md:p-7 lg:p-8'>
                 <div className='border-2 shadow-lg rounded-md'>
                   {/* Title image of the blog */}
-                  <img src={VR} className='h-[50%] rounded-t-md'></img>
+                  <div className='w-full h-full'>
+                    <img src={VR} className='rounded-t-md h-48 object-fill w-full'></img>
+                  </div>
+                  
 
-                  {/* This div contains the date, title text, like option and rating */}
+                  {/* This div contains the date, title text, view button */}
                   {/* Parent div */}
-                  <div className='flex flex-col gap-y-3 p-2'>
+                  <div className='flex flex-col gap-y-2 md:gap-y-3 p-2'>
 
                     {/* Date */}
                     <p className=' text-sm md:text-md text-slate-500'>
@@ -44,7 +47,7 @@ const Blogs = () => {
 
                     {/* View button */}
                     <div className='flex justify-center'>
-                      <button className='p-3 bg-[#fccf47] text-[#1a1a1d] font-semibold w-[25%] rounded-md'>
+                      <button className='p-3 bg-[#fccf47] text-[#1a1a1d] font-semibold w-[25%] rounded-md hover:ring-2 hover:ring-offset-2 hover:ring-[#fccf47] duration-150 ease-in-out'>
                         View
                       </button>
                     </div>
