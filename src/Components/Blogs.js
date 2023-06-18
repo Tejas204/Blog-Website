@@ -40,13 +40,13 @@ const Blogs = () => {
                     <p className='text-sm md:text-md font-bold'>
                       Cybersecurity: The great wall of online protection
                     </p>
-                    <p className='text-sm text-slate-500 text-justify'>
+                    <p className='text-sm text-slate-500 text-justify h-22 md:h-28 lg:h-20'>
                       Cybersecurity is the practice of protecting systems, networks, and programs from digital attacks. 
                       These cyberattacks are usually aimed at accessing, changing, or destroying sensitive information.
                     </p>
 
                     {/* View button */}
-                    <div className='flex justify-center'>
+                    <div className='flex justify-center pt-2'>
                       <button className='p-2 md:p-3 bg-[#fccf47] text-[#1a1a1d] font-semibold w-[25%] rounded-md hover:ring-2 hover:ring-offset-2 hover:ring-[#fccf47] duration-150 ease-in-out'>
                         View
                       </button>
@@ -78,12 +78,12 @@ const Blogs = () => {
                     <p className='text-sm md:text-md font-bold'>
                       Cybersecurity: The great wall of online protection
                     </p>
-                    <p className='text-sm text-slate-500 text-justify h-20'>
+                    <p className='text-sm text-slate-500 text-justify h-22 md:h-28 lg:h-20'>
                       Blockchain is a shared, immutable ledger that facilitates the process of recording transactions and tracking assets in a business network
                     </p>
 
                     {/* View button */}
-                    <div className='flex justify-center'>
+                    <div className='flex justify-center pt-2'>
                       <button className='p-2 md:p-3 bg-[#fccf47] text-[#1a1a1d] font-semibold w-[25%] rounded-md hover:ring-2 hover:ring-offset-2 hover:ring-[#fccf47] duration-150 ease-in-out'>
                         View
                       </button>
@@ -115,13 +115,13 @@ const Blogs = () => {
                     <p className='text-sm md:text-md font-bold'>
                       Cybersecurity: The great wall of online protection
                     </p>
-                    <p className='text-sm text-slate-500 text-justify'>
+                    <p className='text-sm text-slate-500 text-justify h-22 md:h-28 lg:h-20'>
                       Cybersecurity is the practice of protecting systems, networks, and programs from digital attacks. 
                       These cyberattacks are usually aimed at accessing, changing, or destroying sensitive information.
                     </p>
 
                     {/* View button */}
-                    <div className='flex justify-center'>
+                    <div className='flex justify-center pt-2'>
                       <button className='p-2 md:p-3 bg-[#fccf47] text-[#1a1a1d] font-semibold w-[25%] rounded-md hover:ring-2 hover:ring-offset-2 hover:ring-[#fccf47] duration-150 ease-in-out'>
                         View
                       </button>
