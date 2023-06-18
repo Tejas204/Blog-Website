@@ -78,9 +78,8 @@ const Blogs = () => {
                     <p className='text-sm md:text-md font-bold'>
                       Cybersecurity: The great wall of online protection
                     </p>
-                    <p className='text-sm text-slate-500 text-justify'>
-                      Cybersecurity is the practice of protecting systems, networks, and programs from digital attacks. 
-                      These cyberattacks are usually aimed at accessing, changing, or destroying sensitive information.
+                    <p className='text-sm text-slate-500 text-justify h-20'>
+                      Blockchain is a shared, immutable ledger that facilitates the process of recording transactions and tracking assets in a business network
                     </p>
 
                     {/* View button */}
