@@ -3,6 +3,9 @@ import {MdLogin, MdBook, MdHome, MdFilterList, MdVerifiedUser} from "react-icons
 import VR from './Images/VR.jpg';
 import Cyber from './Images/Cyber.jpg';
 import Blockchain from './Images/Blockchain.jpg';
+import Etherium from './Images/etherium.jpeg';
+import MERN from './Images/mern.jpg';
+import UIUX from './Images/UIUX.jpg';
 
 
 export let navbarItems = [
@@ -62,9 +65,27 @@ export let blogsCards = [
         blogTitleImage: Blockchain
     },
     {
-        dateOfPublishing: '18-Aug-2021',
+        dateOfPublishing: '01-Jun-2023',
         blogTitle: 'VR: Creating an alternate reality',
         blogDescription: 'Virtual reality (VR) is a simulated experience that employs pose tracking and 3D near-eye displays to give the user an immersive feel of a virtual world.',
         blogTitleImage: VR
-    }
+    },
+    {
+        dateOfPublishing: '19-Mar-2022',
+        blogTitle: 'VR: Creating an alternate reality',
+        blogDescription: 'Virtual reality (VR) is a simulated experience that employs pose tracking and 3D near-eye displays to give the user an immersive feel of a virtual world.',
+        blogTitleImage: Etherium
+    },
+    {
+        dateOfPublishing: '31-Dec-2020',
+        blogTitle: 'VR: Creating an alternate reality',
+        blogDescription: 'Virtual reality (VR) is a simulated experience that employs pose tracking and 3D near-eye displays to give the user an immersive feel of a virtual world.',
+        blogTitleImage: UIUX
+    },
+    {
+        dateOfPublishing: '18-Aug-2021',
+        blogTitle: 'VR: Creating an alternate reality',
+        blogDescription: 'Virtual reality (VR) is a simulated experience that employs pose tracking and 3D near-eye displays to give the user an immersive feel of a virtual world.',
+        blogTitleImage: MERN
+    },
 ]
