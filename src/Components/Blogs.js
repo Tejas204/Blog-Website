@@ -18,11 +18,30 @@ const Blogs = () => {
         </div>
     </div>
 
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[80%] relative left-[20%]'>
+        {/* Create button, category dropdown, sorting dropdown */}
+        {/* Options div */}
+        <div className='flex flex-row absolute top-0 left-[20%] p-3 w-[80%] justify-between'>
+              {/* 1. Create button */}  
+              <button className='p-2 bg-[#fccf47] text-[#1A1A1D] font-semibold rounded-lg hover:ring-2 hover:ring-offset-2 hover:ring-[#fccf47] ease-in-out duration-200 shadow-md'>
+                Create blog
+              </button>
+
+              {/* Remove filter button */}
+              <button className='p-2 bg-[#fccf47] text-[#1A1A1D] font-semibold rounded-lg hover:ring-2 hover:ring-offset-2 hover:ring-[#fccf47] ease-in-out duration-200 shadow-md'>
+                Remove filter
+              </button>
+
+              {/* Category Dropdown */}
+
+              {/* Sorting dropdown */}
+        </div>
+
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[80%] relative left-[20%] mt-10'>
+        {/* Blog Cards */}
         {blogsCards.map((blogCard, index) => {
           return(
             // ************** Card Begins **************** //
-            <div className='col-span-1 p-4 md:p-7 lg:p-8'>
+            <div className='col-span-1 p-4 md:p-7 lg:p-8' key={index}>
                 <div className='border-2 shadow-lg rounded-md'>
                   {/* Title image of the blog */}
                   <div className='w-full h-full'>
@@ -35,7 +54,7 @@ const Blogs = () => {
                   <div className='flex flex-col gap-y-2 md:gap-y-3 p-2'>
 
                     {/* Date */}
-                    <p className=' text-sm md:text-md text-slate-500'>
+                    <p className=' text-sm text-slate-500'>
                       {blogCard.dateOfPublishing}
                     </p>
 
@@ -61,7 +80,8 @@ const Blogs = () => {
         })}
         
         </div>
-    </div> 
+    </div>
+
     
   )
 }
