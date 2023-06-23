@@ -36,6 +36,34 @@ export let navbarItems = [
     }
 ]
 
+export let verticalNavbarItems = [
+    {
+        name: 'Home',
+        goTo: '/',
+        icon: <MdHome/>
+    },
+    {
+        name: 'Create blog',
+        goTo: '/blogs',
+        icon: <MdBook/>
+    },
+    {
+        name: 'Remove filter',
+        goTo: '/subscriptions',
+        icon: <MdFilterList/>
+    },
+    {
+        name: 'Login',
+        goTo: '/login',
+        icon: <MdLogin/>
+    },
+    {
+        name: 'Register',
+        goTo: '/registration',
+        icon: <MdVerifiedUser/>
+    }
+]
+
 export let footerIcons = [
     {
         name: 'Twitter',

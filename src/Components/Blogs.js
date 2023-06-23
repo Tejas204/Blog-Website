@@ -21,20 +21,17 @@ const Blogs = () => {
         {/* Create button, category dropdown, sorting dropdown */}
         {/* Options div */}
         <div className='flex flex-row absolute top-0 left-[20%] p-3 w-[80%] justify-between'>
-              {/* 1. Create button */}  
+              {/* 1. Category dropdown */}  
               <button className='p-2 bg-[#fccf47] text-[#1A1A1D] font-semibold rounded-lg hover:ring-2 hover:ring-offset-2 hover:ring-[#fccf47] ease-in-out duration-200 shadow-md'>
                 Create blog
               </button>
 
-              {/* Remove filter button */}
-              <button className='p-2 bg-[#fccf47] text-[#1A1A1D] font-semibold rounded-lg hover:ring-2 hover:ring-offset-2 hover:ring-[#fccf47] ease-in-out duration-200 shadow-md'>
-                Remove filter
-              </button>
+                {/* Remove filter button */}
+                <button className='p-2 bg-[#fccf47] text-[#1A1A1D] font-semibold rounded-lg hover:ring-2 hover:ring-offset-2 hover:ring-[#fccf47] ease-in-out duration-200 shadow-md'>
+                  Remove filter
+                </button>
+          </div>
 
-              {/* Category Dropdown */}
-
-              {/* Sorting dropdown */}
-        </div>
 
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[80%] relative left-[20%] mt-10'>
         {/* Blog Cards */}

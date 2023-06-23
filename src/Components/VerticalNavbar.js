@@ -1,5 +1,5 @@
 import React from 'react'
-import { navbarItems } from '../data'
+import { navbarItems, verticalNavbarItems } from '../data'
 import { NavLink } from 'react-router-dom'
 import { footerIcons } from '../data'
 
@@ -15,7 +15,7 @@ const VerticalNavbar = () => {
 
         {/* The div contains vertical navlinks */}
         <div className='flex flex-col gap-y-10 ease-in-out w-[100%] justify-start'>
-                    {navbarItems.map((navItem, index)=>{
+                    {verticalNavbarItems.map((navItem, index)=>{
                         return(
                             // This div contains the navigation icons and links
                             <div className='flex flex-row items-center justify-center md:items-start md:justify-start w-[100%] p-3 hover:border-l-[#fccf47] hover:border-l-8 hover:bg-[#fccf47] hover:bg-opacity-25 duration-150 ease-in-out'>
