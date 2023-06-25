@@ -9,15 +9,14 @@ import { blogsCards } from '../data';
 const Blogs = () => {
 
 // This hook will set the category of the blogs to display
-const [blogCategory, setBlogCategory] = useState('');
+const [blogCategory, setBlogCategory] = useState('all_categories');
 
 // This function handles the changing of category values
 const handleCategoryChange = (categoryChangeEvent) => {
   setBlogCategory(categoryChangeEvent.target.value);
 }
 
-console.log(blogCategory);
-
+console.log(blogCategory)
 
   return (
     // Grid structure for blogs
@@ -53,7 +52,7 @@ console.log(blogCategory);
 
                 {/* Button to apply filters */}
                 <button className={categorySortingsStyle} onClick={() => {console.log()}}>
-                  Apply
+                  Remove filters
                 </button>
           </div>
 
@@ -61,44 +60,86 @@ console.log(blogCategory);
       <div className={blogCardsDivStyle}>
         {/* Blog Cards */}
         {blogsCards.map((blogCard, index) => {
-          return(
-            // ************** Card Begins **************** //
-            <div className='col-span-1 p-4 md:p-7 lg:p-8' key={index}>
-                <div className='border-2 border-gray-200 shadow-lg rounded-md'>
-                  {/* Title image of the blog */}
-                  <div className='w-full h-full'>
-                    <img src={blogCard.blogTitleImage} className='rounded-t-md h-40 md:h-44 lg:h-48 object-fill w-full'></img>
-                  </div>
-                  
-
-                  {/* This div contains the date, title text, view button */}
-                  {/* Parent div */}
-                  <div className='flex flex-col gap-y-2 md:gap-y-3 p-2'>
-
-                    {/* Date */}
-                    <p className=' text-sm text-slate-500'>
-                      {blogCard.dateOfPublishing}
-                    </p>
-
-                    {/* Blog title and help text */}
-                    <p className='text-sm md:text-md font-bold h-9'>
-                      {blogCard.blogTitle}
-                    </p>
-                    <p className='text-sm text-slate-500 text-justify h-22 md:h-28 lg:h-20'>
-                      {blogCard.blogDescription}
-                    </p>
-
-                    {/* View button */}
-                    <div className='flex justify-center pt-2'>
-                      <button className='p-2 md:p-3 bg-[#fccf47] text-[#1a1a1d] font-semibold w-[25%] rounded-md hover:ring-2 hover:ring-offset-2 hover:ring-[#fccf47] duration-150 ease-in-out'>
-                        View
-                      </button>
+          if(blogCategory == "all_categories"){
+            return(
+              // ************** Card Begins **************** //
+              <div className='col-span-1 p-4 md:p-7 lg:p-8' key={index}>
+                  <div className='border-2 border-gray-200 shadow-lg rounded-md'>
+                    {/* Title image of the blog */}
+                    <div className='w-full h-full'>
+                      <img src={blogCard.blogTitleImage} className='rounded-t-md h-40 md:h-44 lg:h-48 object-fill w-full'></img>
+                    </div>
+                    
+  
+                    {/* This div contains the date, title text, view button */}
+                    {/* Parent div */}
+                    <div className='flex flex-col gap-y-2 md:gap-y-3 p-2'>
+  
+                      {/* Date */}
+                      <p className=' text-sm text-slate-500'>
+                        {blogCard.dateOfPublishing}
+                      </p>
+  
+                      {/* Blog title and help text */}
+                      <p className='text-sm md:text-md font-bold h-9'>
+                        {blogCard.blogTitle}
+                      </p>
+                      <p className='text-sm text-slate-500 text-justify h-22 md:h-28 lg:h-20'>
+                        {blogCard.blogDescription}
+                      </p>
+  
+                      {/* View button */}
+                      <div className='flex justify-center pt-2'>
+                        <button className='p-2 md:p-3 bg-[#fccf47] text-[#1a1a1d] font-semibold w-[25%] rounded-md hover:ring-2 hover:ring-offset-2 hover:ring-[#fccf47] duration-150 ease-in-out'>
+                          View
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              // ************** Card Ends **************** //
-          )
+                // ************** Card Ends **************** //
+            )
+          }
+          else if(blogCategory != "all_categories" && blogCategory == blogCard.category){
+            return(
+              // ************** Card Begins **************** //
+              <div className='col-span-1 p-4 md:p-7 lg:p-8' key={index}>
+                  <div className='border-2 border-gray-200 shadow-lg rounded-md'>
+                    {/* Title image of the blog */}
+                    <div className='w-full h-full'>
+                      <img src={blogCard.blogTitleImage} className='rounded-t-md h-40 md:h-44 lg:h-48 object-fill w-full'></img>
+                    </div>
+                    
+  
+                    {/* This div contains the date, title text, view button */}
+                    {/* Parent div */}
+                    <div className='flex flex-col gap-y-2 md:gap-y-3 p-2'>
+  
+                      {/* Date */}
+                      <p className=' text-sm text-slate-500'>
+                        {blogCard.dateOfPublishing}
+                      </p>
+  
+                      {/* Blog title and help text */}
+                      <p className='text-sm md:text-md font-bold h-9'>
+                        {blogCard.blogTitle}
+                      </p>
+                      <p className='text-sm text-slate-500 text-justify h-22 md:h-28 lg:h-20'>
+                        {blogCard.blogDescription}
+                      </p>
+  
+                      {/* View button */}
+                      <div className='flex justify-center pt-2'>
+                        <button className='p-2 md:p-3 bg-[#fccf47] text-[#1a1a1d] font-semibold w-[25%] rounded-md hover:ring-2 hover:ring-offset-2 hover:ring-[#fccf47] duration-150 ease-in-out'>
+                          View
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                // ************** Card Ends **************** //
+            )
+          }
         })}
         
         </div>
