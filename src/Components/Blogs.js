@@ -22,7 +22,7 @@ const Blogs = () => {
         {/* Options div */}
         <div className='flex flex-row absolute top-0 left-[20%] p-3 w-[80%] justify-between'>
               {/* 1. Category dropdown */}
-              <select className='p-2 bg-[#1a1a1d] text-[#ffffff] font-normal rounded-lg hover:ring-2 hover:ring-offset-2 hover:ring-[#1a1a1d] ease-in-out duration-200 shadow-md' name='category'>
+              <select className={categorySortingsStyle}>
                 <option value='all_categories'>All Categories</option>
                 <option value='technology'>Technology</option>
                 <option value='food'>Food</option>
@@ -32,7 +32,7 @@ const Blogs = () => {
               
 
                 {/* Sorting dropdown button */}
-                <select className='p-2 bg-[#1a1a1d] text-[#ffffff] font-normal rounded-lg hover:ring-2 hover:ring-offset-2 hover:ring-[#1a1a1d] ease-in-out duration-200 shadow-md'>
+                <select className={categorySortingsStyle}>
                   <option value='sort_a_z'>Sort by A-Z</option>
                   <option value='sort_z_a'>Sort by Z-A</option>
                   <option value='sort_date_latest'>Sort by Date (latest)</option>
@@ -94,3 +94,13 @@ const Blogs = () => {
 }
 
 export default Blogs
+
+const categorySortingsStyle = `p-1 
+                              md:p-2 
+                              bg-[#1a1a1d] 
+                              text-[#ffffff] 
+                              text-xs sm:text-sm md:text-md lg:text-lg 
+                              font-normal 
+                              rounded-lg 
+                              hover:ring-2 hover:ring-offset-2 hover:ring-[#1a1a1d] 
+                              ease-in-out duration-200 shadow-md`;
