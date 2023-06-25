@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import VerticalNavbar from './VerticalNavbar'
 import mobile from '../Images/blog-website-mobile.png'
 import VR from '../Images/VR.jpg';
@@ -7,6 +7,18 @@ import Blockchain from '../Images/Blockchain.jpg';
 import { blogsCards } from '../data';
 
 const Blogs = () => {
+
+// This hook will set the category of the blogs to display
+const [blogCategory, setBlogCategory] = useState('');
+
+// This function handles the changing of category values
+const handleCategoryChange = (categoryChangeEvent) => {
+  setBlogCategory(categoryChangeEvent.target.value);
+}
+
+console.log(blogCategory);
+
+
   return (
     // Grid structure for blogs
     <div className='flex flex-row'>
@@ -22,14 +34,12 @@ const Blogs = () => {
         {/* Options div */}
         <div className={optionsDivStyle}>
               {/* 1. Category dropdown */}
-              <select className={categorySortingsStyle}>
+              <select className={categorySortingsStyle} name='category' onChange={handleCategoryChange}>
                 <option value='all_categories'>All Categories</option>
                 <option value='technology'>Technology</option>
                 <option value='food'>Food</option>
                 <option value='tourism'>Tourism</option>
               </select>
-
-              
 
                 {/* Sorting dropdown button */}
                 <select className={categorySortingsStyle}>
@@ -40,6 +50,11 @@ const Blogs = () => {
                   <option value='sort_least_read_time'>Least reading time</option>
                   <option value='sort_most_read_time'>Most reading time</option>
                 </select>
+
+                {/* Button to apply filters */}
+                <button className={categorySortingsStyle} onClick={() => {console.log()}}>
+                  Apply
+                </button>
           </div>
 
       {/* Blog cards div */}
@@ -110,7 +125,8 @@ const optionsDivStyle = `flex flex-row
                          top-0 left-[20%] 
                          p-3 
                          w-[80%] 
-                         justify-between`
+                         justify-start
+                         gap-x-10`
 
 const blogCardsDivStyle = `grid grid-cols-1 
                            md:grid-cols-2 lg:grid-cols-3 
