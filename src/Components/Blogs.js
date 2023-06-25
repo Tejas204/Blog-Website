@@ -67,7 +67,7 @@ console.log(blogCategory)
                   <div className='border-2 border-gray-200 shadow-lg rounded-md'>
                     {/* Title image of the blog */}
                     <div className='w-full h-full'>
-                      <img src={blogCard.blogTitleImage} className='rounded-t-md h-40 md:h-44 lg:h-48 object-fill w-full'></img>
+                      <img src={blogCard.blogTitleImage} className={cardImageStyling}></img>
                     </div>
                     
   
@@ -90,7 +90,7 @@ console.log(blogCategory)
   
                       {/* View button */}
                       <div className='flex justify-center pt-2'>
-                        <button className='p-2 md:p-3 bg-[#fccf47] text-[#1a1a1d] font-semibold w-[25%] rounded-md hover:ring-2 hover:ring-offset-2 hover:ring-[#fccf47] duration-150 ease-in-out'>
+                        <button className={buttonStyling}>
                           View
                         </button>
                       </div>
@@ -107,7 +107,7 @@ console.log(blogCategory)
                   <div className='border-2 border-gray-200 shadow-lg rounded-md'>
                     {/* Title image of the blog */}
                     <div className='w-full h-full'>
-                      <img src={blogCard.blogTitleImage} className='rounded-t-md h-40 md:h-44 lg:h-48 object-fill w-full'></img>
+                      <img src={blogCard.blogTitleImage} className={cardImageStyling}></img>
                     </div>
                     
   
@@ -130,7 +130,7 @@ console.log(blogCategory)
   
                       {/* View button */}
                       <div className='flex justify-center pt-2'>
-                        <button className='p-2 md:p-3 bg-[#fccf47] text-[#1a1a1d] font-semibold w-[25%] rounded-md hover:ring-2 hover:ring-offset-2 hover:ring-[#fccf47] duration-150 ease-in-out'>
+                        <button className={buttonStyling}>
                           View
                         </button>
                       </div>
@@ -151,7 +151,7 @@ console.log(blogCategory)
 
 export default Blogs
 
-const categorySortingsStyle = `p-1 
+let categorySortingsStyle = `p-1 
                               md:p-2 
                               bg-[#ffffff] 
                               text-[#1a1a1d]
@@ -161,7 +161,7 @@ const categorySortingsStyle = `p-1
                               rounded-lg 
                               ease-in-out duration-200 shadow-md`;
 
-const optionsDivStyle = `flex flex-row 
+let optionsDivStyle = `flex flex-row 
                          absolute 
                          top-0 left-[20%] 
                          p-3 
@@ -169,9 +169,25 @@ const optionsDivStyle = `flex flex-row
                          justify-start
                          gap-x-10`
 
-const blogCardsDivStyle = `grid grid-cols-1 
+let blogCardsDivStyle = `grid grid-cols-1 
                            md:grid-cols-2 lg:grid-cols-3 
                            w-[80%] 
                            relative 
                            left-[20%] 
                            mt-10`
+
+let buttonStyling = `p-2 
+                 md:p-3 
+                 bg-[#fccf47] 
+                 text-[#1a1a1d] 
+                 font-semibold 
+                 w-[25%] 
+                 rounded-md 
+                 hover:ring-2 hover:ring-offset-2 hover:ring-[#fccf47] 
+                 duration-150 ease-in-out`
+
+let cardImageStyling = `rounded-t-md 
+                        h-40 
+                        md:h-44 lg:h-48 
+                        object-fill 
+                        w-full`
