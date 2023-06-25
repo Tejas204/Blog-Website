@@ -20,7 +20,7 @@ const Blogs = () => {
 
         {/* Create button, category dropdown, sorting dropdown */}
         {/* Options div */}
-        <div className='flex flex-row absolute top-0 left-[20%] p-3 w-[80%] justify-between'>
+        <div className={optionsDivStyle}>
               {/* 1. Category dropdown */}
               <select className={categorySortingsStyle}>
                 <option value='all_categories'>All Categories</option>
@@ -42,14 +42,14 @@ const Blogs = () => {
                 </select>
           </div>
 
-
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[80%] relative left-[20%] mt-10'>
+      {/* Blog cards div */}
+      <div className={blogCardsDivStyle}>
         {/* Blog Cards */}
         {blogsCards.map((blogCard, index) => {
           return(
             // ************** Card Begins **************** //
             <div className='col-span-1 p-4 md:p-7 lg:p-8' key={index}>
-                <div className='border-2 shadow-lg rounded-md'>
+                <div className='border-2 border-gray-200 shadow-lg rounded-md'>
                   {/* Title image of the blog */}
                   <div className='w-full h-full'>
                     <img src={blogCard.blogTitleImage} className='rounded-t-md h-40 md:h-44 lg:h-48 object-fill w-full'></img>
@@ -97,10 +97,24 @@ export default Blogs
 
 const categorySortingsStyle = `p-1 
                               md:p-2 
-                              bg-[#1a1a1d] 
-                              text-[#ffffff] 
-                              text-xs sm:text-sm md:text-md lg:text-lg 
-                              font-normal 
+                              bg-[#ffffff] 
+                              text-[#1a1a1d]
+                              border-2 border-[#1a1a1d] 
+                              text-xs sm:text-sm md:text-md 
+                              font-semibold 
                               rounded-lg 
-                              hover:ring-2 hover:ring-offset-2 hover:ring-[#1a1a1d] 
                               ease-in-out duration-200 shadow-md`;
+
+const optionsDivStyle = `flex flex-row 
+                         absolute 
+                         top-0 left-[20%] 
+                         p-3 
+                         w-[80%] 
+                         justify-between`
+
+const blogCardsDivStyle = `grid grid-cols-1 
+                           md:grid-cols-2 lg:grid-cols-3 
+                           w-[80%] 
+                           relative 
+                           left-[20%] 
+                           mt-10`
