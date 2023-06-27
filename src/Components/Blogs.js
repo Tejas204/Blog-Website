@@ -151,15 +151,16 @@ console.log(blogCategory)
 
 export default Blogs
 
-let categorySortingsStyle = `p-1 
-                              md:p-2 
-                              bg-[#ffffff] 
-                              text-[#1a1a1d]
-                              border-2 border-[#1a1a1d] 
-                              text-xs sm:text-sm md:text-md 
-                              font-semibold 
-                              rounded-lg 
-                              ease-in-out duration-200 shadow-md`;
+let categorySortingsStyle = `
+                            sm:p-2
+                            md:p-2 
+                            bg-[#ffffff] 
+                            text-[#1a1a1d]
+                            border-2 border-[#1a1a1d] 
+                            text-xs sm:text-sm md:text-md 
+                            font-semibold 
+                            rounded-lg 
+                            ease-in-out duration-200 shadow-md`;
 
 let optionsDivStyle = `flex flex-row 
                          absolute 
@@ -167,7 +168,7 @@ let optionsDivStyle = `flex flex-row
                          p-3 
                          w-[80%] 
                          justify-start
-                         gap-x-10`
+                         gap-x-4 md:gap-x-6 lg:gap-x-10`
 
 let blogCardsDivStyle = `grid grid-cols-1 
                            md:grid-cols-2 lg:grid-cols-3 
