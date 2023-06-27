@@ -5,7 +5,13 @@ import Cyber from './Images/Cyber.jpg';
 import Blockchain from './Images/Blockchain.jpg';
 import Etherium from './Images/etherium.jpeg';
 import MERN from './Images/mern.jpg';
-import UIUX from './Images/UIUX.jpg';
+import UIUX from './Images/UIUX.jpg'
+import foodDiet from './Images/food-diet.jpg';
+import goVegan from './Images/go-vegan.jpg';
+import indianFood from './Images/indian-food.jpg';
+import travel from './Images/travel.jpg';
+import eifellTower from './Images/eifell-tower.jpg';
+import ganges from './Images/ganges.jpg';
 
 
 export let navbarItems = [
@@ -100,27 +106,69 @@ export let blogsCards = [
         blogTitle: 'VR: Creating an alternate reality',
         blogDescription: 'Virtual reality (VR) is a simulated experience that employs pose tracking and 3D near-eye displays to give the user an immersive feel of a virtual world.',
         blogTitleImage: VR,
-        category: 'food'
+        category: 'technology'
     },
     {
         dateOfPublishing: '19-Mar-2022 | 4 min read',
         blogTitle: 'VR: Creating an alternate reality',
         blogDescription: 'Virtual reality (VR) is a simulated experience that employs pose tracking and 3D near-eye displays to give the user an immersive feel of a virtual world.',
         blogTitleImage: Etherium,
-        category: 'food'
+        category: 'technology'
     },
     {
         dateOfPublishing: '31-Dec-2020 | 8 min read',
         blogTitle: 'VR: Creating an alternate reality',
         blogDescription: 'Virtual reality (VR) is a simulated experience that employs pose tracking and 3D near-eye displays to give the user an immersive feel of a virtual world.',
         blogTitleImage: UIUX,
-        category: 'tourism'
+        category: 'technology'
     },
     {
         dateOfPublishing: '18-Aug-2021 | 5 min read',
         blogTitle: 'VR: Creating an alternate reality',
         blogDescription: 'Virtual reality (VR) is a simulated experience that employs pose tracking and 3D near-eye displays to give the user an immersive feel of a virtual world.',
         blogTitleImage: MERN,
+        category: 'technology'
+    },
+    {
+        dateOfPublishing: '22-Sep-2022 | 5 min read',
+        blogTitle: 'VR: Creating an alternate reality',
+        blogDescription: 'Virtual reality (VR) is a simulated experience that employs pose tracking and 3D near-eye displays to give the user an immersive feel of a virtual world.',
+        blogTitleImage: foodDiet,
+        category: 'food'
+    },
+    {
+        dateOfPublishing: '01-Nov-2022 | 8 min read',
+        blogTitle: 'VR: Creating an alternate reality',
+        blogDescription: 'Virtual reality (VR) is a simulated experience that employs pose tracking and 3D near-eye displays to give the user an immersive feel of a virtual world.',
+        blogTitleImage: indianFood,
+        category: 'food'
+    },
+    {
+        dateOfPublishing: '15-Apr-2022 | 6 min read',
+        blogTitle: 'VR: Creating an alternate reality',
+        blogDescription: 'Virtual reality (VR) is a simulated experience that employs pose tracking and 3D near-eye displays to give the user an immersive feel of a virtual world.',
+        blogTitleImage: goVegan,
+        category: 'food'
+    },
+    {
+        dateOfPublishing: '15-Apr-2022 | 6 min read',
+        blogTitle: 'VR: Creating an alternate reality',
+        blogDescription: 'Virtual reality (VR) is a simulated experience that employs pose tracking and 3D near-eye displays to give the user an immersive feel of a virtual world.',
+        blogTitleImage: ganges,
+        category: 'tourism'
+    },
+    {
+        dateOfPublishing: '15-Apr-2022 | 6 min read',
+        blogTitle: 'VR: Creating an alternate reality',
+        blogDescription: 'Virtual reality (VR) is a simulated experience that employs pose tracking and 3D near-eye displays to give the user an immersive feel of a virtual world.',
+        blogTitleImage: eifellTower,
+        category: 'tourism'
+    },
+    {
+        dateOfPublishing: '15-Apr-2022 | 6 min read',
+        blogTitle: 'VR: Creating an alternate reality',
+        blogDescription: 'Virtual reality (VR) is a simulated experience that employs pose tracking and 3D near-eye displays to give the user an immersive feel of a virtual world.',
+        blogTitleImage: travel,
         category: 'tourism'
     },
 ]
