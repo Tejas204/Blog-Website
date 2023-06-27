@@ -20,7 +20,7 @@ Tasks:-
   a. set up card design --done
   b. place blog cards in grid -- done
   c. create button for a blog
-  d. add categories
+  d. add categories -- done
   e. add sorting functionalities
 
 
