@@ -1,22 +1,27 @@
 import React, { useState } from 'react';
 import VerticalNavbar from './VerticalNavbar'
-import mobile from '../Images/blog-website-mobile.png'
-import VR from '../Images/VR.jpg';
-import Cyber from '../Images/Cyber.jpg';
-import Blockchain from '../Images/Blockchain.jpg';
 import { blogsCards } from '../data';
 
 const Blogs = () => {
 
-// This hook will set the category of the blogs to display
+// Hook: sets the category of the blogs to display
 const [blogCategory, setBlogCategory] = useState('all_categories');
 
-// This function handles the changing of category values
+// Hook: sets the sorting applicable to the cards
+const [sortingValue, setSortingValue] = useState('sort_a_z');
+
+// Function: handles the changing of category values
 const handleCategoryChange = (categoryChangeEvent) => {
   setBlogCategory(categoryChangeEvent.target.value);
 }
 
-console.log(blogCategory)
+// Function: handles the changing of sort value
+const handleSortingChange = (sortingChangeEvent) => {
+  setSortingValue(sortingChangeEvent.target.value);
+}
+
+// Test
+console.log(sortingValue);
 
   return (
     // Grid structure for blogs
@@ -41,7 +46,7 @@ console.log(blogCategory)
               </select>
 
                 {/* Sorting dropdown button */}
-                <select className={categorySortingsStyle}>
+                <select className={categorySortingsStyle} name='sorting' onChange={handleSortingChange}>
                   <option value='sort_a_z'>Sort by A-Z</option>
                   <option value='sort_z_a'>Sort by Z-A</option>
                   <option value='sort_date_latest'>Sort by Date (latest)</option>
@@ -100,7 +105,7 @@ console.log(blogCategory)
                 // ************** Card Ends **************** //
             )
           }
-          else if(blogCategory != "all_categories" && blogCategory == blogCard.category){
+          else if(blogCategory == blogCard.category){
             return(
               // ************** Card Begins **************** //
               <div className='col-span-1 p-4 md:p-7 lg:p-8' key={index}>
