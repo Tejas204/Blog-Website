@@ -64,7 +64,7 @@ console.log(sortingValue);
       {/* Blog cards div */}
       <div className={blogCardsDivStyle}>
         {/* Blog Cards */}
-        {blogsCards.map((blogCard, index) => {
+        {blogsCards.sort((a,b) => a.blogTitle > b.blogTitle ? 1 : -1).map((blogCard, index) => {
           if(blogCategory == "all_categories"){
             return(
               // ************** Card Begins **************** //

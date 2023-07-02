@@ -138,7 +138,7 @@ export let blogsCards = [
     },
     {
         dateOfPublishing: '01-Nov-2022 | 8 min read',
-        blogTitle: 'VR: Creating an alternate reality',
+        blogTitle: 'Indian Food: Treat of a lifetime',
         blogDescription: 'Virtual reality (VR) is a simulated experience that employs pose tracking and 3D near-eye displays to give the user an immersive feel of a virtual world.',
         blogTitleImage: indianFood,
         category: 'food'
