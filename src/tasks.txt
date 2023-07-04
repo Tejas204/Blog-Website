@@ -21,7 +21,7 @@ Tasks:-
   b. place blog cards in grid -- done
   c. create button for a blog
   d. add categories -- done
-  e. add sorting functionalities -- in progress
+  e. add sorting functionalities -- in progress, partially completed
 
 
 5. Set up authentication
