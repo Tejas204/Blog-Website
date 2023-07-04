@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import VerticalNavbar from './VerticalNavbar'
 import { blogsCards } from '../data';
 
@@ -10,6 +10,10 @@ const [blogCategory, setBlogCategory] = useState('all_categories');
 // Hook: sets the sorting applicable to the cards
 const [sortingValue, setSortingValue] = useState('sort_a_z');
 
+// Hook: handles weight of weight_1 and weight_2
+const [weight_1, setWeight_1] = useState(1);
+const [weight_2, setWeight_2] = useState(-1);
+
 // Function: handles the changing of category values
 const handleCategoryChange = (categoryChangeEvent) => {
   setBlogCategory(categoryChangeEvent.target.value);
@@ -19,6 +23,25 @@ const handleCategoryChange = (categoryChangeEvent) => {
 const handleSortingChange = (sortingChangeEvent) => {
   setSortingValue(sortingChangeEvent.target.value);
 }
+
+// Hook: handles sorting from A-Z and Z-A
+useEffect(() => {
+  if(sortingValue === 'sort_a_z'){
+    console.log("In A-z");
+    setWeight_1(1);
+    setWeight_2(-1);
+  }
+  else if(sortingValue === 'sort_z_a'){
+    console.log("In z-a");
+    setWeight_1(-1);
+    setWeight_2(1);
+  }
+}, [sortingValue]);
+
+// Variable declaration
+// Variables: store BlogsCards object
+let blogsCardsObject_1 = blogsCards;
+let blogsCardsObject_2 = blogsCards;
 
 // Test
 console.log(sortingValue);
@@ -64,7 +87,7 @@ console.log(sortingValue);
       {/* Blog cards div */}
       <div className={blogCardsDivStyle}>
         {/* Blog Cards */}
-        {blogsCards.sort((a,b) => a.blogTitle > b.blogTitle ? -1 : 1).map((blogCard, index) => {
+        {blogsCards.sort((blogsCardsObject_1,blogsCardsObject_2) => blogsCardsObject_1.blogTitle > blogsCardsObject_2.blogTitle ? weight_1 : weight_2).map((blogCard, index) => {
           if(blogCategory == "all_categories"){
             return(
               // ************** Card Begins **************** //
