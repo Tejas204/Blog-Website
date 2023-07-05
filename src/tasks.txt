@@ -22,6 +22,7 @@ Tasks:-
   c. create button for a blog
   d. add categories -- done
   e. add sorting functionalities -- in progress, partially completed, sorting by date pending
+  f. implement remove filter functionality.
 
 
 5. Set up authentication
