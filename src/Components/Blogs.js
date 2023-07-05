@@ -14,6 +14,9 @@ const [sortingValue, setSortingValue] = useState('sort_a_z');
 const [weight_1, setWeight_1] = useState(1);
 const [weight_2, setWeight_2] = useState(-1);
 
+// Hook: Sets the value on the basis of which to sort
+const [basisOfSort, setBasisOfSort] = useState('');
+
 // Function: handles the changing of category values
 const handleCategoryChange = (categoryChangeEvent) => {
   setBlogCategory(categoryChangeEvent.target.value);
@@ -26,25 +29,37 @@ const handleSortingChange = (sortingChangeEvent) => {
 
 // Hook: handles sorting from A-Z and Z-A
 useEffect(() => {
-  if(sortingValue === 'sort_a_z'){
-    console.log("In A-z");
+  if(sortingValue === 'sort_a_z' || sortingValue === 'sort_date_latest' || sortingValue === 'sort_least_read_time'){
+    // Set weights
     setWeight_1(1);
-    setWeight_2(-1);
+    setWeight_2(-1);   
   }
-  else if(sortingValue === 'sort_z_a'){
-    console.log("In z-a");
+  else if(sortingValue === 'sort_z_a' || sortingValue === 'sort_date_oldest' || sortingValue === 'sort_most_read_time'){
+    // Set weights
     setWeight_1(-1);
     setWeight_2(1);
   }
+
+  // Set basisOfSortValue
+  if(sortingValue === 'sort_a_z' || sortingValue === 'sort_z_a'){
+    setBasisOfSort('blogTitle')
+  }
+  else if(sortingValue === 'sort_date_latest' || sortingValue === 'sort_date_oldest'){
+    setBasisOfSort('dateOfPublishing')
+  }
+  else{
+    setBasisOfSort('readTime');
+  }
+ 
 }, [sortingValue]);
 
 // Variable declaration
 // Variables: store BlogsCards object
-let blogsCardsObject_1 = blogsCards;
+let var1 = 'blogTitle';
 let blogsCardsObject_2 = blogsCards;
 
 // Test
-console.log(sortingValue);
+console.log("var1"+var1);
 
   return (
     // Grid structure for blogs
@@ -87,7 +102,9 @@ console.log(sortingValue);
       {/* Blog cards div */}
       <div className={blogCardsDivStyle}>
         {/* Blog Cards */}
-        {blogsCards.sort((blogsCardsObject_1,blogsCardsObject_2) => blogsCardsObject_1.blogTitle > blogsCardsObject_2.blogTitle ? weight_1 : weight_2).map((blogCard, index) => {
+        {blogsCards.sort((blogsCardsObject_1,blogsCardsObject_2) => 
+        {return blogsCardsObject_1[basisOfSort] > blogsCardsObject_2[basisOfSort] ? weight_1 : weight_2})
+        .map((blogCard, index) => {
           if(blogCategory == "all_categories"){
             return(
               // ************** Card Begins **************** //
@@ -105,7 +122,7 @@ console.log(sortingValue);
   
                       {/* Date */}
                       <p className=' text-sm text-slate-500'>
-                        {blogCard.dateOfPublishing}
+                        {blogCard.dateOfPublishing} | {blogCard.readTime} min
                       </p>
   
                       {/* Blog title and help text */}
@@ -145,7 +162,7 @@ console.log(sortingValue);
   
                       {/* Date */}
                       <p className=' text-sm text-slate-500'>
-                        {blogCard.dateOfPublishing}
+                        {blogCard.dateOfPublishing} | {blogCard.readTime} min
                       </p>
   
                       {/* Blog title and help text */}
