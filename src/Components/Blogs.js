@@ -55,7 +55,7 @@ useEffect(() => {
 
 
 // Test
-console.log("var1"+var1);
+console.log("var1");
 
   return (
     // Grid structure for blogs
