@@ -53,10 +53,6 @@ useEffect(() => {
  
 }, [sortingValue]);
 
-// Variable declaration
-// Variables: store BlogsCards object
-let var1 = 'blogTitle';
-let blogsCardsObject_2 = blogsCards;
 
 // Test
 console.log("var1"+var1);
