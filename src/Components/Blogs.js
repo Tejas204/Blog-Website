@@ -17,16 +17,6 @@ const [weight_2, setWeight_2] = useState(-1);
 // Hook: Sets the value on the basis of which to sort
 const [basisOfSort, setBasisOfSort] = useState('');
 
-// Function: handles the changing of category values
-const handleCategoryChange = (categoryChangeEvent) => {
-  setBlogCategory(categoryChangeEvent.target.value);
-}
-
-// Function: handles the changing of sort value
-const handleSortingChange = (sortingChangeEvent) => {
-  setSortingValue(sortingChangeEvent.target.value);
-}
-
 // Hook: handles sorting from A-Z and Z-A
 useEffect(() => {
   if(sortingValue === 'sort_a_z' || sortingValue === 'sort_date_latest' || sortingValue === 'sort_least_read_time'){
@@ -52,6 +42,23 @@ useEffect(() => {
   }
  
 }, [sortingValue]);
+
+// Function: handles the changing of category values
+const handleCategoryChange = (categoryChangeEvent) => {
+  setBlogCategory(categoryChangeEvent.target.value);
+}
+
+// Function: handles the changing of sort value
+const handleSortingChange = (sortingChangeEvent) => {
+  setSortingValue(sortingChangeEvent.target.value);
+}
+
+
+// Function: handles the remove filter functionality
+const handleRemoveFilters = () => {
+  setBlogCategory('all_categories');
+  setSortingValue('sort_a_z');
+}
 
 
 // Test
@@ -90,7 +97,7 @@ console.log("var1");
                 </select>
 
                 {/* Button to apply filters */}
-                <button className={categorySortingsStyle} onClick={() => {console.log()}}>
+                <button className={categorySortingsStyle} onClick={handleRemoveFilters}>
                   Remove filters
                 </button>
           </div>
