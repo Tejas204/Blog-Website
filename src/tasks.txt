@@ -22,7 +22,7 @@ Tasks:-
   c. create button for a blog
   d. add categories -- done
   e. add sorting functionalities -- in progress, partially completed, sorting by date pending
-  f. implement remove filter functionality.
+  f. implement remove filter functionality. -- partially completed, need to find a way to reset display values for two dropdowns
 
 
 5. Set up authentication
