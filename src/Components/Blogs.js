@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import VerticalNavbar from './VerticalNavbar'
-import { blogsCards } from '../data';
+import { blogsCards, blogCategoryOptions, sortingOptions } from '../data';
 
 const Blogs = () => {
 
@@ -80,20 +80,16 @@ console.log("var1");
         <div className={optionsDivStyle}>
               {/* 1. Category dropdown */}
               <select className={categorySortingsStyle} name='category' onChange={handleCategoryChange}>
-                <option value='all_categories'>All Categories</option>
-                <option value='technology'>Technology</option>
-                <option value='food'>Food</option>
-                <option value='tourism'>Tourism</option>
+                  {blogCategoryOptions.map((blogCategoryOption, index) => {
+                    return(<option value={blogCategoryOption.value}>{blogCategoryOption.label}</option>)
+                  })}
               </select>
 
                 {/* Sorting dropdown button */}
                 <select className={categorySortingsStyle} name='sorting' onChange={handleSortingChange}>
-                  <option value='sort_a_z'>Sort by A-Z</option>
-                  <option value='sort_z_a'>Sort by Z-A</option>
-                  <option value='sort_date_latest'>Sort by Date (latest)</option>
-                  <option value='sort_date_oldest'>Sort by Date (old)</option>
-                  <option value='sort_least_read_time'>Least reading time</option>
-                  <option value='sort_most_read_time'>Most reading time</option>
+                  {sortingOptions.map((sortingOption, index) => {
+                    return(<option value={sortingOption.value}>{sortingOption.label}</option>)
+                  })}
                 </select>
 
                 {/* Button to apply filters */}

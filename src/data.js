@@ -184,3 +184,49 @@ export let blogsCards = [
         category: 'tourism'
     },
 ]
+
+export let blogCategoryOptions = [
+    {
+        value: 'all_categories',
+        label: 'All Categories'
+    },
+    {
+        value: 'technology',
+        label: 'Technology'
+    },
+    {
+        value: 'food',
+        label: 'Food'
+    },
+    {
+        value: 'tourism',
+        label: 'Tourism'
+    }
+]
+
+export let sortingOptions = [
+    {
+        value: 'sort_a_z',
+        label: 'Sort by A-Z'
+    },
+    {
+        value: 'sort_z_a',
+        label: 'Sort by Z-A'
+    },
+    {
+        value: 'sort_date_latest',
+        label: 'Latest Blogs'
+    },
+    {
+        value: 'sort_date_oldest',
+        label: 'Oldest blogs'
+    },
+    {
+        value: 'sort_least_read_time',
+        label: 'Least reading time'
+    },
+    {
+        value: 'sort_most_read_time',
+        label: 'Most reading time'
+    }
+]
