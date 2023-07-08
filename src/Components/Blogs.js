@@ -4,6 +4,9 @@ import { blogsCards, blogCategoryOptions, sortingOptions } from '../data';
 
 const Blogs = () => {
 
+// Hook: handles sorting from A-Z and Z-A
+
+
 // Hook: sets the category of the blogs to display
 const [blogCategory, setBlogCategory] = useState('all_categories');
 
@@ -17,7 +20,7 @@ const [weight_2, setWeight_2] = useState(-1);
 // Hook: Sets the value on the basis of which to sort
 const [basisOfSort, setBasisOfSort] = useState('');
 
-// Hook: handles sorting from A-Z and Z-A
+
 useEffect(() => {
   if(sortingValue === 'sort_a_z' || sortingValue === 'sort_date_latest' || sortingValue === 'sort_least_read_time'){
     // Set weights
@@ -40,6 +43,7 @@ useEffect(() => {
   else{
     setBasisOfSort('readTime');
   }
+
  
 }, [sortingValue]);
 
@@ -53,16 +57,12 @@ const handleSortingChange = (sortingChangeEvent) => {
   setSortingValue(sortingChangeEvent.target.value);
 }
 
-
 // Function: handles the remove filter functionality
 const handleRemoveFilters = () => {
   setBlogCategory('all_categories');
   setSortingValue('sort_a_z');
 }
 
-
-// Test
-console.log("var1");
 
   return (
     // Grid structure for blogs
@@ -107,8 +107,8 @@ console.log("var1");
           if(blogCategory == "all_categories"){
             return(
               // ************** Card Begins **************** //
-              <div className='col-span-1 p-4 md:p-7 lg:p-8' key={index}>
-                  <div className='border-2 border-gray-200 shadow-lg rounded-md'>
+              <div className={`col-span-1 p-4 md:p-7 lg:p-8 hover:scale-105 ease-in-out duration-300`} key={index}>
+                  <div className='border-2 border-gray-200 shadow-lg rounded-md hover:shadow-slate-400'>
                     {/* Title image of the blog */}
                     <div className='w-full h-full'>
                       <img src={blogCard.blogTitleImage} className={cardImageStyling}></img>
@@ -215,7 +215,7 @@ let optionsDivStyle = `flex flex-row
                          gap-x-4 md:gap-x-6 lg:gap-x-10`
 
 let blogCardsDivStyle = `grid grid-cols-1 
-                           md:grid-cols-2 lg:grid-cols-3 
+                           md:grid-cols-2 lg:grid-cols-3
                            w-[80%] 
                            relative 
                            left-[20%] 
