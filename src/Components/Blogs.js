@@ -58,7 +58,7 @@ const handleSortingChange = (sortingChangeEvent) => {
 }
 
 // Function: handles the remove filter functionality
-const handleRemoveFilters = (handleRemoveFiltersEvent) => {
+const handleRemoveFilters = () => {
   setBlogCategory('all_categories');
   setSortingValue('sort_a_z');
 }
@@ -107,8 +107,8 @@ const handleRemoveFilters = (handleRemoveFiltersEvent) => {
           if(blogCategory == "all_categories"){
             return(
               // ************** Card Begins **************** //
-              <div className={`col-span-1 p-4 md:p-7 lg:p-8 hover:scale-105 ease-in-out duration-300`} key={index}>
-                  <div className='border-2 border-gray-200 shadow-lg rounded-md hover:shadow-slate-400'>
+              <div className={`col-span-1 p-4 md:p-7 lg:p-8`} key={index}>
+                  <div className='border-2 border-gray-200 shadow-lg rounded-md hover:shadow-slate-400 ease-in-out duration-300'>
                     {/* Title image of the blog */}
                     <div className='w-full h-full'>
                       <img src={blogCard.blogTitleImage} className={cardImageStyling}></img>
@@ -148,7 +148,7 @@ const handleRemoveFilters = (handleRemoveFiltersEvent) => {
             return(
               // ************** Card Begins **************** //
               <div className='col-span-1 p-4 md:p-7 lg:p-8' key={index}>
-                  <div className='border-2 border-gray-200 shadow-lg rounded-md'>
+                  <div className='border-2 border-gray-200 shadow-lg rounded-md hover:shadow-slate-400 ease-in-out duration-300'>
                     {/* Title image of the blog */}
                     <div className='w-full h-full'>
                       <img src={blogCard.blogTitleImage} className={cardImageStyling}></img>

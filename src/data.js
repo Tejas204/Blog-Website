@@ -54,7 +54,7 @@ export let verticalNavbarItems = [
         icon: <MdBook/>
     },
     {
-        name: 'Remove filter',
+        name: 'Subscriptions',
         goTo: '/subscriptions',
         icon: <MdFilterList/>
     },
