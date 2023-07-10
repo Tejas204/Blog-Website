@@ -58,7 +58,7 @@ const handleSortingChange = (sortingChangeEvent) => {
 }
 
 // Function: handles the remove filter functionality
-const handleRemoveFilters = () => {
+const handleRemoveFilters = (handleRemoveFiltersEvent) => {
   setBlogCategory('all_categories');
   setSortingValue('sort_a_z');
 }
@@ -79,14 +79,14 @@ const handleRemoveFilters = () => {
         {/* Options div */}
         <div className={optionsDivStyle}>
               {/* 1. Category dropdown */}
-              <select className={categorySortingsStyle} name='category' onChange={handleCategoryChange}>
+              <select className={categorySortingsStyle} name='category' onChange={handleCategoryChange} value={blogCategory}>
                   {blogCategoryOptions.map((blogCategoryOption, index) => {
                     return(<option value={blogCategoryOption.value}>{blogCategoryOption.label}</option>)
                   })}
               </select>
 
                 {/* Sorting dropdown button */}
-                <select className={categorySortingsStyle} name='sorting' onChange={handleSortingChange}>
+                <select className={categorySortingsStyle} name='sorting' onChange={handleSortingChange} value={sortingValue}>
                   {sortingOptions.map((sortingOption, index) => {
                     return(<option value={sortingOption.value}>{sortingOption.label}</option>)
                   })}
