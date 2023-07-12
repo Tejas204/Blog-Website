@@ -87,7 +87,7 @@ export let footerIcons = [
 
 export let blogsCards = [
     {
-        dateOfPublishing: '20-Apr-2023',
+        dateOfPublishing: new Date("2018-04-25").toLocaleDateString(),
         readTime: '5',
         blogTitle: 'Cybersecurity: The great wall of online protection',
         blogDescription: 'Cybersecurity is the practice of protecting systems, networks, and programs from digital attacks. These cyberattacks are usually aimed at accessing, changing, or destroying sensitive information.',
@@ -95,7 +95,7 @@ export let blogsCards = [
         category: 'technology'
     },
     {
-        dateOfPublishing: '31-Mar-2022',
+        dateOfPublishing: new Date("2022-03-18").toLocaleDateString(),
         readTime: '7',
         blogTitle: 'Blockchain: The ledger needed for the modern world',
         blogDescription: 'Blockchain is a shared, immutable ledger that facilitates the process of recording transactions and tracking assets in a business network.',
@@ -104,7 +104,7 @@ export let blogsCards = [
         
     },
     {
-        dateOfPublishing: '01-Jun-2023',
+        dateOfPublishing: new Date("2023-06-17").toLocaleDateString(),
         readTime: '6',
         blogTitle: 'VR: Creating an alternate reality',
         blogDescription: 'Virtual reality (VR) is a simulated experience that employs pose tracking and 3D near-eye displays to give the user an immersive feel of a virtual world.',
@@ -112,7 +112,7 @@ export let blogsCards = [
         category: 'technology'
     },
     {
-        dateOfPublishing: '19-Mar-2022',
+        dateOfPublishing: new Date("2022-03-19").toLocaleDateString(),
         readTime: '4',
         blogTitle: 'VR: Creating an alternate reality',
         blogDescription: 'Virtual reality (VR) is a simulated experience that employs pose tracking and 3D near-eye displays to give the user an immersive feel of a virtual world.',
@@ -120,7 +120,7 @@ export let blogsCards = [
         category: 'technology'
     },
     {
-        dateOfPublishing: '31-Dec-2020',
+        dateOfPublishing: new Date("2020-12-31").toLocaleDateString(),
         readTime: '8',
         blogTitle: 'VR: Creating an alternate reality',
         blogDescription: 'Virtual reality (VR) is a simulated experience that employs pose tracking and 3D near-eye displays to give the user an immersive feel of a virtual world.',
@@ -128,7 +128,7 @@ export let blogsCards = [
         category: 'technology'
     },
     {
-        dateOfPublishing: '18-Aug-2021',
+        dateOfPublishing: new Date("2021-08-18").toLocaleDateString(),
         readTime: '5',
         blogTitle: 'VR: Creating an alternate reality',
         blogDescription: 'Virtual reality (VR) is a simulated experience that employs pose tracking and 3D near-eye displays to give the user an immersive feel of a virtual world.',
@@ -136,7 +136,7 @@ export let blogsCards = [
         category: 'technology'
     },
     {
-        dateOfPublishing: '22-Sep-2022',
+        dateOfPublishing: new Date("2022-09-22").toLocaleDateString(),
         readTime: '5',
         blogTitle: 'VR: Creating an alternate reality',
         blogDescription: 'Virtual reality (VR) is a simulated experience that employs pose tracking and 3D near-eye displays to give the user an immersive feel of a virtual world.',
@@ -144,7 +144,7 @@ export let blogsCards = [
         category: 'food'
     },
     {
-        dateOfPublishing: '01-Nov-2022',
+        dateOfPublishing: new Date("2022-11-01").toLocaleDateString(),
         readTime: '8',
         blogTitle: 'Indian Food: Treat of a lifetime',
         blogDescription: 'Virtual reality (VR) is a simulated experience that employs pose tracking and 3D near-eye displays to give the user an immersive feel of a virtual world.',
@@ -152,7 +152,7 @@ export let blogsCards = [
         category: 'food'
     },
     {
-        dateOfPublishing: '15-Apr-2022',
+        dateOfPublishing: new Date("2022-04-22").toLocaleDateString(),
         readTime: '6',
         blogTitle: 'VR: Creating an alternate reality',
         blogDescription: 'Virtual reality (VR) is a simulated experience that employs pose tracking and 3D near-eye displays to give the user an immersive feel of a virtual world.',
@@ -160,7 +160,7 @@ export let blogsCards = [
         category: 'food'
     },
     {
-        dateOfPublishing: '15-Apr-2022',
+        dateOfPublishing: new Date("2022-04-15").toLocaleDateString(),
         readTime: '6',
         blogTitle: 'VR: Creating an alternate reality',
         blogDescription: 'Virtual reality (VR) is a simulated experience that employs pose tracking and 3D near-eye displays to give the user an immersive feel of a virtual world.',
@@ -168,7 +168,7 @@ export let blogsCards = [
         category: 'tourism'
     },
     {
-        dateOfPublishing: '15-Apr-2022',
+        dateOfPublishing: new Date("2022-04-15").toLocaleDateString(),
         readTime: '6',
         blogTitle: 'VR: Creating an alternate reality',
         blogDescription: 'Virtual reality (VR) is a simulated experience that employs pose tracking and 3D near-eye displays to give the user an immersive feel of a virtual world.',
@@ -176,7 +176,7 @@ export let blogsCards = [
         category: 'tourism'
     },
     {
-        dateOfPublishing: '15-Apr-2022',
+        dateOfPublishing: new Date("2023-02-28").toLocaleDateString(),
         readTime: '6',
         blogTitle: 'VR: Creating an alternate reality',
         blogDescription: 'Virtual reality (VR) is a simulated experience that employs pose tracking and 3D near-eye displays to give the user an immersive feel of a virtual world.',
