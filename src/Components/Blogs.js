@@ -18,16 +18,16 @@ const [weight_1, setWeight_1] = useState(1);
 const [weight_2, setWeight_2] = useState(-1);
 
 // Hook: Sets the value on the basis of which to sort
-const [basisOfSort, setBasisOfSort] = useState('');
+const [basisOfSort, setBasisOfSort] = useState('blogTitle');
 
 
 useEffect(() => {
-  if(sortingValue === 'sort_a_z' || sortingValue === 'sort_date_latest' || sortingValue === 'sort_least_read_time'){
+  if(sortingValue === 'sort_a_z' || sortingValue === 'sort_date_oldest' || sortingValue === 'sort_least_read_time'){
     // Set weights
     setWeight_1(1);
     setWeight_2(-1);   
   }
-  else if(sortingValue === 'sort_z_a' || sortingValue === 'sort_date_oldest' || sortingValue === 'sort_most_read_time'){
+  else if(sortingValue === 'sort_z_a' || sortingValue === 'sort_date_latest' || sortingValue === 'sort_most_read_time'){
     // Set weights
     setWeight_1(-1);
     setWeight_2(1);
@@ -102,9 +102,10 @@ const handleRemoveFilters = () => {
       <div className={blogCardsDivStyle}>
         {/* Blog Cards */}
         {blogsCards.sort((blogsCardsObject_1,blogsCardsObject_2) => 
-        {return blogsCardsObject_1[basisOfSort] > blogsCardsObject_2[basisOfSort] ? weight_1 : weight_2})
+        // Note: .split().reverse() is only for date. It does not have an impact on sorting by blog title or reading time as they simply don't have a '/' character
+        {return blogsCardsObject_1[basisOfSort].split('/').reverse() > blogsCardsObject_2[basisOfSort].split('/').reverse() ? weight_1 : weight_2})
         .map((blogCard, index) => {
-          if(blogCategory == "all_categories"){
+          if(blogCategory == "all_categories"){ 
             return(
               // ************** Card Begins **************** //
               <div className={`col-span-1 p-4 md:p-7 lg:p-8`} key={index}>
