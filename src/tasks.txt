@@ -15,14 +15,9 @@ Functionalities:
 
 Tasks:-
 
+6. Create a page for creating blogs
 
-4. Implement create a blog, sorting functionality.
-  a. set up card design --done
-  b. place blog cards in grid -- done
-  c. create button for a blog
-  d. add categories -- done
-  e. add sorting functionalities -- in progress, partially completed, sorting by date pending
-  f. implement remove filter functionality. -- done
+7. When a blog is created, it should be added to overall list
 
 
 5. Set up authentication
@@ -34,10 +29,21 @@ Tasks:-
 Completed
 
 1. Create login and register pages -- done
+
 2. Create routes -- done
+
 3. Create blog pages -- done
   a. add vertial navbar -- done
   b. add icons when small -- done
+
+4. Implement create a blog, sorting functionality.
+  a. set up card design --done
+  b. place blog cards in grid -- done
+  c. create button for a blog -- done
+  d. add categories -- done
+  e. add sorting functionalities -- done
+  f. implement remove filter functionality. -- done
+
 
 ** ------------------------------------------------------------------- **
 
