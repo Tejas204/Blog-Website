@@ -66,7 +66,7 @@ const handleRemoveFilters = () => {
 
   return (
     // Grid structure for blogs
-    <div className='flex flex-row'>
+  <div className='flex flex-row'>
 
     {/* Vertical navbar column */}
     <div className='grid grid-cols-1 w-[20%] fixed left-0'>
@@ -75,31 +75,31 @@ const handleRemoveFilters = () => {
         </div>
     </div>
 
-        {/* Create button, category dropdown, sorting dropdown */}
-        {/* Options div */}
-        <div className={optionsDivStyle}>
-              {/* 1. Category dropdown */}
-              <select className={categorySortingsStyle} name='category' onChange={handleCategoryChange} value={blogCategory}>
-                  {blogCategoryOptions.map((blogCategoryOption, index) => {
-                    return(<option value={blogCategoryOption.value}>{blogCategoryOption.label}</option>)
-                  })}
-              </select>
+    {/* Create button, category dropdown, sorting dropdown */}
+    {/* Options div */}
+    <div className={optionsDivStyle}>
+        {/* 1. Category dropdown */}
+        <select className={categorySortingsStyle} name='category' onChange={handleCategoryChange} value={blogCategory}>
+            {blogCategoryOptions.map((blogCategoryOption, index) => {
+              return(<option value={blogCategoryOption.value}>{blogCategoryOption.label}</option>)
+            })}
+        </select>
 
-                {/* Sorting dropdown button */}
-                <select className={categorySortingsStyle} name='sorting' onChange={handleSortingChange} value={sortingValue}>
-                  {sortingOptions.map((sortingOption, index) => {
-                    return(<option value={sortingOption.value}>{sortingOption.label}</option>)
-                  })}
-                </select>
+        {/* Sorting dropdown button */}
+        <select className={categorySortingsStyle} name='sorting' onChange={handleSortingChange} value={sortingValue}>
+          {sortingOptions.map((sortingOption, index) => {
+            return(<option value={sortingOption.value}>{sortingOption.label}</option>)
+          })}
+        </select>
 
-                {/* Button to apply filters */}
-                <button className={categorySortingsStyle} onClick={handleRemoveFilters}>
-                  Remove filters
-                </button>
-          </div>
+        {/* Button to apply filters */}
+        <button className={categorySortingsStyle} onClick={handleRemoveFilters}>
+          Remove filters
+        </button>
+    </div>
 
-      {/* Blog cards div */}
-      <div className={blogCardsDivStyle}>
+    {/* Blog cards div */}
+    <div className={blogCardsDivStyle}>
         {/* Blog Cards */}
         {blogsCards.sort((blogsCardsObject_1,blogsCardsObject_2) => 
         // Note: .split().reverse() is only for date. It does not have an impact on sorting by blog title or reading time as they simply don't have a '/' character
@@ -141,7 +141,7 @@ const handleRemoveFilters = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+              </div>
                 // ************** Card Ends **************** //
             )
           }
@@ -181,14 +181,14 @@ const handleRemoveFilters = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+              </div>
                 // ************** Card Ends **************** //
             )
           }
         })}
         
         </div>
-    </div>
+  </div>
 
     
   )

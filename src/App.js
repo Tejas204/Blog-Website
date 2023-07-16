@@ -27,9 +27,11 @@ function App() {
         <Route path='forgot-password' element={<ForgotPassword/>}></Route>
 
         {/* Route for blogs page */}
-        <Route path='blogs' element={<Blogs/>}></Route>
+        <Route path='blogs' element={<Blogs/>}>
+          
+        </Route>
 
-        {/* Route for blogs page */}
+        {/* Route for create blog page */}
         <Route path='create-blog' element={<CreateBlog/>}></Route>
 
         {/* No match route */}
