@@ -69,7 +69,7 @@ const handleRemoveFilters = () => {
   <div className='flex flex-row'>
 
     {/* Vertical navbar column */}
-    <div className='grid grid-cols-1 w-[20%] fixed left-0'>
+    <div className='grid grid-cols-1 w-[20%] fixed left-0 z-50'>
         <div className='col-span-1'>
             <VerticalNavbar/>
         </div>
@@ -118,7 +118,7 @@ const handleRemoveFilters = () => {
   
                     {/* This div contains the date, title text, view button */}
                     {/* Parent div */}
-                    <div className='flex flex-col gap-y-2 md:gap-y-3 p-2'>
+                    <div className='flex flex-col gap-y-2 md:gap-y-3 p-5'>
   
                       {/* Date */}
                       <p className=' text-sm text-slate-500'>
@@ -135,7 +135,7 @@ const handleRemoveFilters = () => {
   
                       {/* View button */}
                       <div className='flex justify-center pt-2'>
-                        <button className={buttonStyling}>
+                        <button className={`${buttonStyling}`}>
                           View
                         </button>
                       </div>
