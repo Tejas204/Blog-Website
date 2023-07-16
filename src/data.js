@@ -50,7 +50,7 @@ export let verticalNavbarItems = [
     },
     {
         name: 'Create blog',
-        goTo: '/blogs',
+        goTo: '/create-blog',
         icon: <MdBook/>
     },
     {

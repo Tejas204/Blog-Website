@@ -7,6 +7,7 @@ import LoginPage from './Components/LoginPage';
 import RegisterationPage from './Components/RegisterationPage';
 import ForgotPassword from './Components/ForgotPassword';
 import Blogs from './Components/Blogs';
+import CreateBlog from './Components/CreateBlog';
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
 
         {/* Route for blogs page */}
         <Route path='blogs' element={<Blogs/>}></Route>
+
+        {/* Route for blogs page */}
+        <Route path='create-blog' element={<CreateBlog/>}></Route>
 
         {/* No match route */}
         <Route path='*' element={<NoMatch/>}></Route>
