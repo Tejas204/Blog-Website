@@ -118,7 +118,7 @@ const handleRemoveFilters = () => {
   
                     {/* This div contains the date, title text, view button */}
                     {/* Parent div */}
-                    <div className='flex flex-col gap-y-2 md:gap-y-3 p-5'>
+                    <div className='flex flex-col gap-y-2 md:gap-y-3 p-3'>
   
                       {/* Date */}
                       <p className=' text-sm text-slate-500'>
