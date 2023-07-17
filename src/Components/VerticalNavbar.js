@@ -18,13 +18,16 @@ const VerticalNavbar = () => {
                     {verticalNavbarItems.map((navItem, index)=>{
                         return(
                             // This div contains the navigation icons and links
-                            <div className='flex flex-row items-center justify-center md:items-start md:justify-start w-[100%] p-3 hover:border-l-[#fccf47] hover:border-l-8 hover:bg-[#fccf47] hover:bg-opacity-25 duration-150 ease-in-out'>
+                            <div className='group flex flex-row items-center justify-center md:items-start md:justify-start w-[100%] p-3 hover:border-l-[#fccf47] hover:border-l-8 hover:bg-[#fccf47] hover:bg-opacity-25 duration-150 ease-in-out'>
 
                                 {/* Navigation icons are visible only on small screens */}
                                 <div>
                                     <NavLink className='w-[100%] text-2xl text-[#ffffff] hover:cursor-pointerm md:hidden' key={index} to={navItem.goTo}>
                                         {navItem.icon}
                                     </NavLink>
+                                </div>
+                                <div className='absolute left-full md:hidden bg-black text-white p-3 whitespace-nowrap rounded-e hidden group-hover:block md:group-hover:hidden min-w-[20px]'>
+                                    {navItem.name}
                                 </div>
 
                                 {/* Navigation text is visible on medium and large screens */}
