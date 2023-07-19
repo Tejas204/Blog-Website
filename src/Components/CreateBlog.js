@@ -30,8 +30,8 @@ const [selectedImage, setSelectedImage] = useState(uploadImage);
 
             {/* Form begins */}
             {/* Image div */}
-            <div className='p-2 sm:w-[80%] md:w-[70%] lg:w-[60%] h-[80%]'>
-                <img alt='no image' src={selectedImage} className='w-[100%] h-[100%] border-[#1a1a1d] border-dashed rounded-xl border-2'></img>
+            <div className={imageDivStyling}>
+                <img alt='no image' src={selectedImage} className={uploadImageStyling}></img>
             </div>
         </div>
         
@@ -51,5 +51,9 @@ let columnTwo = `grid grid-cols-1 w-[80%] relative left-[20%] flex flex-col item
 let titleText = `txt-sm md:text-md lg:text-2xl
                  font-semibold
                  p-2`
+
+let imageDivStyling = `p-2 sm:w-[80%] md:w-[70%] lg:w-[60%] h-[80%]`
+
+let uploadImageStyling = `w-[100%] h-[100%] border-[#1a1a1d] border-dashed rounded-xl border-2`
 
 export default CreateBlog
