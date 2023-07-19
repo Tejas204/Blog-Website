@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import VerticalNavbar from './VerticalNavbar'
 import { Outlet } from 'react-router-dom';
+import uploadImage from '../Images/uploadImage.png'
 
 const CreateBlog = () => {
+
+// Hook: sets the uploaded image to the div
+const [selectedImage, setSelectedImage] = useState(uploadImage);
   return (
     // Parent div: contains 2 columns
     // Column 1: vertical Navbar
@@ -23,6 +27,12 @@ const CreateBlog = () => {
             <div>
                 <p className={titleText}>Can't wait to see your blog, get going...</p>
             </div>
+
+            {/* Form begins */}
+            {/* Image div */}
+            <div className='p-2 sm:w-[80%] md:w-[70%] lg:w-[60%] h-[80%]'>
+                <img alt='no image' src={selectedImage} className='w-[100%] h-[100%] border-[#1a1a1d] border-dashed rounded-xl border-2'></img>
+            </div>
         </div>
         
     </div>
@@ -36,7 +46,7 @@ let columnOne = `grid grid-cols-1 w-[20%] fixed left-0`
 
 let verticalNavbarStyle = `col-span-1`
 
-let columnTwo = `grid grid-cols-1 w-[80%] relative left-[20%]`
+let columnTwo = `grid grid-cols-1 w-[80%] relative left-[20%] flex flex-col items-center text-center justify-items-center -z-50`
 
 let titleText = `txt-sm md:text-md lg:text-2xl
                  font-semibold
