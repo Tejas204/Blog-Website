@@ -35,7 +35,8 @@ const [selectedImage, setSelectedImage] = useState(false);
             </div>
 
             {/* Upload button div */}
-            <div>
+            <div className='flex flex-row gap-x-3 items-center justify-center'>
+                {/* Upload Image button */}
                 <form>
                 <label for='blog-image' className={buttonStyling}>Select Image</label>
                     <input type='file' name='blogImage' id='blog-image' className='hidden' onChange={
@@ -45,6 +46,11 @@ const [selectedImage, setSelectedImage] = useState(false);
                             }}>
                     </input>
                 </form>
+
+                {/* Remove Image button */}
+                <button className={buttonStyling} onClick={() => {setSelectedImage(false)}}>
+                    Remove Image
+                </button>
             </div>
 
         </div>
