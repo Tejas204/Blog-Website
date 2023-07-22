@@ -5,7 +5,7 @@ import uploadImage from '../Images/uploadImage.png'
 const CreateBlog = () => {
 
 // Hook: sets the uploaded image to the div
-const [selectedImage, setSelectedImage] = useState(uploadImage);
+const [selectedImage, setSelectedImage] = useState(false);
 
   return (
     // Parent div: contains 2 columns
@@ -31,7 +31,7 @@ const [selectedImage, setSelectedImage] = useState(uploadImage);
             {/* Form begins */}
             {/* Image div */}
             <div className={imageDivStyling}>
-                <img alt='no image' src={URL.createObjectURL(selectedImage)} className={uploadImageStyling}></img>
+                {selectedImage ? (<img alt='' src={URL.createObjectURL(selectedImage)} className={uploadImageStyling}></img>) : (<img src={uploadImage} className={uploadImageStyling} alt='no image'></img>)}
             </div>
 
             {/* Upload button div */}
