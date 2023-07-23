@@ -57,7 +57,7 @@ const [selectedImage, setSelectedImage] = useState(false);
             <div>
                 <form className='mt-8 gap-y-4 flex flex-col items-center'>
                     <input type='text' id='blogTitle' placeholder='Enter title of your blog' className='border-b-2 border-b-[#1a1a1d] bg-slate-100 p-3 outline-none focus:border-none focus:ring-2 focus:ring-[#fccf47] focus:text-[#1a1a1d] focus:bg-transparent focus:ease-in-out duration-100 focus:rounded-lg'></input>
-                    <textarea placeholder='Start blogging' rows='15' className='h-[100%] w-[400%] bg-slate-100 border-b-2 border-b-[#1a1a1d] p-3 outline-none focus:border-none focus:ring-2 focus:ring-[#fccf47] focus:text-[#1a1a1d] focus:bg-transparent focus:ease-in-out duration-200 focus:rounded-lg'></textarea>
+                    <textarea placeholder='Start blogging' rows='15' className='h-[100%] sm:w-[100%] md:w-[250%] lg:w-[350%] bg-slate-100 border-b-2 border-b-[#1a1a1d] p-3 outline-none focus:border-none focus:ring-2 focus:ring-[#fccf47] focus:text-[#1a1a1d] focus:bg-transparent focus:ease-in-out duration-200 focus:rounded-lg'></textarea>
                     <button className={buttonStyling}>Submit</button>
                 </form>
             </div>
@@ -74,11 +74,11 @@ const [selectedImage, setSelectedImage] = useState(false);
 
 let parentDiv = `flex flex-row`
 
-let columnOne = `grid grid-cols-1 w-[20%] fixed left-0`
+let columnOne = `grid grid-cols-1 w-[20%] fixed left-0 z-50`
 
 let verticalNavbarStyle = `col-span-1`
 
-let columnTwo = `grid grid-cols-1 w-[80%] relative left-[20%] flex flex-col items-center text-center justify-items-center -z-50 md:z-0`
+let columnTwo = `grid grid-cols-1 w-[80%] relative left-[20%] flex flex-col items-center text-center justify-items-center md:z-0`
 
 let titleText = `txt-sm md:text-md lg:text-2xl
                  font-semibold
