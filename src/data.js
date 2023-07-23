@@ -138,8 +138,8 @@ export let blogsCards = [
     {
         dateOfPublishing: new Date("2022-09-22").toLocaleDateString(),
         readTime: '5',
-        blogTitle: 'VR: Creating an alternate reality',
-        blogDescription: 'Virtual reality (VR) is a simulated experience that employs pose tracking and 3D near-eye displays to give the user an immersive feel of a virtual world.',
+        blogTitle: 'Eat Light, Feel Bright',
+        blogDescription: 'Salads are dishes made up of mixed ingredients, often including vegetables. They can be served chilled or at room temperature.',
         blogTitleImage: foodDiet,
         category: 'food'
     },
@@ -147,15 +147,15 @@ export let blogsCards = [
         dateOfPublishing: new Date("2022-11-01").toLocaleDateString(),
         readTime: '8',
         blogTitle: 'Indian Food: Treat of a lifetime',
-        blogDescription: 'Virtual reality (VR) is a simulated experience that employs pose tracking and 3D near-eye displays to give the user an immersive feel of a virtual world.',
+        blogDescription: 'Indian food is a diverse cuisine that varies by region and is influenced by local culture, religion, and traditions. It is known for its bold flavors and use of spices.',
         blogTitleImage: indianFood,
         category: 'food'
     },
     {
         dateOfPublishing: new Date("2022-04-22").toLocaleDateString(),
         readTime: '6',
-        blogTitle: 'VR: Creating an alternate reality',
-        blogDescription: 'Virtual reality (VR) is a simulated experience that employs pose tracking and 3D near-eye displays to give the user an immersive feel of a virtual world.',
+        blogTitle: 'Savor the Flavor of Vegan Delights',
+        blogDescription: 'Vegan food refers to a diet that excludes all animal products, including meat, dairy, eggs, and honey.',
         blogTitleImage: goVegan,
         category: 'food'
     },
