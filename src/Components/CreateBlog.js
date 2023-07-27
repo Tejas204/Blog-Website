@@ -58,7 +58,6 @@ const addNewCard = (event) => {
                     <input type='file' name='blogImage' id='blog-image' className='hidden' onChange={
                         (event) => {
                             setSelectedImage(event.target.files[0]);
-                            console.log(selectedImage);
                             }}>
                     </input>
                 </form>
@@ -72,8 +71,8 @@ const addNewCard = (event) => {
             {/* Title and body */}
             <div>
                 <form className='mt-8 gap-y-4 flex flex-col items-center' onSubmit={addNewCard}>
-                    <input type='text' id='blogTitle' placeholder='Enter title of your blog' className='border-b-2 border-b-[#1a1a1d] bg-slate-100 p-3 outline-none focus:border-none focus:ring-2 focus:ring-[#fccf47] focus:text-[#1a1a1d] focus:bg-transparent focus:ease-in-out duration-100 focus:rounded-lg'></input>
-                    <textarea placeholder='Start blogging' rows='15' className='h-[100%] sm:w-[100%] md:w-[250%] lg:w-[350%] bg-slate-100 border-b-2 border-b-[#1a1a1d] p-3 outline-none focus:border-none focus:ring-2 focus:ring-[#fccf47] focus:text-[#1a1a1d] focus:bg-transparent focus:ease-in-out duration-200 focus:rounded-lg'></textarea>
+                    <input required type='text' id='blogTitle' placeholder='Enter title of your blog' className='border-b-2 border-b-[#1a1a1d] bg-slate-100 p-3 outline-none focus:border-none focus:ring-2 focus:ring-[#fccf47] focus:text-[#1a1a1d] focus:bg-transparent focus:ease-in-out duration-100 focus:rounded-lg'></input>
+                    <textarea required placeholder='Start blogging' rows='15' className='h-[100%] sm:w-[100%] md:w-[250%] lg:w-[350%] bg-slate-100 border-b-2 border-b-[#1a1a1d] p-3 outline-none focus:border-none focus:ring-2 focus:ring-[#fccf47] focus:text-[#1a1a1d] focus:bg-transparent focus:ease-in-out duration-200 focus:rounded-lg'></textarea>
                     <button className={buttonStyling}>Submit</button>
                 </form>
             </div>
