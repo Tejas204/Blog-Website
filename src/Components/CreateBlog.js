@@ -3,25 +3,20 @@ import VerticalNavbar from './VerticalNavbar'
 import uploadImage from '../Images/uploadImage.png'
 import {blogsCards} from '../data'
 
-const CreateBlog = () => {
+const CreateBlog = ({getAllBlogs}) => {
 
 // Hook: sets the uploaded image to the div
 const [selectedImage, setSelectedImage] = useState(false);
 
 // Hook: sets the title of the blog
-const [newBlogTitle, setNewBlogTitle] = useState('');
+const [newBlog, createNewBlog] = useState(blogsCards);
 
-// Hook: sets the title of the blog
-const [newBlogbody, setNewBlogBody] = useState('');
+// Hook: when newBlog gets updates, the useEffect hook will run
+useEffect(() => {
+    getAllBlogs(newBlog);
+}, [newBlog])
 
-// Function: Adds form data to the blogsCards
-const addNewCard = (event) => {
-    setNewBlogTitle(event.target[0].value);
-    setNewBlogBody(event.target[1].value);
 
-    console.log(newBlogTitle);
-    console.log(newBlogbody);
-}
 
   return (
     // Parent div: contains 2 columns
@@ -70,9 +65,18 @@ const addNewCard = (event) => {
 
             {/* Title and body */}
             <div>
-                <form className='mt-8 gap-y-4 flex flex-col items-center' onSubmit={addNewCard}>
+                <form className='mt-8 gap-y-4 flex flex-col items-center' onSubmit={() => {
+                    createNewBlog(blogsCards.push({
+                        dateOfPublishing: new Date().toLocaleDateString(),
+                        readTime: '14',
+                        blogTitle: document.getElementById('blogTitle'),
+                        blogDescription: document.getElementById('blogContent'),
+                        blogTitleImage: selectedImage,
+                        category: 'technology'
+                    }))
+                }}>
                     <input required type='text' id='blogTitle' placeholder='Enter title of your blog' className='border-b-2 border-b-[#1a1a1d] bg-slate-100 p-3 outline-none focus:border-none focus:ring-2 focus:ring-[#fccf47] focus:text-[#1a1a1d] focus:bg-transparent focus:ease-in-out duration-100 focus:rounded-lg'></input>
-                    <textarea required placeholder='Start blogging' rows='15' className='h-[100%] sm:w-[100%] md:w-[250%] lg:w-[350%] bg-slate-100 border-b-2 border-b-[#1a1a1d] p-3 outline-none focus:border-none focus:ring-2 focus:ring-[#fccf47] focus:text-[#1a1a1d] focus:bg-transparent focus:ease-in-out duration-200 focus:rounded-lg'></textarea>
+                    <textarea required id='blogContent' placeholder='Start blogging' rows='15' className='h-[100%] sm:w-[100%] md:w-[250%] lg:w-[350%] bg-slate-100 border-b-2 border-b-[#1a1a1d] p-3 outline-none focus:border-none focus:ring-2 focus:ring-[#fccf47] focus:text-[#1a1a1d] focus:bg-transparent focus:ease-in-out duration-200 focus:rounded-lg'></textarea>
                     <button className={buttonStyling}>Submit</button>
                 </form>
             </div>

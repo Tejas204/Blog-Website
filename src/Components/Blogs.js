@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import VerticalNavbar from './VerticalNavbar'
 import { blogsCards, blogCategoryOptions, sortingOptions } from '../data';
 
-const Blogs = () => {
+const Blogs = ({allBlogs}) => {
 
 // Hook: handles sorting from A-Z and Z-A
 
@@ -101,7 +101,7 @@ const handleRemoveFilters = () => {
     {/* Blog cards div */}
     <div className={blogCardsDivStyle}>
         {/* Blog Cards */}
-        {blogsCards.sort((blogsCardsObject_1,blogsCardsObject_2) => 
+        {allBlogs.sort((blogsCardsObject_1,blogsCardsObject_2) => 
         // Note: .split().reverse() is only for date. It does not have an impact on sorting by blog title or reading time as they simply don't have a '/' character
         {return blogsCardsObject_1[basisOfSort].split('/').reverse() > blogsCardsObject_2[basisOfSort].split('/').reverse() ? weight_1 : weight_2})
         .map((blogCard, index) => {

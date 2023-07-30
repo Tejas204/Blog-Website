@@ -8,8 +8,13 @@ import RegisterationPage from './Components/RegisterationPage';
 import ForgotPassword from './Components/ForgotPassword';
 import Blogs from './Components/Blogs';
 import CreateBlog from './Components/CreateBlog';
+import { useState } from 'react';
+import { blogsCards } from './data';
 
 function App() {
+  // Hook: Receives all blogs from create blogs page and passes to Blogs page
+  const [allBlogs, getAllBlogs] = useState(blogsCards);
+
   return (
     <div>
       {/* Route structure */}
@@ -27,12 +32,12 @@ function App() {
         <Route path='forgot-password' element={<ForgotPassword/>}></Route>
 
         {/* Route for blogs page */}
-        <Route path='blogs' element={<Blogs/>}>
+        <Route path='blogs' element={<Blogs allBlogs={allBlogs}/>}>
           
         </Route>
 
         {/* Route for create blog page */}
-        <Route path='create-blog' element={<CreateBlog/>}></Route>
+        <Route path='create-blog' element={<CreateBlog getAllBlogs={getAllBlogs}/>}></Route>
 
         {/* No match route */}
         <Route path='*' element={<NoMatch/>}></Route>
