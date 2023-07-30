@@ -12,8 +12,7 @@ import { useState } from 'react';
 import { blogsCards } from './data';
 
 function App() {
-  // Hook: Receives all blogs from create blogs page and passes to Blogs page
-  const [allBlogs, getAllBlogs] = useState(blogsCards);
+
 
   return (
     <div>
@@ -32,12 +31,12 @@ function App() {
         <Route path='forgot-password' element={<ForgotPassword/>}></Route>
 
         {/* Route for blogs page */}
-        <Route path='blogs' element={<Blogs allBlogs={allBlogs}/>}>
+        <Route path='blogs' element={<Blogs/>}>
           
         </Route>
 
         {/* Route for create blog page */}
-        <Route path='create-blog' element={<CreateBlog getAllBlogs={getAllBlogs}/>}></Route>
+        <Route path='create-blog' element={<CreateBlog/>}></Route>
 
         {/* No match route */}
         <Route path='*' element={<NoMatch/>}></Route>
