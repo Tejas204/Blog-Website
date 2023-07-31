@@ -8,6 +8,14 @@ const CreateBlog = () => {
 // Hook: sets the uploaded image to the div
 const [selectedImage, setSelectedImage] = useState(false);
 
+// Hook: sets the category of the new blog
+const [newBlogCategory, setNewBlogCategory] = useState('all_categories');
+
+// Function: Handles the change in value of dropdown
+const newBlogCategoryChange = (newCategory) => {
+    setNewBlogCategory(newCategory.target.value);
+}
+
 
   return (
     // Parent div: contains 2 columns
@@ -63,10 +71,10 @@ const [selectedImage, setSelectedImage] = useState(false);
                     <input required type='text' id='blogTitle' placeholder='Enter title of your blog' className={formStyling}></input>
 
                     {/* Inputs for appriximate reading time and category */}
-                    <input type='number' min='1' placeholder='Approx. read time' className={formStyling}></input>
+                    <input required type='number' min='1' placeholder='Approx. read time' className={formStyling}></input>
 
                     {/* Blog category */}
-                    <select className={formStyling}>
+                    <select className={formStyling} id='new-category' onChange={newBlogCategoryChange} value={newBlogCategory}>
                         {blogCategoryOptions.map((blogCategory, index) => {
                             return(<option value={blogCategory.value}>{blogCategory.label}</option>)
                         })}
