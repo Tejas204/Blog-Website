@@ -71,7 +71,7 @@ const newBlogCategoryChange = (newCategory) => {
                     <input required type='text' id='blogTitle' placeholder='Enter title of your blog' className={formStyling}></input>
 
                     {/* Inputs for appriximate reading time and category */}
-                    <input required type='number' min='1' placeholder='Approx. read time' className={formStyling}></input>
+                    <input required id='read-time' type='number' min='1' placeholder='Approx. read time' className={formStyling}></input>
 
                     {/* Blog category */}
                     <select className={formStyling} id='new-category' onChange={newBlogCategoryChange} value={newBlogCategory}>
@@ -85,11 +85,11 @@ const newBlogCategoryChange = (newCategory) => {
                     <button type='button' className={buttonStyling} onClick={() => {
                         blogsCards.push({
                             dateOfPublishing: new Date().toLocaleDateString(),
-                            readTime: '14',
+                            readTime: document.getElementById('read-time').value,
                             blogTitle: document.getElementById('blogTitle').value,
                             blogDescription: document.getElementById('blogContent').value,
                             blogTitleImage: selectedImage,
-                            category: 'technology'
+                            category: newBlogCategory
                     })
                 }}>Submit</button>
                 </form>
