@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import VerticalNavbar from './VerticalNavbar'
 import uploadImage from '../Images/uploadImage.png'
-import {blogsCards} from '../data'
+import {blogCategoryOptions, blogsCards} from '../data'
 
 const CreateBlog = () => {
 
@@ -54,11 +54,26 @@ const [selectedImage, setSelectedImage] = useState(false);
                 </button>
             </div>
 
-            {/* Title and body */}
+            
+
+            {/* Form to submit title, approx read time, category and body */}
             <div>
                 <form className='mt-8 gap-y-4 flex flex-col items-center'>
-                    <input required type='text' id='blogTitle' placeholder='Enter title of your blog' className='border-b-2 border-b-[#1a1a1d] bg-slate-100 p-3 outline-none focus:border-none focus:ring-2 focus:ring-[#fccf47] focus:text-[#1a1a1d] focus:bg-transparent focus:ease-in-out duration-100 focus:rounded-lg'></input>
-                    <textarea required id='blogContent' placeholder='Start blogging' rows='15' className='h-[100%] sm:w-[100%] md:w-[250%] lg:w-[350%] bg-slate-100 border-b-2 border-b-[#1a1a1d] p-3 outline-none focus:border-none focus:ring-2 focus:ring-[#fccf47] focus:text-[#1a1a1d] focus:bg-transparent focus:ease-in-out duration-200 focus:rounded-lg'></textarea>
+                    {/* Blog title */}
+                    <input required type='text' id='blogTitle' placeholder='Enter title of your blog' className={formStyling}></input>
+
+                    {/* Inputs for appriximate reading time and category */}
+                    <input type='number' min='1' placeholder='Approx. read time' className={formStyling}></input>
+
+                    {/* Blog category */}
+                    <select className={formStyling}>
+                        {blogCategoryOptions.map((blogCategory, index) => {
+                            return(<option value={blogCategory.value}>{blogCategory.label}</option>)
+                        })}
+                    </select>
+
+                    {/* Blog content */}
+                    <textarea required id='blogContent' placeholder='Start blogging' rows='15' className={blogContentStyling}></textarea>
                     <button type='button' className={buttonStyling} onClick={() => {
                         blogsCards.push({
                             dateOfPublishing: new Date().toLocaleDateString(),
@@ -106,5 +121,18 @@ let buttonStyling = `p-2
                  rounded-md
                  hover:ring-2 hover:ring-offset-2 hover:ring-[#fccf47]
                  duration-150 ease-in-out`
+
+let formStyling = `border-b-2 border-b-[#1a1a1d] 
+                   bg-slate-100 
+                   p-3 
+                   outline-none 
+                   focus:border-none focus:ring-2 focus:ring-[#fccf47] focus:text-[#1a1a1d] focus:bg-transparent focus:ease-in-out 
+                   duration-100 focus:rounded-lg`
+
+let blogContentStyling = `h-[120%] sm:w-[150%] md:w-[250%] lg:w-[350%] 
+                          bg-slate-100 border-b-2 border-b-[#1a1a1d] 
+                          p-3 outline-none 
+                          focus:border-none focus:ring-2 focus:ring-[#fccf47] focus:text-[#1a1a1d] focus:bg-transparent focus:ease-in-out 
+                          duration-200 focus:rounded-lg`
 
 export default CreateBlog
