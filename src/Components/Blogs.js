@@ -4,6 +4,7 @@ import { blogsCards, blogCategoryOptions, sortingOptions } from '../data';
 
 const Blogs = () => {
 
+console.log(blogsCards[0])
 
 // Hook: sets the category of the blogs to display
 const [blogCategory, setBlogCategory] = useState('all_categories');

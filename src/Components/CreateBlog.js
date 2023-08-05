@@ -8,6 +8,8 @@ const CreateBlog = () => {
 // Hook: sets the uploaded image to the div
 const [selectedImage, setSelectedImage] = useState(false);
 
+console.log("New Image:"+selectedImage);
+
 // Hook: sets the category of the new blog
 const [newBlogCategory, setNewBlogCategory] = useState('all_categories');
 
@@ -88,7 +90,7 @@ const newBlogCategoryChange = (newCategory) => {
                             readTime: document.getElementById('read-time').value,
                             blogTitle: document.getElementById('blogTitle').value,
                             blogDescription: document.getElementById('blogContent').value,
-                            blogTitleImage: selectedImage,
+                            blogTitleImage: URL.createObjectURL(selectedImage),
                             category: newBlogCategory
                     })
                 }}>Submit</button>
