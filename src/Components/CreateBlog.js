@@ -8,8 +8,6 @@ const CreateBlog = () => {
 // Hook: sets the uploaded image to the div
 const [selectedImage, setSelectedImage] = useState(false);
 
-console.log("New Image:"+selectedImage);
-
 // Hook: sets the category of the new blog
 const [newBlogCategory, setNewBlogCategory] = useState('all_categories');
 

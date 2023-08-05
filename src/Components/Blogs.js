@@ -4,8 +4,6 @@ import { blogsCards, blogCategoryOptions, sortingOptions } from '../data';
 
 const Blogs = () => {
 
-console.log(blogsCards[0])
-
 // Hook: sets the category of the blogs to display
 const [blogCategory, setBlogCategory] = useState('all_categories');
 
@@ -80,14 +78,14 @@ const handleRemoveFilters = () => {
         {/* 1. Category dropdown */}
         <select className={categorySortingsStyle} name='category' onChange={handleCategoryChange} value={blogCategory}>
             {blogCategoryOptions.map((blogCategoryOption, index) => {
-              return(<option value={blogCategoryOption.value}>{blogCategoryOption.label}</option>)
+              return(<option value={blogCategoryOption.value} key={index}>{blogCategoryOption.label}</option>)
             })}
         </select>
 
         {/* Sorting dropdown button */}
         <select className={categorySortingsStyle} name='sorting' onChange={handleSortingChange} value={sortingValue}>
           {sortingOptions.map((sortingOption, index) => {
-            return(<option value={sortingOption.value}>{sortingOption.label}</option>)
+            return(<option value={sortingOption.value} key={index}>{sortingOption.label}</option>)
           })}
         </select>
 

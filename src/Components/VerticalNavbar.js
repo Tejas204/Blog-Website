@@ -18,7 +18,7 @@ const VerticalNavbar = () => {
                     {verticalNavbarItems.map((navItem, index)=>{
                         return(
                             // This div contains the navigation icons and links
-                            <div className='group flex flex-row items-center justify-center md:items-start md:justify-start w-[100%] p-3 hover:border-l-[#fccf47] hover:border-l-8 hover:bg-[#fccf47] hover:bg-opacity-25 duration-150 ease-in-out'>
+                            <div className='group flex flex-row items-center justify-center md:items-start md:justify-start w-[100%] p-3 hover:border-l-[#fccf47] hover:border-l-8 hover:bg-[#fccf47] hover:bg-opacity-25 duration-150 ease-in-out' key={index}>
 
                                 {/* Navigation icons are visible only on small screens */}
                                 <div>
@@ -46,7 +46,7 @@ const VerticalNavbar = () => {
             <ul className='flex flex-col gap-y-6 md:flex-row md:space-x-7'>
                 {footerIcons.map((footerIcon, index) => {
                     return(
-                        <li className='text-[#FCCF47] text-2xl md:text-3xl lg:text-5xl hover:cursor-pointer hover:scale-125 duration-100 ease-in-out'>{footerIcon.icon}</li>
+                        <li className='text-[#FCCF47] text-2xl md:text-3xl lg:text-5xl hover:cursor-pointer hover:scale-125 duration-100 ease-in-out' key={index}>{footerIcon.icon}</li>
                     )
                 })}
             </ul>

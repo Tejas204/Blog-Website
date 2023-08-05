@@ -18,7 +18,7 @@ const Footer = () => {
             <ul className='space-x-4 flex flex-row'>
                 {footerIcons.map((footerIcon, index) => {
                     return(
-                        <li className='text-[#FCCF47] text-3xl hover:cursor-pointer hover:scale-150 duration-100 ease-in-out'>{footerIcon.icon}</li>
+                        <li className='text-[#FCCF47] text-3xl hover:cursor-pointer hover:scale-150 duration-100 ease-in-out' key={index}>{footerIcon.icon}</li>
                     )
                 })}
             </ul>
@@ -30,7 +30,7 @@ const Footer = () => {
             <ul className='space-y-3 flex flex-col'>
                 {navbarItems.map((navbarItem, index) => {
                     return (
-                        <NavLink to={navbarItem.goTo} className='text-[#f8f8f8] hover:text-[#FCCF47] hover:cursor-pointer duration-100'>{navbarItem.name}</NavLink>
+                        <NavLink to={navbarItem.goTo} className='text-[#f8f8f8] hover:text-[#FCCF47] hover:cursor-pointer duration-100' key={index}>{navbarItem.name}</NavLink>
                     )
                 })}
             </ul>
