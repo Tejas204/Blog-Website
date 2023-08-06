@@ -114,16 +114,16 @@ export let blogsCards = [
     {
         dateOfPublishing: new Date("2022-03-19").toLocaleDateString(),
         readTime: '4',
-        blogTitle: 'VR: Creating an alternate reality',
-        blogDescription: 'Virtual reality (VR) is a simulated experience that employs pose tracking and 3D near-eye displays to give the user an immersive feel of a virtual world.',
+        blogTitle: 'Ethereum: A Decentralized Revolution',
+        blogDescription: 'Ethereum is a decentralized platform that runs smart contracts: applications that run exactly as programmed without any possibility of downtime, censorship or fraud.',
         blogTitleImage: Etherium,
         category: 'technology'
     },
     {
         dateOfPublishing: new Date("2020-12-31").toLocaleDateString(),
         readTime: '8',
-        blogTitle: 'VR: Creating an alternate reality',
-        blogDescription: 'Virtual reality (VR) is a simulated experience that employs pose tracking and 3D near-eye displays to give the user an immersive feel of a virtual world.',
+        blogTitle: 'UI/UX: Crafting Digital Experiences',
+        blogDescription: 'UI/UX design is all about crafting digital experiences that are intuitive, engaging, and user-friendly. It involves designing the user interface (UI) and the user experience (UX) of a product or service.',
         blogTitleImage: UIUX,
         category: 'technology'
     },

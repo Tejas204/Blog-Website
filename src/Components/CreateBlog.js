@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import VerticalNavbar from './VerticalNavbar'
 import uploadImage from '../Images/uploadImage.png'
 import {blogCategoryOptions, blogsCards} from '../data'
+import { NavLink } from 'react-router-dom';
 
 const CreateBlog = () => {
 
@@ -82,7 +83,8 @@ const newBlogCategoryChange = (newCategory) => {
 
                     {/* Blog content */}
                     <textarea required id='blogContent' placeholder='Start blogging' rows='15' className={blogContentStyling}></textarea>
-                    <button type='button' className={buttonStyling} onClick={() => {
+                    <NavLink className={buttonStyling} onClick={() => {
+                        // Push the new card to the blogCards array of objects
                         blogsCards.push({
                             dateOfPublishing: new Date().toLocaleDateString(),
                             readTime: document.getElementById('read-time').value,
@@ -90,8 +92,13 @@ const newBlogCategoryChange = (newCategory) => {
                             blogDescription: document.getElementById('blogContent').value,
                             blogTitleImage: URL.createObjectURL(selectedImage),
                             category: newBlogCategory
-                    })
-                }}>Submit</button>
+                    });
+                        // Clear all the values from the fields
+                        document.getElementById('read-time').value = '';
+                        document.getElementById('blogTitle').value = ''; 
+                        document.getElementById('blogContent').value = '';
+                        setSelectedImage(false);  
+                }} to='/blogs'>Submit</NavLink>
                 </form>
             </div>
             
