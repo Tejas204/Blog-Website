@@ -15,10 +15,14 @@ Functionalities:
 
 Tasks:-
 
-6. Create a page for creating blogs - partially complete
-  a. Create a small text editor
+6. Create a page for creating blogs - complete
 
-7. When a blog is created, it should be added to overall list
+7. When a blog is created, it should be added to overall list - complete
+
+8. when the view button is clicked, the blog should open
+  a. need dynamic routing
+  b. create a layout for the blog view page
+  c. limit the title and subtitle on the blog card.
 
 
 5. Set up authentication
