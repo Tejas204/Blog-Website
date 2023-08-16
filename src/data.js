@@ -130,7 +130,7 @@ export let blogsCards = [
     {
         dateOfPublishing: new Date("2021-08-18").toLocaleDateString(),
         readTime: '5',
-        blogTitle: 'VR: Creating an alternate reality',
+        blogTitle: 'MERN: A complete front end and backend package for web development using MongoDB, Reacr, Express and Node',
         blogDescription: 'Virtual reality (VR) is a simulated experience that employs pose tracking and 3D near-eye displays to give the user an immersive feel of a virtual world.',
         blogTitleImage: MERN,
         category: 'technology'
