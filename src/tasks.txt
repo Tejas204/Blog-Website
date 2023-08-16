@@ -22,7 +22,7 @@ Tasks:-
 8. when the view button is clicked, the blog should open
   a. need dynamic routing
   b. create a layout for the blog view page
-  c. limit the title and subtitle on the blog card.
+  c. limit the title and subtitle on the blog card. - complete
 
 
 5. Set up authentication
