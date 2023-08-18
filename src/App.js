@@ -10,6 +10,7 @@ import Blogs from './Components/Blogs';
 import CreateBlog from './Components/CreateBlog';
 import { useState } from 'react';
 import { blogsCards } from './data';
+import ViewBlog from './Components/ViewBlog';
 
 function App() {
 
@@ -37,6 +38,9 @@ function App() {
 
         {/* Route for create blog page */}
         <Route path='create-blog' element={<CreateBlog/>}></Route>
+
+        {/* Route for view blog page */}
+        <Route path='view-blog' element={<ViewBlog/>}></Route>
 
         {/* No match route */}
         <Route path='*' element={<NoMatch/>}></Route>
