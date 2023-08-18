@@ -1,5 +1,6 @@
 import React from 'react'
 import VerticalNavbar from './VerticalNavbar'
+import { blogsCards } from '../data'
 
 const ViewBlog = () => {
   return (
@@ -19,10 +20,30 @@ const ViewBlog = () => {
         <div className={columnTwo}>
 
             {/* Subdivision 1 */}
-            <div className='w-[100%] col-span-4 md:col-span-3 border-r-2 h-screen'>Hello this is div 2</div>
+            <div className='w-[100%] col-span-4 md:col-span-3 h-screen'>Hello this is div 2</div>
 
             {/* Subdivision 2 */}
-            <div className='w-[100%] md:col-span-1 hidden md:block h-screen'>Hello this is div 3</div>
+            <div className='space-y-4 w-[20%] md:col-span-1 hidden md:block h-screen bg-slate-200 text-left p-4 fixed right-0'>
+                {/* Category */}
+                <p className='border-b-2 border-[#1a1a1d] text-[#1a1a1d] text-xl font-semibold'>Category</p>
+                <p className='p-3 rounded-lg w-fit bg-slate-100 border-2 border-slate-400 text-slate-600 font-semibold'>Technology</p>
+
+                {/* Reading time */}
+                <p className='border-b-2 border-[#1a1a1d] text-[#1a1a1d] text-xl font-semibold'>Read time</p>
+                <p className='p-3 rounded-lg w-fit bg-slate-100 border-2 border-slate-400 text-slate-600 font-semibold'>4 minutes</p>
+
+                {/* Related blogs*/}
+                <p className='border-b-2 border-[#1a1a1d] text-[#1a1a1d] text-xl font-semibold'>Related blogs</p>
+                <div className='space-y-2 overflow-y-auto h-3/5 scroll-smooth'>
+                {blogsCards.map((blogCard, index) => {
+                    if(blogCard.category == 'technology'){
+                        return(
+                            <p className='p-1 rounded-lg w-fit bg-slate-100 border-2 border-slate-400 text-slate-600 font-semibold'>{blogCard.blogTitle}</p>
+                        )
+                    }
+                })}
+                </div>
+            </div>
         </div>
      </div>
   )
