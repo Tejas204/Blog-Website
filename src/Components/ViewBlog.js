@@ -1,6 +1,7 @@
 import React from 'react'
 import VerticalNavbar from './VerticalNavbar'
 import { blogsCards } from '../data'
+import Etherium from '../Images/etherium.jpeg';
 
 const ViewBlog = () => {
   return (
@@ -20,7 +21,16 @@ const ViewBlog = () => {
         <div className={columnTwo}>
 
             {/* Subdivision 1 */}
-            <div className='w-[100%] col-span-4 md:col-span-3 h-screen'>Hello this is div 2</div>
+            <div className='w-[100%] col-span-4 md:col-span-3 h-screen p-4 space-y-2'>
+                {/* Blog title */}
+                <p className='text-lg md:text-xl lg:text-2xl font-semibold text-left'>Blockchain: The ledger needed for the modern world</p>
+
+                {/* Blog information div */}
+                <p className='text-left text-xs md:text-sm text-slate-500 md:hidden sm:block'>Technology | 4 mins</p>
+
+                {/* Blog image */}
+                <img src={Etherium} className='w-[100%] md:h-[40%] lg:h-[60%]'></img>
+            </div>
 
             {/* Subdivision 2 */}
             <div className='space-y-4 w-[20%] md:col-span-1 hidden md:block h-screen bg-slate-200 text-left p-4 fixed right-0'>
