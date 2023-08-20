@@ -58,8 +58,20 @@ const ViewBlog = () => {
 
                     {/* Comments */}
                     <div className='space-y-2'>
-                        <p className=''>Test comment</p>
-                        <p>Test comment</p>
+                        <div className='p-2 border-2 border-[#1a1a1d] rounded-lg hover:bg-slate-300 hover:border-slate-500 ease-in-out duration-200'>
+                            <p className='font-semibold'>Tejas | {new Date().toLocaleDateString()}</p>
+                            <p className='text-justify text-gray-800'>This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles. This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles. This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles</p>
+                        </div>
+   
+                        <div className='p-2 border-2 border-[#1a1a1d] rounded-lg hover:bg-slate-300 hover:border-slate-500 ease-in-out duration-200'>
+                            <p className='font-semibold'>Tejas | {new Date().toLocaleDateString()}</p>
+                            <p className='text-justify text-gray-800'>This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles. This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles. This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles</p>
+                        </div>
+
+                        <div className='p-2 border-2 border-[#1a1a1d] rounded-lg hover:bg-slate-300 hover:border-slate-500 ease-in-out duration-200'>
+                            <p className='font-semibold'>Tejas | {new Date().toLocaleDateString()}</p>
+                            <p className='text-justify text-gray-800'>This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles. This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles. This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles</p>
+                        </div>
                     </div>
                     
                 </div>
