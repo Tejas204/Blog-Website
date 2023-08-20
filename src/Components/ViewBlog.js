@@ -32,7 +32,7 @@ const ViewBlog = () => {
                 <img src={Etherium} className='w-[100%] md:h-[40%] lg:h-[60%]'></img>
 
                 {/* Blog content */}
-                <p className='text-justify text-sm md:text-md lg:text-base border-b-2 border-slate-400'>
+                <p className='text-justify text-sm md:text-md lg:text-base border-b-2 border-slate-300 pb-2'>
                     Ethereum is a decentralized blockchain with smart contract functionality. 
                     Ether is the native cryptocurrency of the platform. Among cryptocurrencies, ether is second only to bitcoin in market capitalization. 
                     It is open-source software.
@@ -51,9 +51,17 @@ const ViewBlog = () => {
                     This has cut Ethereum's energy usage by 99%.
                 </p>
 
-                {/* Div of comments */}
-                <div>
-                    Hi
+                {/* Division of comments */}
+                <div className='flex flex-col text-left space-y-3'>
+                    {/* Heading for comment */}
+                    <p className='fontp-semibold text-lg md:text-xl lg:text-2xl'>Comments</p>
+
+                    {/* Comments */}
+                    <div className='space-y-2'>
+                        <p className=''>Test comment</p>
+                        <p>Test comment</p>
+                    </div>
+                    
                 </div>
             </div>
 
@@ -83,6 +91,8 @@ const ViewBlog = () => {
      </div>
   )
 }
+
+
 
 let parentDiv = `flex flex-row`
 
