@@ -72,16 +72,19 @@ const ViewBlog = () => {
                             <p className='font-semibold'>Tejas | {new Date().toLocaleDateString()}</p>
                             <p className='text-justify text-gray-800'>This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles. This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles. This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles</p>
                         </div>
-                    </div>
 
-                    {/* Div for adding a comment */}
-                    <div>
                         {/* Div for comment area */}
                         <div className='w-[100%]'>
                             <textarea rows='4' className='w-[100%] border-2 border-[#1a1a1d] rounded-lg p-2 focus:ring-2 focus:ring-[#1a1a1d] ease-in-out duration-150' placeholder='Share your thoughts..'></textarea>
                         </div>
                         {/* Div for post button */}
+                        <div className='w-[100%] flex flex-row-reverse'>
+                            <button className='p-2 md:p-3 bg-[#fccf47] text-[#1a1a1d] w-[17%] font-semibold rounded-md hover:ring-2 hover:ring-offset-2 hover:ring-[#fccf47] duration-150 ease-in-out'>Post</button>
+                        </div>
                     </div>
+
+                    
+                    
                     
                 </div>
             </div>
