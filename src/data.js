@@ -13,7 +13,7 @@ import travel from './Images/travel.jpg';
 import eifellTower from './Images/eifell-tower.jpg';
 import ganges from './Images/ganges.jpg';
 
-
+var comment = "This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles. This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles. This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles";
 export let navbarItems = [
     {
         name: 'Home',
@@ -92,7 +92,8 @@ export let blogsCards = [
         blogTitle: 'Cybersecurity: The great wall of online protection',
         blogDescription: 'Cybersecurity is the practice of protecting systems, networks, and programs from digital attacks. These cyberattacks are usually aimed at accessing, changing, or destroying sensitive information.',
         blogTitleImage: Cyber,
-        category: 'technology'
+        category: 'technology',
+        comments: [comment, comment, comment]
     },
     {
         dateOfPublishing: new Date("2022-03-18").toLocaleDateString(),

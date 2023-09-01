@@ -4,6 +4,7 @@ import { blogsCards } from '../data'
 import Etherium from '../Images/etherium.jpeg';
 
 const ViewBlog = () => {
+    console.log(blogsCards[0]);
   return (
     <div className={parentDiv}>
 
@@ -59,11 +60,11 @@ const ViewBlog = () => {
                     {/* Comments */}
                     <div className='space-y-5'>
                         <div className='p-2 border-2 border-[#1a1a1d] rounded-lg hover:bg-slate-300 hover:border-slate-500 ease-in-out duration-200'>
-                            <p className='font-semibold'>Tejas | {new Date().toLocaleDateString()}</p>
-                            <p className='text-justify text-gray-800'>This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles. This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles. This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles</p>
+                            <p className='font-semibold text-sm md:text-md lg:text-base'>Tejas | {new Date().toLocaleDateString()}</p>
+                            <p className='text-justify text-sm md:text-md lg:text-base text-gray-800'>This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles. This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles. This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles</p>
                         </div>
    
-                        <div className='p-2 border-2 border-[#1a1a1d] rounded-lg hover:bg-slate-300 hover:border-slate-500 ease-in-out duration-200'>
+                        {/* <div className='p-2 border-2 border-[#1a1a1d] rounded-lg hover:bg-slate-300 hover:border-slate-500 ease-in-out duration-200'>
                             <p className='font-semibold'>Tejas | {new Date().toLocaleDateString()}</p>
                             <p className='text-justify text-gray-800'>This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles. This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles. This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles</p>
                         </div>
@@ -71,7 +72,7 @@ const ViewBlog = () => {
                         <div className='p-2 border-2 border-[#1a1a1d] rounded-lg hover:bg-slate-300 hover:border-slate-500 ease-in-out duration-200'>
                             <p className='font-semibold'>Tejas | {new Date().toLocaleDateString()}</p>
                             <p className='text-justify text-gray-800'>This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles. This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles. This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles</p>
-                        </div>
+                        </div> */}
 
                         {/* Div for comment area */}
                         <div className='w-[100%]'>
