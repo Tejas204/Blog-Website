@@ -13,7 +13,26 @@ import travel from './Images/travel.jpg';
 import eifellTower from './Images/eifell-tower.jpg';
 import ganges from './Images/ganges.jpg';
 
-var comment = "This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles. This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles. This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles";
+let comment = [
+    {
+        commentText: "This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles. This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles. This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles",
+        commentUser: "Tejas",
+        commentDate: new Date().toLocaleDateString()
+    },
+    {
+        commentText: "This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles. This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles. This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles",
+        commentUser: "Tejas",
+        commentDate: new Date().toLocaleDateString()
+    },
+    {
+        commentText: "This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles. This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles. This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles",
+        commentUser: "Tejas",
+        commentDate: new Date().toLocaleDateString()
+    }
+
+
+]
+
 export let navbarItems = [
     {
         name: 'Home',
@@ -93,7 +112,7 @@ export let blogsCards = [
         blogDescription: 'Cybersecurity is the practice of protecting systems, networks, and programs from digital attacks. These cyberattacks are usually aimed at accessing, changing, or destroying sensitive information.',
         blogTitleImage: Cyber,
         category: 'technology',
-        comments: [comment, comment, comment]
+        comments: comment
     },
     {
         dateOfPublishing: new Date("2022-03-18").toLocaleDateString(),

@@ -4,7 +4,7 @@ import { blogsCards } from '../data'
 import Etherium from '../Images/etherium.jpeg';
 
 const ViewBlog = () => {
-    console.log(blogsCards[0]);
+    console.log(blogsCards[0].comments);
   return (
     <div className={parentDiv}>
 
@@ -59,20 +59,18 @@ const ViewBlog = () => {
 
                     {/* Comments */}
                     <div className='space-y-5'>
-                        <div className='p-2 border-2 border-[#1a1a1d] rounded-lg hover:bg-slate-300 hover:border-slate-500 ease-in-out duration-200'>
-                            <p className='font-semibold text-sm md:text-md lg:text-base'>Tejas | {new Date().toLocaleDateString()}</p>
-                            <p className='text-justify text-sm md:text-md lg:text-base text-gray-800'>This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles. This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles. This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles</p>
-                        </div>
-   
-                        {/* <div className='p-2 border-2 border-[#1a1a1d] rounded-lg hover:bg-slate-300 hover:border-slate-500 ease-in-out duration-200'>
-                            <p className='font-semibold'>Tejas | {new Date().toLocaleDateString()}</p>
-                            <p className='text-justify text-gray-800'>This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles. This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles. This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles</p>
-                        </div>
-
-                        <div className='p-2 border-2 border-[#1a1a1d] rounded-lg hover:bg-slate-300 hover:border-slate-500 ease-in-out duration-200'>
-                            <p className='font-semibold'>Tejas | {new Date().toLocaleDateString()}</p>
-                            <p className='text-justify text-gray-800'>This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles. This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles. This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles</p>
-                        </div> */}
+                        {/* Loop through each comment for a blog */}
+                        {blogsCards[0].comments.map((comment, index) => {
+                            return (
+                                // return the comment div
+                                <div key={index} className='p-2 border-2 border-[#1a1a1d] rounded-lg hover:bg-slate-300 hover:border-slate-500 ease-in-out duration-200'>
+                                    {/* Place the author of the comment and the date at which the comment was added */}
+                                    <p className='font-semibold text-sm md:text-md lg:text-base'>{comment.commentUser} | {comment.commentDate}</p>
+                                    {/* Place the text of the comment */}
+                                    <p className='text-justify text-sm md:text-md lg:text-base text-gray-800'>{comment.commentText}</p>
+                                </div>
+                            )
+                        })}
 
                         {/* Div for comment area */}
                         <div className='w-[100%]'>
