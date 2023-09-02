@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import VerticalNavbar from './VerticalNavbar'
 import { blogsCards } from '../data'
 import Etherium from '../Images/etherium.jpeg';
 
 const ViewBlog = () => {
-    console.log(blogsCards[0].comments);
+
+// Hook: this hook stores the state of the comments
+const [newComments, getNewComments] = useState(blogsCards[0].comments);
+
+
   return (
     <div className={parentDiv}>
 
@@ -74,11 +78,23 @@ const ViewBlog = () => {
 
                         {/* Div for comment area */}
                         <div className='w-[100%]'>
-                            <textarea rows='4' className='w-[100%] border-2 border-[#1a1a1d] rounded-lg p-2 focus:ring-2 focus:ring-[#1a1a1d] ease-in-out duration-150' placeholder='Share your thoughts..'></textarea>
+                            <textarea id='newComment' rows='4' className='w-[100%] border-2 border-[#1a1a1d] rounded-lg p-2 focus:ring-2 focus:ring-[#1a1a1d] ease-in-out duration-150' placeholder='Share your thoughts..'></textarea>
                         </div>
-                        {/* Div for post button */}
+                        {/* Div for post button
+                            When post is clicked, update the state of the comment
+                            This is done by pushing the new comment to the comments[array Object]
+                             */}
                         <div className='w-[100%] flex flex-row-reverse'>
-                            <button className='p-2 md:p-3 bg-[#fccf47] text-[#1a1a1d] w-[17%] font-semibold rounded-md hover:ring-2 hover:ring-offset-2 hover:ring-[#fccf47] duration-150 ease-in-out'>Post</button>
+                            <button type='button' className='p-2 md:p-3 bg-[#fccf47] text-[#1a1a1d] w-[17%] font-semibold rounded-md hover:ring-2 hover:ring-offset-2 hover:ring-[#fccf47] duration-150 ease-in-out' onClick={() => {
+                                getNewComments(blogsCards[0].comments.push({
+                                    commentText: document.getElementById("newComment").value,
+                                    commentUser: "Tejas",
+                                    commentDate: new Date().toLocaleDateString()
+                                }));
+                                document.getElementById("newComment").value = "";
+                            }}>
+                                Post
+                            </button>
                         </div>
                     </div>
 
