@@ -33,14 +33,14 @@ function App() {
 
         {/* Route for blogs page */}
         <Route path='blogs' element={<Blogs/>}>
-          
+          <Route path='view-blog/:blogID' element={<ViewBlog/>}></Route>
         </Route>
 
         {/* Route for create blog page */}
         <Route path='create-blog' element={<CreateBlog/>}></Route>
 
         {/* Route for view blog page */}
-        <Route path='view-blog' element={<ViewBlog/>}></Route>
+        {/* <Route path='view-blog' element={<ViewBlog/>}></Route> */}
 
         {/* No match route */}
         <Route path='*' element={<NoMatch/>}></Route>

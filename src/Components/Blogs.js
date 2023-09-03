@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import VerticalNavbar from './VerticalNavbar'
 import { blogsCards, blogCategoryOptions, sortingOptions } from '../data';
-import { useParams } from 'react-router-dom';
+import { NavLink, Navigate, Outlet, useParams } from 'react-router-dom';
 
 const Blogs = () => {
 
@@ -18,11 +18,10 @@ const [weight_2, setWeight_2] = useState(-1);
 // Hook: Sets the value on the basis of which to sort
 const [basisOfSort, setBasisOfSort] = useState('blogTitle');
 
-// Hook: makes API calls for dynamically displaying the blogs
-const params = useParams();
 
-// Variable: Stores the value of Blog Id
-const blogID = params.blogID;
+// Hook: sets the value of blogID
+const [blogID, setBlogID] = useState();
+
 
 
 useEffect(() => {
@@ -139,9 +138,11 @@ const handleRemoveFilters = () => {
   
                       {/* View button */}
                       <div className='flex justify-center pt-2'>
-                        <button className={`${buttonStyling}`}>
+                        <NavLink target='_blank' to={`view-blog/:`+blogID} className={`${buttonStyling}`} onClick={() => {
+                          setBlogID(blogCard.id);
+                        }}>
                           View
-                        </button>
+                        </NavLink>
                       </div>
                     </div>
                   </div>
@@ -190,6 +191,7 @@ const handleRemoveFilters = () => {
             )
           }
         })}
+
         
         </div>
   </div>
@@ -234,7 +236,7 @@ let buttonStyling = `p-2
                  w-[25%] 
                  rounded-md 
                  hover:ring-2 hover:ring-offset-2 hover:ring-[#fccf47] 
-                 duration-150 ease-in-out`
+                 duration-150 ease-in-out text-center`
 
 let cardImageStyling = `rounded-t-md 
                         h-40 

@@ -2,11 +2,17 @@ import React, { useState } from 'react'
 import VerticalNavbar from './VerticalNavbar'
 import { blogsCards } from '../data'
 import Etherium from '../Images/etherium.jpeg';
+import { useParams } from 'react-router-dom';
 
 const ViewBlog = () => {
 
 // Hook: this hook stores the state of the comments
 const [newComments, getNewComments] = useState(blogsCards[0].comments);
+
+// Hook: makes API calls for dynamically displaying the blogs
+const params = useParams();
+
+const blogid = params.blogid;
 
 
   return (
