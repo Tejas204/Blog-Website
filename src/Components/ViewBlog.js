@@ -12,7 +12,9 @@ const [newComments, getNewComments] = useState(blogsCards[0].comments);
 // Hook: makes API calls for dynamically displaying the blogs
 const params = useParams();
 
-const blogid = params.blogid;
+const blogid = params.blogID;
+
+console.log(blogid);
 
 
   return (
