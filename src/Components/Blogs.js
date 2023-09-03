@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import VerticalNavbar from './VerticalNavbar'
 import { blogsCards, blogCategoryOptions, sortingOptions } from '../data';
+import { useParams } from 'react-router-dom';
 
 const Blogs = () => {
 
@@ -16,6 +17,12 @@ const [weight_2, setWeight_2] = useState(-1);
 
 // Hook: Sets the value on the basis of which to sort
 const [basisOfSort, setBasisOfSort] = useState('blogTitle');
+
+// Hook: makes API calls for dynamically displaying the blogs
+const params = useParams();
+
+// Variable: Stores the value of Blog Id
+const blogID = params.blogID;
 
 
 useEffect(() => {

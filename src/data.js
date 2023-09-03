@@ -112,7 +112,8 @@ export let blogsCards = [
         blogDescription: 'Cybersecurity is the practice of protecting systems, networks, and programs from digital attacks. These cyberattacks are usually aimed at accessing, changing, or destroying sensitive information.',
         blogTitleImage: Cyber,
         category: 'technology',
-        comments: comment
+        comments: comment,
+        id: 1
     },
     {
         dateOfPublishing: new Date("2022-03-18").toLocaleDateString(),
@@ -120,7 +121,8 @@ export let blogsCards = [
         blogTitle: 'Blockchain: The ledger needed for the modern world',
         blogDescription: 'Blockchain is a shared, immutable ledger that facilitates the process of recording transactions and tracking assets in a business network.',
         blogTitleImage: Blockchain,
-        category: 'technology'
+        category: 'technology',
+        id: 2
         
     },
     {
@@ -129,7 +131,8 @@ export let blogsCards = [
         blogTitle: 'VR: Creating an alternate reality',
         blogDescription: 'Virtual reality (VR) is a simulated experience that employs pose tracking and 3D near-eye displays to give the user an immersive feel of a virtual world.',
         blogTitleImage: VR,
-        category: 'technology'
+        category: 'technology',
+        id: 3
     },
     {
         dateOfPublishing: new Date("2022-03-19").toLocaleDateString(),
@@ -137,7 +140,8 @@ export let blogsCards = [
         blogTitle: 'Ethereum: A Decentralized Revolution',
         blogDescription: 'Ethereum is a decentralized platform that runs smart contracts: applications that run exactly as programmed without any possibility of downtime, censorship or fraud.',
         blogTitleImage: Etherium,
-        category: 'technology'
+        category: 'technology',
+        id: 4
     },
     {
         dateOfPublishing: new Date("2020-12-31").toLocaleDateString(),
@@ -145,7 +149,8 @@ export let blogsCards = [
         blogTitle: 'UI/UX: Crafting Digital Experiences',
         blogDescription: 'UI/UX design is all about crafting digital experiences that are intuitive, engaging, and user-friendly. It involves designing the user interface (UI) and the user experience (UX) of a product or service.',
         blogTitleImage: UIUX,
-        category: 'technology'
+        category: 'technology',
+        id: 5
     },
     {
         dateOfPublishing: new Date("2021-08-18").toLocaleDateString(),
@@ -153,7 +158,8 @@ export let blogsCards = [
         blogTitle: 'MERN: A complete front end and backend package for web development using MongoDB, Reacr, Express and Node',
         blogDescription: 'Virtual reality (VR) is a simulated experience that employs pose tracking and 3D near-eye displays to give the user an immersive feel of a virtual world.',
         blogTitleImage: MERN,
-        category: 'technology'
+        category: 'technology',
+        id: 6
     },
     {
         dateOfPublishing: new Date("2022-09-22").toLocaleDateString(),
@@ -161,7 +167,8 @@ export let blogsCards = [
         blogTitle: 'Eat Light, Feel Bright',
         blogDescription: 'Salads are dishes made up of mixed ingredients, often including vegetables. They can be served chilled or at room temperature.',
         blogTitleImage: foodDiet,
-        category: 'food'
+        category: 'food',
+        id: 7
     },
     {
         dateOfPublishing: new Date("2022-11-01").toLocaleDateString(),
@@ -169,7 +176,8 @@ export let blogsCards = [
         blogTitle: 'Indian Food: Treat of a lifetime',
         blogDescription: 'Indian food is a diverse cuisine that varies by region and is influenced by local culture, religion, and traditions. It is known for its bold flavors and use of spices.',
         blogTitleImage: indianFood,
-        category: 'food'
+        category: 'food',
+        id: 8
     },
     {
         dateOfPublishing: new Date("2022-04-22").toLocaleDateString(),
@@ -177,7 +185,8 @@ export let blogsCards = [
         blogTitle: 'Savor the Flavor of Vegan Delights',
         blogDescription: 'Vegan food refers to a diet that excludes all animal products, including meat, dairy, eggs, and honey.',
         blogTitleImage: goVegan,
-        category: 'food'
+        category: 'food',
+        id: 9
     },
     {
         dateOfPublishing: new Date("2022-04-15").toLocaleDateString(),
@@ -185,7 +194,8 @@ export let blogsCards = [
         blogTitle: 'VR: Creating an alternate reality',
         blogDescription: 'Virtual reality (VR) is a simulated experience that employs pose tracking and 3D near-eye displays to give the user an immersive feel of a virtual world.',
         blogTitleImage: ganges,
-        category: 'tourism'
+        category: 'tourism',
+        id: 10
     },
     {
         dateOfPublishing: new Date("2022-04-15").toLocaleDateString(),
@@ -193,7 +203,8 @@ export let blogsCards = [
         blogTitle: 'VR: Creating an alternate reality',
         blogDescription: 'Virtual reality (VR) is a simulated experience that employs pose tracking and 3D near-eye displays to give the user an immersive feel of a virtual world.',
         blogTitleImage: eifellTower,
-        category: 'tourism'
+        category: 'tourism',
+        id: 11
     },
     {
         dateOfPublishing: new Date("2023-02-28").toLocaleDateString(),
@@ -201,7 +212,8 @@ export let blogsCards = [
         blogTitle: 'VR: Creating an alternate reality',
         blogDescription: 'Virtual reality (VR) is a simulated experience that employs pose tracking and 3D near-eye displays to give the user an immersive feel of a virtual world.',
         blogTitleImage: travel,
-        category: 'tourism'
+        category: 'tourism',
+        id: 12
     },
 ]
 
