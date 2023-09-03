@@ -24,7 +24,7 @@ Tasks:-
   b. create a layout for the blog view page - in progress
     i.   add a button and text area to post new comment - complete
     ii.  when post is clicked, add the comment to the existing list - complete
-    iii. implement dynamic routing
+    iii. implement dynamic routing - in progress
   c. limit the title and subtitle on the blog card. - complete
 
 
