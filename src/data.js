@@ -13,6 +13,23 @@ import travel from './Images/travel.jpg';
 import eifellTower from './Images/eifell-tower.jpg';
 import ganges from './Images/ganges.jpg';
 
+// Big blogs content **********************************************
+
+let etheriumContent = `Ethereum is a decentralized blockchain with smart contract functionality. 
+Ether is the native cryptocurrency of the platform. Among cryptocurrencies, ether is second only to bitcoin in market capitalization. 
+It is open-source software.Ethereum was conceived in 2013 by programmer Vitalik Buterin.
+Additional founders of Ethereum included Gavin Wood, Charles Hoskinson, Anthony Di Iorio and Joseph Lubin.
+In 2014, development work began and was crowdfunded, and the network went live on 30 July 2015.
+Ethereum allows anyone to deploy permanent and immutable decentralized applications onto it, with which users can interact.
+Decentralized finance (DeFi) applications provide financial instruments which do not directly rely on financial intermediaries like brokerages, exchanges, or banks. 
+This facilitates borrowing against cryptocurrency holdings or lending them out for interest.
+Ethereum also allows users to create and exchange non-fungible tokens (NFTs), which are tokens that can be tied to unique digital assets, 
+such as images. Additionally, many other cryptocurrencies utilize the ERC-20 token standard on top of the Ethereum blockchain and have utilized
+the platform for initial coin offerings.On 15 September 2022, Ethereum transitioned its consensus mechanism from proof-of-work (PoW) to proof-of-stake (PoS) in an upgrade process known as "the Merge". 
+This has cut Ethereum's energy usage by 99%.`
+
+// Content ends **********************************************
+
 let comment = [
     {
         commentText: "This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles. This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles. This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles",
@@ -138,7 +155,7 @@ export let blogsCards = [
         dateOfPublishing: new Date("2022-03-19").toLocaleDateString(),
         readTime: '4',
         blogTitle: 'Ethereum: A Decentralized Revolution',
-        blogDescription: 'Ethereum is a decentralized platform that runs smart contracts: applications that run exactly as programmed without any possibility of downtime, censorship or fraud.',
+        blogDescription: etheriumContent,
         blogTitleImage: Etherium,
         category: 'technology',
         id: 4
@@ -262,3 +279,4 @@ export let sortingOptions = [
         label: 'Most reading time'
     }
 ]
+

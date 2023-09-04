@@ -12,7 +12,23 @@ const [newComments, getNewComments] = useState(blogsCards[0].comments);
 // Hook: makes API calls for dynamically displaying the blogs
 const params = useParams();
 
-const blogid = params.blogID;
+// Store the dynamic value coming from the URL
+// ex: :2; :1 etc.
+let blogid = params.blogID;
+blogid = blogid.slice(1);
+
+// Variable: stores the final blog to display
+let finalBlog;
+
+// Loop: finalize the blog to be displayed
+for(let i = 0; i<blogsCards.length; i++){
+    if(blogsCards[i].id == blogid){
+        finalBlog = blogsCards[i];
+    }
+    else{
+        continue;
+    }
+}
 
 console.log(blogid);
 
@@ -36,32 +52,18 @@ console.log(blogid);
             {/* Subdivision 1 - Blog */}
             <div className='w-[100%] col-span-4 md:col-span-3 h-screen p-8 space-y-2'>
                 {/* Blog title */}
-                <p className='text-lg md:text-xl lg:text-2xl font-semibold text-left'>Blockchain: The ledger needed for the modern world</p>
+                {/* <p className='text-lg md:text-xl lg:text-2xl font-semibold text-left'>Blockchain: The ledger needed for the modern world</p> */}
+                <p className='text-lg md:text-xl lg:text-2xl font-semibold text-left'>{finalBlog.blogTitle}</p>
 
                 {/* Blog information div */}
-                <p className='text-left text-xs md:text-sm text-slate-500 md:hidden sm:block'>Technology | 4 mins</p>
+                <p className='text-left text-xs md:text-sm text-slate-500 md:hidden sm:block'>{finalBlog.category.toLocaleUpperCase()} | {finalBlog.readTime} mins</p>
 
                 {/* Blog image */}
-                <img src={Etherium} className='w-[100%] md:h-[40%] lg:h-[60%]'></img>
+                <img src={finalBlog.blogTitleImage} className='w-[100%] md:h-[40%] lg:h-[60%]'></img>
 
                 {/* Blog content */}
                 <p className='text-justify text-sm md:text-md lg:text-base border-b-2 border-slate-300 pb-2'>
-                    Ethereum is a decentralized blockchain with smart contract functionality. 
-                    Ether is the native cryptocurrency of the platform. Among cryptocurrencies, ether is second only to bitcoin in market capitalization. 
-                    It is open-source software.
-                    
-                    Ethereum was conceived in 2013 by programmer Vitalik Buterin.
-                    Additional founders of Ethereum included Gavin Wood, Charles Hoskinson, Anthony Di Iorio and Joseph Lubin.
-                    In 2014, development work began and was crowdfunded, and the network went live on 30 July 2015.
-                    Ethereum allows anyone to deploy permanent and immutable decentralized applications onto it, with which users can interact.
-                    Decentralized finance (DeFi) applications provide financial instruments which do not directly rely on financial intermediaries like brokerages, exchanges, or banks. 
-                    This facilitates borrowing against cryptocurrency holdings or lending them out for interest.
-                    Ethereum also allows users to create and exchange non-fungible tokens (NFTs), which are tokens that can be tied to unique digital assets, 
-                    such as images. Additionally, many other cryptocurrencies utilize the ERC-20 token standard on top of the Ethereum blockchain and have utilized
-                    the platform for initial coin offerings.
-                    
-                    On 15 September 2022, Ethereum transitioned its consensus mechanism from proof-of-work (PoW) to proof-of-stake (PoS) in an upgrade process known as "the Merge". 
-                    This has cut Ethereum's energy usage by 99%.
+                    {finalBlog.blogDescription}
                 </p>
 
                 {/* Division of comments */}
@@ -116,17 +118,17 @@ console.log(blogid);
             <div className='space-y-4 w-[20%] md:col-span-1 hidden md:block h-screen bg-slate-200 text-left p-4 fixed right-0'>
                 {/* Category */}
                 <p className='border-b-2 border-[#1a1a1d] text-[#1a1a1d] text-xl font-semibold'>Category</p>
-                <p className='p-3 rounded-lg w-fit bg-slate-100 border-2 border-slate-400 text-slate-600 font-semibold'>Technology</p>
+                <p className='p-3 rounded-lg w-fit bg-slate-100 border-2 border-slate-400 text-slate-600 font-semibold'>{finalBlog.category.toLocaleUpperCase()}</p>
 
                 {/* Reading time */}
                 <p className='border-b-2 border-[#1a1a1d] text-[#1a1a1d] text-xl font-semibold'>Read time</p>
-                <p className='p-3 rounded-lg w-fit bg-slate-100 border-2 border-slate-400 text-slate-600 font-semibold'>4 minutes</p>
+                <p className='p-3 rounded-lg w-fit bg-slate-100 border-2 border-slate-400 text-slate-600 font-semibold'>{finalBlog.readTime} minutes</p>
 
                 {/* Related blogs*/}
                 <p className='border-b-2 border-[#1a1a1d] text-[#1a1a1d] text-xl font-semibold'>Related blogs</p>
                 <div className='space-y-4 overflow-y-auto h-3/5 scroll-smooth'>
                 {blogsCards.map((blogCard, index) => {
-                    if(blogCard.category == 'technology'){
+                    if(blogCard.category == finalBlog.category){
                         return(
                             <p className='p-1 rounded-lg w-fit bg-slate-100 border-2 border-slate-400 text-slate-600 font-semibold'>{blogCard.blogTitle}</p>
                         )
