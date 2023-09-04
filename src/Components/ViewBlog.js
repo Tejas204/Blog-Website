@@ -12,7 +12,7 @@ const [newComments, getNewComments] = useState(blogsCards[0].comments);
 // Hook: makes API calls for dynamically displaying the blogs
 const params = useParams();
 
-// Store the dynamic value coming from the URL
+// Variable: Store the dynamic value coming from the URL
 // ex: :2; :1 etc.
 let blogid = params.blogID;
 blogid = blogid.slice(1);

@@ -180,9 +180,11 @@ const handleRemoveFilters = () => {
   
                       {/* View button */}
                       <div className='flex justify-center pt-2'>
-                        <button className={buttonStyling}>
+                        <NavLink target='_blank' to={`/view-blog/:`+blogID} className={`${buttonStyling}`} onClick={() => {
+                            setBlogID(blogCard.id);
+                          }}>
                           View
-                        </button>
+                        </NavLink>
                       </div>
                     </div>
                   </div>
