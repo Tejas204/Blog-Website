@@ -28,6 +28,8 @@ Tasks:-
     iv.  related blogs in right vertical navbar should redirect to that blog - complete
   c. limit the title and subtitle on the blog card. - complete
 
+9. Bug: When a new blog is added, it is not displayed in a new tab. Some formatting also goes for a ride!
+
 
 5. Set up authentication
   a. Learn more about auth context
