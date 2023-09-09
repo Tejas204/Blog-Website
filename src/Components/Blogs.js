@@ -172,10 +172,10 @@ const handleRemoveFilters = () => {
   
                       {/* Blog title and help text */}
                       <p className='text-sm md:text-md font-bold h-9'>
-                        {blogCard.blogTitle}
+                        {blogCard.blogTitle.length <= 75 ? blogCard.blogTitle : blogCard.blogTitle.slice(0, 75) + ' . .'}
                       </p>
                       <p className='text-sm text-slate-500 text-justify h-22 md:h-28 lg:h-20'>
-                        {blogCard.blogDescription}
+                        {blogCard.blogDescription.length <= 195 ? blogCard.blogDescription : blogCard.blogDescription.slice(0, 195) + ' . .'}
                       </p>
   
                       {/* View button */}
