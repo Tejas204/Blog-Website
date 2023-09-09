@@ -14,6 +14,9 @@ import ViewBlog from './Components/ViewBlog';
 
 function App() {
 
+// Hook: send the new blogs to ViewBlogs to render
+const [newBlogs, getNewBlogs] = useState();
+
 
   return (
     <div>
@@ -37,10 +40,10 @@ function App() {
         </Route>
 
         {/* Route for create blog page */}
-        <Route path='create-blog' element={<CreateBlog/>}></Route>
+        <Route path='create-blog' element={<CreateBlog getNewBlogs={getNewBlogs}/>}></Route>
 
         {/* Route for view blog page */}
-        <Route path='view-blog/:blogID' element={<ViewBlog/>}></Route>
+        <Route path='view-blog/:blogID' element={<ViewBlog newBlogs={newBlogs}/>}></Route>
 
         {/* No match route */}
         <Route path='*' element={<NoMatch/>}></Route>

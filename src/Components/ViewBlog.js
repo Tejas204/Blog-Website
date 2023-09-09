@@ -5,7 +5,7 @@ import Etherium from '../Images/etherium.jpeg';
 import { useParams } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 
-const ViewBlog = () => {
+const ViewBlog = ({newBlogs}) => {
 
 // Hook: this hook stores the state of the comments
 const [newComments, getNewComments] = useState(blogsCards[0].comments);
@@ -21,6 +21,8 @@ blogid = blogid.slice(1);
 // Variable: stores the final blog to display
 let finalBlog;
 
+console.log("new blogs: "+newBlogs);
+
 // Loop: finalize the blog to be displayed
 for(let i = 0; i<blogsCards.length; i++){
     if(blogsCards[i].id == blogid){
@@ -30,8 +32,6 @@ for(let i = 0; i<blogsCards.length; i++){
         continue;
     }
 }
-
-console.log(blogid);
 
 
   return (
