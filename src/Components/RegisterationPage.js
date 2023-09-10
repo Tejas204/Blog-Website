@@ -1,7 +1,9 @@
 import React, { useRef } from 'react'
 import { NavLink } from 'react-router-dom'
 
-const RegisterationPage = () => {
+const RegisterationPage = ({newBlogs}) => {
+
+console.log(newBlogs)
 
 const emailRef = useRef();
 const passwordRef = useRef();

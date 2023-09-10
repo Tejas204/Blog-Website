@@ -30,6 +30,9 @@ Tasks:-
 
 9. Bug: When a new blog is added, it is not displayed in a new tab. Some formatting also goes for a ride!
 
+10. when I go back to create blog, the blogs again become 12. This is because by default, newBlogsCards is set to blogsCards
+--> we need to pass newBlogs to create blogs as well.
+
 
 5. Set up authentication
   a. Learn more about auth context

@@ -18,7 +18,7 @@ function App() {
 const [newBlogs, getNewBlogs] = useState(blogsCards);
 console.log(newBlogs);
 
-var testObject = newBlogs[newBlogs.length-1];
+var testObject = [...newBlogs, newBlogs[newBlogs.length-1]];
 
 
   return (
@@ -32,7 +32,7 @@ var testObject = newBlogs[newBlogs.length-1];
         <Route path='login' element={<LoginPage/>}></Route>
 
         {/* Route for Registration Page */}
-        <Route path='registration' element={<RegisterationPage/>}></Route>
+        <Route path='registration' element={<RegisterationPage newBlogs={newBlogs}/>}></Route>
 
         {/* Route for forgot password */}
         <Route path='forgot-password' element={<ForgotPassword/>}></Route>
@@ -46,7 +46,7 @@ var testObject = newBlogs[newBlogs.length-1];
         <Route path='create-blog' element={<CreateBlog getNewBlogs={getNewBlogs}/>}></Route>
 
         {/* Route for view blog page */}
-        <Route path='view-blog/:blogID' element={<ViewBlog newBlogs={newBlogs}/>}></Route>
+        <Route path='view-blog/:blogID' element={<ViewBlog testObject={testObject}/>}></Route>
 
         {/* No match route */}
         <Route path='*' element={<NoMatch/>}></Route>
