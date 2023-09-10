@@ -21,7 +21,7 @@ blogid = blogid.slice(1);
 // Variable: stores the final blog to display
 let finalBlog;
 
-console.log("new blogs: "+newBlogs.length);
+console.log(newBlogs);
 
 // Loop: finalize the blog to be displayed
 for(let i = 0; i<blogsCards.length; i++){

@@ -14,9 +14,11 @@ import ViewBlog from './Components/ViewBlog';
 
 function App() {
 
-// Hook: send the new blogs to ViewBlogs to render
+// Hook: send the new blogs from CreateBlog to Blogs to render
 const [newBlogs, getNewBlogs] = useState(blogsCards);
- console.log("Received from create blogs: "+newBlogs.length);
+console.log(newBlogs);
+
+var testObject = newBlogs[newBlogs.length-1];
 
 
   return (

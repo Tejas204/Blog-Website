@@ -23,8 +23,6 @@ const [basisOfSort, setBasisOfSort] = useState('blogTitle');
 // Hook: sets the value of blogID
 const [blogID, setBlogID] = useState();
 
-
-
 useEffect(() => {
   if(sortingValue === 'sort_a_z' || sortingValue === 'sort_date_oldest' || sortingValue === 'sort_least_read_time'){
     // Set weights
