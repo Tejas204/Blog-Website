@@ -21,7 +21,7 @@ blogid = blogid.slice(1);
 // Variable: stores the final blog to display
 let finalBlog;
 
-console.log("new blogs: "+newBlogs);
+console.log("new blogs: "+newBlogs.length);
 
 // Loop: finalize the blog to be displayed
 for(let i = 0; i<blogsCards.length; i++){
@@ -131,7 +131,7 @@ for(let i = 0; i<blogsCards.length; i++){
                 {blogsCards.map((blogCard, index) => {
                     if(blogCard.category == finalBlog.category && blogCard.id != finalBlog.id){
                         return(
-                            <NavLink to={`/view-blog/:`+blogCard.id} target='_blank' className='p-1 rounded-lg w-fit bg-slate-100 border-2 border-slate-400 text-slate-600 font-semibold'>{blogCard.blogTitle}</NavLink>
+                            <NavLink key={index} to={`/view-blog/:`+blogCard.id} target='_blank' className='p-1 rounded-lg w-fit bg-slate-100 border-2 border-slate-400 text-slate-600 font-semibold'>{blogCard.blogTitle}</NavLink>
                         )
                     }
                 })}

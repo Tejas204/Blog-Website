@@ -15,15 +15,19 @@ const [newBlogCategory, setNewBlogCategory] = useState('all_categories');
 // Hook: sets the state of blogsCards after a new element is pushed to it
 const [newBlogsCards, setNewBlogsCards] = useState(blogsCards);
 
+
 // Function: Handles the change in value of dropdown
 const newBlogCategoryChange = (newCategory) => {
     setNewBlogCategory(newCategory.target.value);
 }
 
-// Function: Sends the new blogs to App.js
-const sendNewBlogs = (newBlogsCards) => {
+// Hook: Sends the new blogs to App.js when the newBlogsCards changes
+useEffect(() => {
+    console.log("new blogs cards"+newBlogsCards.length);
     getNewBlogs(newBlogsCards);
-}
+}, [newBlogsCards]);
+    
+
 
 
   return (
@@ -85,15 +89,15 @@ const sendNewBlogs = (newBlogsCards) => {
                     {/* Blog category */}
                     <select className={formStyling} id='new-category' onChange={newBlogCategoryChange} value={newBlogCategory}>
                         {blogCategoryOptions.map((blogCategory, index) => {
-                            return(<option value={blogCategory.value}>{blogCategory.label}</option>)
+                            return(<option key={index} value={blogCategory.value}>{blogCategory.label}</option>)
                         })}
                     </select>
 
                     {/* Blog content */}
                     <textarea required id='blogContent' placeholder='Start blogging' rows='15' className={blogContentStyling}></textarea>
-                    <NavLink className={buttonStyling} onClick={() => {
+                    <button className={buttonStyling} onClick={() => {
                         // Push the new card to the blogCards array of objects
-                        setNewBlogsCards.apply(blogsCards.push({
+                        setNewBlogsCards([...newBlogsCards, {
                             dateOfPublishing: new Date().toLocaleDateString(),
                             readTime: document.getElementById('read-time').value,
                             blogTitle: document.getElementById('blogTitle').value,
@@ -101,18 +105,16 @@ const sendNewBlogs = (newBlogsCards) => {
                             blogTitleImage: URL.createObjectURL(selectedImage),
                             category: newBlogCategory,
                             id: blogsCards.length + 1
-                    }));
+                    }]);
                         // Send the new array of blogs to App.js
-                        
-                        sendNewBlogs(newBlogsCards);
-                        console.log("TD"+newBlogsCards.length)
+                        console.log("TD "+newBlogsCards)
 
                         // Clear all the values from the fields
                         document.getElementById('read-time').value = '';
                         document.getElementById('blogTitle').value = ''; 
                         document.getElementById('blogContent').value = '';
                         setSelectedImage(false);  
-                }} to='/blogs'>Submit</NavLink>
+                }}>Submit</button>
                 </form>
             </div>
             

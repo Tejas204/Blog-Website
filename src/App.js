@@ -15,7 +15,8 @@ import ViewBlog from './Components/ViewBlog';
 function App() {
 
 // Hook: send the new blogs to ViewBlogs to render
-const [newBlogs, getNewBlogs] = useState();
+const [newBlogs, getNewBlogs] = useState(blogsCards);
+ console.log("Received from create blogs: "+newBlogs.length);
 
 
   return (
@@ -35,7 +36,7 @@ const [newBlogs, getNewBlogs] = useState();
         <Route path='forgot-password' element={<ForgotPassword/>}></Route>
 
         {/* Route for blogs page */}
-        <Route path='blogs' element={<Blogs/>}>
+        <Route path='blogs' element={<Blogs newBlogs={newBlogs}/>}>
           
         </Route>
 
