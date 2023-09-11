@@ -4,7 +4,7 @@ import uploadImage from '../Images/uploadImage.png'
 import {blogCategoryOptions, blogsCards} from '../data'
 import { NavLink } from 'react-router-dom';
 
-const CreateBlog = ({getNewBlogs}) => {
+const CreateBlog = ({getNewBlogs, newBlogs}) => {
 
 // Hook: sets the uploaded image to the div
 const [selectedImage, setSelectedImage] = useState(false);
@@ -13,7 +13,7 @@ const [selectedImage, setSelectedImage] = useState(false);
 const [newBlogCategory, setNewBlogCategory] = useState('all_categories');
 
 // Hook: sets the state of blogsCards after a new element is pushed to it
-const [newBlogsCards, setNewBlogsCards] = useState(blogsCards);
+const [newBlogsCards, setNewBlogsCards] = useState(newBlogs);
 
 
 // Function: Handles the change in value of dropdown

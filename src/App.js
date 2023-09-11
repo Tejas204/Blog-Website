@@ -43,7 +43,7 @@ var testObject = [...newBlogs, newBlogs[newBlogs.length-1]];
         </Route>
 
         {/* Route for create blog page */}
-        <Route path='create-blog' element={<CreateBlog getNewBlogs={getNewBlogs}/>}></Route>
+        <Route path='create-blog' element={<CreateBlog getNewBlogs={getNewBlogs} newBlogs={newBlogs}/>}></Route>
 
         {/* Route for view blog page */}
         <Route path='view-blog/:blogID' element={<ViewBlog testObject={testObject}/>}></Route>
