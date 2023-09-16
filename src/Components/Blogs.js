@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect} from 'react';
 import VerticalNavbar from './VerticalNavbar'
 import { blogsCards, blogCategoryOptions, sortingOptions } from '../data';
-import { NavLink, Navigate, Outlet, useParams } from 'react-router-dom';
+import { NavLink, Navigate, Outlet, useNavigate, useParams, Link } from 'react-router-dom';
+import { useContext } from 'react';
+
+
 
 const Blogs = ({newBlogs}) => {
-
 
 // Hook: sets the category of the blogs to display
 const [blogCategory, setBlogCategory] = useState('all_categories');
@@ -23,6 +25,8 @@ const [basisOfSort, setBasisOfSort] = useState('blogTitle');
 // Hook: sets the value of blogID
 const [blogID, setBlogID] = useState();
 
+
+// Hook: sets the value of weight and sorting value
 useEffect(() => {
   if(sortingValue === 'sort_a_z' || sortingValue === 'sort_date_oldest' || sortingValue === 'sort_least_read_time'){
     // Set weights
@@ -46,7 +50,6 @@ useEffect(() => {
     setBasisOfSort('readTime');
   }
 
- 
 }, [sortingValue]);
 
 // Function: handles the changing of category values
@@ -63,6 +66,11 @@ const handleSortingChange = (sortingChangeEvent) => {
 const handleRemoveFilters = () => {
   setBlogCategory('all_categories');
   setSortingValue('sort_a_z');
+}
+
+// Function: handle view click
+const handleViewClick = (blogid) => {
+  setBlogID(blogid);
 }
 
 
@@ -137,8 +145,8 @@ const handleRemoveFilters = () => {
   
                       {/* View button */}
                       <div className='flex justify-center pt-2'>
-                        <NavLink target='_blank' to={`/view-blog/:`+blogID} className={`${buttonStyling}`} onClick={() => {
-                          setBlogID(blogCard.id);
+                        <NavLink to={`/view-blog/:`+blogCard.id} state={{data: newBlogs}} className={`${buttonStyling}`} onClick={() => {
+                          handleViewClick(blogCard.id);
                         }}>
                           View
                         </NavLink>
@@ -180,7 +188,7 @@ const handleRemoveFilters = () => {
                       {/* View button */}
                       <div className='flex justify-center pt-2'>
                         <NavLink target='_blank' to={`/view-blog/:`+blogID} className={`${buttonStyling}`} onClick={() => {
-                            setBlogID(blogCard.id);
+                            handleViewClick(blogCard.id);
                           }}>
                           View
                         </NavLink>

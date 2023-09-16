@@ -8,9 +8,11 @@ import RegisterationPage from './Components/RegisterationPage';
 import ForgotPassword from './Components/ForgotPassword';
 import Blogs from './Components/Blogs';
 import CreateBlog from './Components/CreateBlog';
-import { useState } from 'react';
+import { createContext, useState } from 'react';
 import { blogsCards } from './data';
 import ViewBlog from './Components/ViewBlog';
+
+export const blogContext = createContext();
 
 function App() {
 
@@ -18,7 +20,7 @@ function App() {
 const [newBlogs, getNewBlogs] = useState(blogsCards);
 console.log(newBlogs);
 
-var testObject = [...newBlogs, newBlogs[newBlogs.length-1]];
+// var testObject = [...newBlogs, newBlogs[newBlogs.length-1]];
 
 
   return (
@@ -32,21 +34,21 @@ var testObject = [...newBlogs, newBlogs[newBlogs.length-1]];
         <Route path='login' element={<LoginPage/>}></Route>
 
         {/* Route for Registration Page */}
-        <Route path='registration' element={<RegisterationPage newBlogs={newBlogs}/>}></Route>
+        <Route path='registration' element={<RegisterationPage/>}></Route>
 
         {/* Route for forgot password */}
         <Route path='forgot-password' element={<ForgotPassword/>}></Route>
 
+        
         {/* Route for blogs page */}
-        <Route path='blogs' element={<Blogs newBlogs={newBlogs}/>}>
-          
-        </Route>
+        <Route path='blogs' element={<Blogs newBlogs={newBlogs}/>}></Route>
 
         {/* Route for create blog page */}
         <Route path='create-blog' element={<CreateBlog getNewBlogs={getNewBlogs} newBlogs={newBlogs}/>}></Route>
 
-        {/* Route for view blog page */}
-        <Route path='view-blog/:blogID' element={<ViewBlog testObject={testObject}/>}></Route>
+          {/* Route for view blog page */}
+          <Route path='view-blog/:blogID' element={<ViewBlog/>}></Route>
+        
 
         {/* No match route */}
         <Route path='*' element={<NoMatch/>}></Route>

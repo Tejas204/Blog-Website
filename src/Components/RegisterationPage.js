@@ -1,9 +1,12 @@
 import React, { useRef } from 'react'
+import { useContext } from 'react';
 import { NavLink } from 'react-router-dom'
+import { blogContext } from '../App';
 
-const RegisterationPage = ({newBlogs}) => {
+const RegisterationPage = () => {
 
-console.log(newBlogs)
+const Blog1 = useContext(blogContext);
+console.log(Blog1);
 
 const emailRef = useRef();
 const passwordRef = useRef();

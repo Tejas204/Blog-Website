@@ -2,10 +2,12 @@ import React, { useState } from 'react'
 import heroImage from '../Images/knowledge-home.png'
 import Footer from './Footer'
 import Navbar from './Navbar'
+import { useLocation } from 'react-router-dom'
 
 const LandingPage = () => {
 
-
+const loc = useLocation();
+console.log(loc);
 
   return (
     // Parent div

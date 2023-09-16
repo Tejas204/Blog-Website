@@ -2,10 +2,12 @@ import React, { useState } from 'react'
 import VerticalNavbar from './VerticalNavbar'
 import { blogsCards } from '../data'
 import Etherium from '../Images/etherium.jpeg';
-import { useParams } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
+import { useContext } from 'react';
+import { blogContext } from '../App';
 
-const ViewBlog = ({testObject}) => {
+const ViewBlog = ({props}) => {
 
 // Hook: this hook stores the state of the comments
 const [newComments, getNewComments] = useState(blogsCards[0].comments);
@@ -13,25 +15,32 @@ const [newComments, getNewComments] = useState(blogsCards[0].comments);
 // Hook: makes API calls for dynamically displaying the blogs
 const params = useParams();
 
+// Hook: Stores data coming from use navigate hook
+
 // Variable: Store the dynamic value coming from the URL
 // ex: :2; :1 etc.
 let blogid = params.blogID;
 blogid = blogid.slice(1);
+console.log(blogid);
 
 // Variable: stores the final blog to display
 let finalBlog;
 
-console.log(testObject);
+let location = useLocation();
+let blog = location.state.data;
+console.log(blog);
 
 // Loop: finalize the blog to be displayed
-for(let i = 0; i<blogsCards.length; i++){
-    if(blogsCards[i].id == blogid){
-        finalBlog = blogsCards[i];
+for(let i = 0; i<blog.length; i++){
+    if(blog[i].id == blogid){
+        finalBlog = blog[i];
     }
     else{
         continue;
     }
 }
+
+
 
 
   return (
@@ -72,42 +81,7 @@ for(let i = 0; i<blogsCards.length; i++){
                     {/* Heading for comment */}
                     <p className='fontp-semibold text-lg md:text-xl lg:text-2xl'>Comments</p>
 
-                    {/* Comments */}
-                    <div className='space-y-5'>
-                        {/* Loop through each comment for a blog */}
-                        {blogsCards[0].comments.map((comment, index) => {
-                            return (
-                                // return the comment div
-                                <div key={index} className='p-2 border-2 border-[#1a1a1d] rounded-lg hover:bg-slate-300 hover:border-slate-500 ease-in-out duration-200'>
-                                    {/* Place the author of the comment and the date at which the comment was added */}
-                                    <p className='font-semibold text-sm md:text-md lg:text-base'>{comment.commentUser} | {comment.commentDate}</p>
-                                    {/* Place the text of the comment */}
-                                    <p className='text-justify text-sm md:text-md lg:text-base text-gray-800'>{comment.commentText}</p>
-                                </div>
-                            )
-                        })}
-
-                        {/* Div for comment area */}
-                        <div className='w-[100%]'>
-                            <textarea id='newComment' rows='4' className='w-[100%] border-2 border-[#1a1a1d] rounded-lg p-2 focus:ring-2 focus:ring-[#1a1a1d] ease-in-out duration-150' placeholder='Share your thoughts..'></textarea>
-                        </div>
-                        {/* Div for post button
-                            When post is clicked, update the state of the comment
-                            This is done by pushing the new comment to the comments[array Object]
-                             */}
-                        <div className='w-[100%] flex flex-row-reverse'>
-                            <button type='button' className='p-2 md:p-3 bg-[#fccf47] text-[#1a1a1d] w-[17%] font-semibold rounded-md hover:ring-2 hover:ring-offset-2 hover:ring-[#fccf47] duration-150 ease-in-out' onClick={() => {
-                                getNewComments(blogsCards[0].comments.push({
-                                    commentText: document.getElementById("newComment").value,
-                                    commentUser: "Tejas",
-                                    commentDate: new Date().toLocaleDateString()
-                                }));
-                                document.getElementById("newComment").value = "";
-                            }}>
-                                Post
-                            </button>
-                        </div>
-                    </div>
+                    {/*Comments were here, now will be icomments.js  */}
 
                     
                     
