@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import VerticalNavbar from './VerticalNavbar'
 import { blogsCards } from '../data'
 import Etherium from '../Images/etherium.jpeg';
@@ -9,13 +9,9 @@ import { blogContext } from '../App';
 
 const ViewBlog = ({props}) => {
 
-// Hook: this hook stores the state of the comments
-const [newComments, getNewComments] = useState(blogsCards[0].comments);
 
 // Hook: makes API calls for dynamically displaying the blogs
 const params = useParams();
-
-// Hook: Stores data coming from use navigate hook
 
 // Variable: Store the dynamic value coming from the URL
 // ex: :2; :1 etc.
@@ -26,9 +22,13 @@ console.log(blogid);
 // Variable: stores the final blog to display
 let finalBlog;
 
+// Hook: useLocation gives access to the state prop of the NavLink component
 let location = useLocation();
+// Get the blogs stored in the data key
 let blog = location.state.data;
-console.log(blog[blogid]);
+
+
+
 
 // Loop: finalize the blog to be displayed
 for(let i = 0; i<blog.length; i++){
@@ -39,6 +39,17 @@ for(let i = 0; i<blog.length; i++){
         continue;
     }
 }
+
+// Hook: this hook stores the state of the comments
+const [newComments, getNewComments] = useState(finalBlog.comments);
+
+
+// Hook: Runs when the blog id changes and sets the comments
+useEffect(() => {
+    getNewComments(finalBlog.comments);
+}, [blogid]);
+
+
 
 
 
@@ -84,7 +95,7 @@ for(let i = 0; i<blog.length; i++){
                     {/*Comments were here, now will be icomments.js  */}
                     <div className='space-y-5'>
                         {/* Loop through each comment for a blog */}
-                        {blog[blogid].comments.map((comment, index) => {
+                        {newComments.map((comment, index) => {
                             return (
                                 // return the comment div
                                 <div key={index} className='p-2 border-2 border-[#1a1a1d] rounded-lg hover:bg-slate-300 hover:border-slate-500 ease-in-out duration-200'>
@@ -106,11 +117,11 @@ for(let i = 0; i<blog.length; i++){
                             */}
                         <div className='w-[100%] flex flex-row-reverse'>
                             <button type='button' className='p-2 md:p-3 bg-[#fccf47] text-[#1a1a1d] w-[17%] font-semibold rounded-md hover:ring-2 hover:ring-offset-2 hover:ring-[#fccf47] duration-150 ease-in-out' onClick={() => {
-                                getNewComments(blog[blogid].comments.push({
+                                getNewComments([...newComments, {
                                     commentText: document.getElementById("newComment").value,
                                     commentUser: "Tejas",
                                     commentDate: new Date().toLocaleDateString()
-                                }));
+                                }]);
                                 document.getElementById("newComment").value = "";
                             }}>
                                 Post

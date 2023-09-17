@@ -46,8 +46,19 @@ let comment = [
         commentUser: "Tejas",
         commentDate: new Date().toLocaleDateString()
     }
+]
 
-
+let comment_9 = [
+    {
+        commentText: "This is a great work on ethereum.",
+        commentUser: "Tejas",
+        commentDate: new Date().toLocaleDateString()
+    },
+    {
+        commentText: "This is a great work on ethereum. This helped me a lot in my project.",
+        commentUser: "Tejas",
+        commentDate: new Date().toLocaleDateString()
+    }
 ]
 
 export let navbarItems = [
@@ -210,7 +221,7 @@ export let blogsCards = [
         blogDescription: 'Vegan food refers to a diet that excludes all animal products, including meat, dairy, eggs, and honey.',
         blogTitleImage: goVegan,
         category: 'food',
-        comments: comment,
+        comments: comment_9,
         id: 9
     },
     {

@@ -104,6 +104,7 @@ useEffect(() => {
                             blogDescription: document.getElementById('blogContent').value,
                             blogTitleImage: URL.createObjectURL(selectedImage),
                             category: newBlogCategory,
+                            comments:[],
                             id: blogsCards.length + 1
                     }]);
                         // Send the new array of blogs to App.js
