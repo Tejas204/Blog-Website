@@ -139,6 +139,7 @@ export let blogsCards = [
         blogDescription: 'Blockchain is a shared, immutable ledger that facilitates the process of recording transactions and tracking assets in a business network.',
         blogTitleImage: Blockchain,
         category: 'technology',
+        comments: comment,
         id: 2
         
     },
@@ -148,6 +149,7 @@ export let blogsCards = [
         blogTitle: 'VR: Creating an alternate reality',
         blogDescription: 'Virtual reality (VR) is a simulated experience that employs pose tracking and 3D near-eye displays to give the user an immersive feel of a virtual world.',
         blogTitleImage: VR,
+        comments: comment,
         category: 'technology',
         id: 3
     },
@@ -158,6 +160,7 @@ export let blogsCards = [
         blogDescription: etheriumContent,
         blogTitleImage: Etherium,
         category: 'technology',
+        comments: comment,
         id: 4
     },
     {
@@ -167,6 +170,7 @@ export let blogsCards = [
         blogDescription: 'UI/UX design is all about crafting digital experiences that are intuitive, engaging, and user-friendly. It involves designing the user interface (UI) and the user experience (UX) of a product or service.',
         blogTitleImage: UIUX,
         category: 'technology',
+        comments: comment,
         id: 5
     },
     {
@@ -176,6 +180,7 @@ export let blogsCards = [
         blogDescription: 'Virtual reality (VR) is a simulated experience that employs pose tracking and 3D near-eye displays to give the user an immersive feel of a virtual world.',
         blogTitleImage: MERN,
         category: 'technology',
+        comments: comment,
         id: 6
     },
     {
@@ -185,6 +190,7 @@ export let blogsCards = [
         blogDescription: 'Salads are dishes made up of mixed ingredients, often including vegetables. They can be served chilled or at room temperature.',
         blogTitleImage: foodDiet,
         category: 'food',
+        comments: comment,
         id: 7
     },
     {
@@ -194,6 +200,7 @@ export let blogsCards = [
         blogDescription: 'Indian food is a diverse cuisine that varies by region and is influenced by local culture, religion, and traditions. It is known for its bold flavors and use of spices.',
         blogTitleImage: indianFood,
         category: 'food',
+        comments: comment,
         id: 8
     },
     {
@@ -203,6 +210,7 @@ export let blogsCards = [
         blogDescription: 'Vegan food refers to a diet that excludes all animal products, including meat, dairy, eggs, and honey.',
         blogTitleImage: goVegan,
         category: 'food',
+        comments: comment,
         id: 9
     },
     {
@@ -212,6 +220,7 @@ export let blogsCards = [
         blogDescription: 'Virtual reality (VR) is a simulated experience that employs pose tracking and 3D near-eye displays to give the user an immersive feel of a virtual world.',
         blogTitleImage: ganges,
         category: 'tourism',
+        comments: comment,
         id: 10
     },
     {
@@ -221,6 +230,7 @@ export let blogsCards = [
         blogDescription: 'Virtual reality (VR) is a simulated experience that employs pose tracking and 3D near-eye displays to give the user an immersive feel of a virtual world.',
         blogTitleImage: eifellTower,
         category: 'tourism',
+        comments: comment,
         id: 11
     },
     {
@@ -230,6 +240,7 @@ export let blogsCards = [
         blogDescription: 'Virtual reality (VR) is a simulated experience that employs pose tracking and 3D near-eye displays to give the user an immersive feel of a virtual world.',
         blogTitleImage: travel,
         category: 'tourism',
+        comments: comment,
         id: 12
     },
 ]
