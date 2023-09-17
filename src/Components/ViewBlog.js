@@ -137,10 +137,10 @@ for(let i = 0; i<blog.length; i++){
                 {/* Related blogs*/}
                 <p className='border-b-2 border-[#1a1a1d] text-[#1a1a1d] text-xl font-semibold'>Related blogs</p>
                 <div className='space-y-4 overflow-y-auto h-3/5 scroll-smooth flex flex-col'>
-                {blogsCards.map((blogCard, index) => {
+                {blog.map((blogCard, index) => {
                     if(blogCard.category == finalBlog.category && blogCard.id != finalBlog.id){
                         return(
-                            <NavLink key={index} to={`/view-blog/:`+blogCard.id} target='_blank' className='p-1 rounded-lg w-fit bg-slate-100 border-2 border-slate-400 text-slate-600 font-semibold'>{blogCard.blogTitle}</NavLink>
+                            <NavLink key={index} to={`/view-blog/:`+blogCard.id} state={{data: blog}} className='p-1 rounded-lg w-fit bg-slate-100 border-2 border-slate-400 text-slate-600 font-semibold'>{blogCard.blogTitle}</NavLink>
                         )
                     }
                 })}
