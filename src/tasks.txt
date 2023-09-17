@@ -33,6 +33,8 @@ Tasks:-
 10. when I go back to create blog, the blogs again become 12. This is because by default, newBlogsCards is set to blogsCards
 --> we need to pass newBlogs to create blogs as well. -- solved
 
+11. When a new comment is added on a new blog, it does not appear when the blog is reopened
+
 
 5. Set up authentication
   a. Learn more about auth context
