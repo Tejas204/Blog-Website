@@ -34,6 +34,10 @@ Tasks:-
 --> we need to pass newBlogs to create blogs as well. -- solved
 
 11. When a new comment is added on a new blog, it does not appear when the blog is reopened
+--> Reason: The comments are reloaded when the blog is reopened
+--> Solution: Create a separate array of comment objects. Each object would have an id
+    corresponding to the blog id.
+--> When a new blog is created, push an empty object with a new id and then display the comments
 
 
 5. Set up authentication
