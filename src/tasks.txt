@@ -15,19 +15,6 @@ Functionalities:
 
 Tasks:-
 
-6. Create a page for creating blogs - complete
-
-7. When a blog is created, it should be added to overall list - complete
-
-8. when the view button is clicked, the blog should open
-  a. need dynamic routing
-  b. create a layout for the blog view page - in progress
-    i.   add a button and text area to post new comment - complete
-    ii.  when post is clicked, add the comment to the existing list - complete
-    iii. implement dynamic routing - complete
-    iv.  related blogs in right vertical navbar should redirect to that blog - complete
-  c. limit the title and subtitle on the blog card. - complete
-
 9. Bug: When a new blog is added, it is not displayed in a new tab. Some formatting also goes for a ride! -- solved
 
 10. when I go back to create blog, the blogs again become 12. This is because by default, newBlogsCards is set to blogsCards
@@ -63,6 +50,19 @@ Completed
   d. add categories -- done
   e. add sorting functionalities -- done
   f. implement remove filter functionality. -- done
+
+6. Create a page for creating blogs - complete
+
+7. When a blog is created, it should be added to overall list - complete
+
+8. when the view button is clicked, the blog should open - complete
+  a. need dynamic routing - complete
+  b. create a layout for the blog view page - in progress
+    i.   add a button and text area to post new comment - complete
+    ii.  when post is clicked, add the comment to the existing list - complete
+    iii. implement dynamic routing - complete
+    iv.  related blogs in right vertical navbar should redirect to that blog - complete
+  c. limit the title and subtitle on the blog card. - complete
 
 
 ** ------------------------------------------------------------------- **
