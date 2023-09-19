@@ -61,6 +61,83 @@ let comment_9 = [
     }
 ]
 
+/***************** Comments ************************************/
+
+export let commentsPOC = [
+    {
+        commentArray: ["This is a great work on ethereum.","This is a great work on ethereum.","This is a great work on ethereum."],
+        commentUser: "User",
+        commentDate: new Date().toLocaleDateString(),
+        id: 1
+    },
+    {
+        commentArray: ["This is a great work on ethereum.","This is a great work on ethereum.","This is a great work on ethereum."],
+        commentUser: "User",
+        commentDate: new Date().toLocaleDateString(),
+        id: 2
+    },
+    {
+        commentArray: ["This is a great work on ethereum.","This is a great work on ethereum."],
+        commentUser: "User",
+        commentDate: new Date().toLocaleDateString(),
+        id: 3
+    },
+    {
+        commentArray: ["This is a great work on ethereum."],
+        commentUser: "User",
+        commentDate: new Date().toLocaleDateString(),
+        id: 4
+    },
+    {
+        commentArray: ["This is a great work on ethereum."],
+        commentUser: "User",
+        commentDate: new Date().toLocaleDateString(),
+        id: 5
+    },
+    {
+        commentArray: ["This is a great work on ethereum."],
+        commentUser: "User",
+        commentDate: new Date().toLocaleDateString(),
+        id: 6
+    },
+    {
+        commentArray: ["This is a great work on ethereum.","This is a great work on ethereum."],
+        commentUser: "User",
+        commentDate: new Date().toLocaleDateString(),
+        id: 7
+    },
+    {
+        commentArray: ["This is a great work on ethereum.","This is a great work on ethereum.","This is a great work on ethereum."],
+        commentUser: "User",
+        commentDate: new Date().toLocaleDateString(),
+        id: 8
+    },
+    {
+        commentArray: ["This is a great work on ethereum.","This is a great work on ethereum.","This is a great work on ethereum."],
+        commentUser: "User",
+        commentDate: new Date().toLocaleDateString(),
+        id: 9
+    },
+    {
+        commentArray: ["This is a great work on ethereum.","This is a great work on ethereum.","This is a great work on ethereum.","This is a great work on ethereum."],
+        commentUser: "User",
+        commentDate: new Date().toLocaleDateString(),
+        id: 10
+    },
+    {
+        commentArray: ["This is a great work on ethereum.","This is a great work on ethereum."],
+        commentUser: "User",
+        commentDate: new Date().toLocaleDateString(),
+        id: 11
+    },
+    {
+        commentArray: ["This is a great work on ethereum.","This is a great work on ethereum."],
+        commentUser: "User",
+        commentDate: new Date().toLocaleDateString(),
+        id: 12
+    }
+]
+
 export let navbarItems = [
     {
         name: 'Home',

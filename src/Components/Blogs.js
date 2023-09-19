@@ -187,9 +187,9 @@ const handleViewClick = (blogid) => {
   
                       {/* View button */}
                       <div className='flex justify-center pt-2'>
-                        <NavLink target='_blank' to={`/view-blog/:`+blogID} className={`${buttonStyling}`} onClick={() => {
-                            handleViewClick(blogCard.id);
-                          }}>
+                      <NavLink to={`/view-blog/:`+blogCard.id} state={{data: newBlogs}} className={`${buttonStyling}`} onClick={() => {
+                          handleViewClick(blogCard.id);
+                        }}>
                           View
                         </NavLink>
                       </div>

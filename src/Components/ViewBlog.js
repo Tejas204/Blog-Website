@@ -28,8 +28,6 @@ let location = useLocation();
 let blog = location.state.data;
 
 
-
-
 // Loop: finalize the blog to be displayed
 for(let i = 0; i<blog.length; i++){
     if(blog[i].id == blogid){
@@ -40,6 +38,7 @@ for(let i = 0; i<blog.length; i++){
     }
 }
 
+
 // Hook: this hook stores the state of the comments
 const [newComments, getNewComments] = useState(finalBlog.comments);
 
@@ -48,8 +47,6 @@ const [newComments, getNewComments] = useState(finalBlog.comments);
 useEffect(() => {
     getNewComments(finalBlog.comments);
 }, [blogid]);
-
-
 
 
 
