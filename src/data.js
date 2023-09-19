@@ -30,7 +30,7 @@ This has cut Ethereum's energy usage by 99%.`
 
 // Content ends **********************************************
 
-let comment = [
+export let comment = [
     {
         commentText: "This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles. This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles. This is a great work on ethereum. This helped me a lot in my project. Keep sharing such articles",
         commentUser: "Tejas",

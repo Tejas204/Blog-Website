@@ -7,7 +7,7 @@ import { NavLink } from 'react-router-dom';
 import { useContext } from 'react';
 import { blogContext } from '../App';
 
-const ViewBlog = ({props}) => {
+const ViewBlog = ({getComments}) => {
 
 
 // Hook: makes API calls for dynamically displaying the blogs
@@ -17,7 +17,6 @@ const params = useParams();
 // ex: :2; :1 etc.
 let blogid = params.blogID;
 blogid = blogid.slice(1);
-console.log(blogid);
 
 // Variable: stores the final blog to display
 let finalBlog;
@@ -47,6 +46,11 @@ const [newComments, getNewComments] = useState(finalBlog.comments);
 useEffect(() => {
     getNewComments(finalBlog.comments);
 }, [blogid]);
+
+// Hook: sends the new comments to app.js as
+useEffect(() => {
+    getComments(newComments);
+},[newComments]);
 
 
 

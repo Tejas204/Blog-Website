@@ -9,7 +9,7 @@ import ForgotPassword from './Components/ForgotPassword';
 import Blogs from './Components/Blogs';
 import CreateBlog from './Components/CreateBlog';
 import { createContext, useState } from 'react';
-import { blogsCards } from './data';
+import { blogsCards, comment } from './data';
 import ViewBlog from './Components/ViewBlog';
 
 export const blogContext = createContext();
@@ -20,7 +20,9 @@ function App() {
 const [newBlogs, getNewBlogs] = useState(blogsCards);
 console.log(newBlogs);
 
-// var testObject = [...newBlogs, newBlogs[newBlogs.length-1]];
+// Hook: receive the comments from ViewBlog and send them to Blogs
+const [newComments, getComments] = useState(comment);
+console.log("NEW comments: "+newComments);
 
 
   return (
@@ -47,7 +49,7 @@ console.log(newBlogs);
         <Route path='create-blog' element={<CreateBlog getNewBlogs={getNewBlogs} newBlogs={newBlogs}/>}></Route>
 
           {/* Route for view blog page */}
-          <Route path='view-blog/:blogID' element={<ViewBlog/>}></Route>
+          <Route path='view-blog/:blogID' element={<ViewBlog getComments={getComments}/>}></Route>
         
 
         {/* No match route */}
