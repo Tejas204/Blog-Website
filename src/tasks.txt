@@ -25,6 +25,9 @@ Tasks:-
 --> Solution: Create a separate array of comment objects. Each object would have an id
     corresponding to the blog id.
 --> When a new blog is created, push an empty object with a new id and then display the comments
+--> when a comment is updated for a blog, pass the blog id to app.js
+--> In blogs.js, pass the current path
+--> if previous id and current path match, then display the new comment set, else, display the old set
 
 
 5. Set up authentication

@@ -6,7 +6,7 @@ import { useContext } from 'react';
 
 
 
-const Blogs = ({newBlogs}) => {
+const Blogs = ({newBlogs, newComments}) => {
 
 // Hook: sets the category of the blogs to display
 const [blogCategory, setBlogCategory] = useState('all_categories');

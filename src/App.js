@@ -43,7 +43,7 @@ console.log("NEW comments: "+newComments);
 
         
         {/* Route for blogs page */}
-        <Route path='blogs' element={<Blogs newBlogs={newBlogs}/>}></Route>
+        <Route path='blogs' element={<Blogs newComments={newComments} newBlogs={newBlogs}/>}></Route>
 
         {/* Route for create blog page */}
         <Route path='create-blog' element={<CreateBlog getNewBlogs={getNewBlogs} newBlogs={newBlogs}/>}></Route>
