@@ -33,6 +33,10 @@ useState is a Hook that lets you add React state to function components. This re
 2. Sorting the blogs
 3. Responsive design
 
+### `useEffect Hook`
+
+The useEffect hook is used to pass data when certain variables are updated. For example, when a new blog is created, the useEffect hook will triggers to get the length of the array of blogs to render
+
 ### `Tailwind CSS`
 
 This web app uses tailwind css for styling.
