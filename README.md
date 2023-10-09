@@ -18,6 +18,15 @@ navigation, Firebase for authentication and Tailwind CSS for styling.
 7. Sort and filter the blogs according to the requirement
 8. Basic security using Firebase authentication
 
+## How to run?
+
+1. Clone the repository
+2. ```npm i``` -- Running this command on the command line will install all the requisite dependencies which include:
+      - React Router DOM
+      - Tailwind CSS
+      - Basic React packages
+3. ```num run start``` -- Command to start the project
+
 ## Details
 
 In this project, you will run into:
