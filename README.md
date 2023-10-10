@@ -10,13 +10,9 @@ navigation, Firebase for authentication and Tailwind CSS for styling.
 ## Features
 
 1. Create a new blog
-2. Edit existing blogs created by the logged in user
-3. Delete blogs created by logged in user
-4. Add comments
-5. Rate a blog
-6. Like a blog
-7. Sort and filter the blogs according to the requirement
-8. Basic security using Firebase authentication
+2. Add comments
+3. Sort the blogs according in ascending & descinding order, date of creation and reading time
+4. Filter the blogs based on category.
 
 ## How to run?
 
