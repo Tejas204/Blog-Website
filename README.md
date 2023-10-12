@@ -62,3 +62,7 @@ This web app uses tailwind css for styling.
 ### `HTML`
 
 Well, you cannot get anywhere without the basics.
+
+## Future Build
+
+The project does not contain authentication even though the login and registration page exists. Suggestions to implement the same are most welcome!
