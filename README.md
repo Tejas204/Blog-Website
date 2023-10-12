@@ -20,7 +20,7 @@ navigation, Firebase for authentication and Tailwind CSS for styling.
 2. ```npm i``` -- Running this command on the command line will install all the requisite dependencies which include:
       - React Router DOM
       - Tailwind CSS
-      - Basic React packages
+      - React icons
 3. ```num run start``` -- Command to start the project
 
 ## Details
@@ -40,7 +40,11 @@ useState is a Hook that lets you add React state to function components. This re
 
 ### `useEffect Hook`
 
-The useEffect hook is used to pass data when certain variables are updated. For example, when a new blog is created, the useEffect hook will triggers to get the length of the array of blogs to render
+The useEffect hook is used to pass data when certain variables are updated. For example, when a new blog is created, the useEffect hook will triggers to get the length of the array of blogs to render.
+
+### `React Router DOM`
+
+This package is utilized for creating routes so that user can navigate to the login page, blogs page, create blog page, etc. The ```Navlink``` tag proves to be useful not only for navigating to the desired page but also to transfer data from one page to another.
 
 ### `Tailwind CSS`
 
