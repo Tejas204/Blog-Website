@@ -46,6 +46,9 @@ The useEffect hook is used to pass data when certain variables are updated. For 
 
 This package is utilized for creating routes so that user can navigate to the login page, blogs page, create blog page, etc. The ```Navlink``` tag proves to be useful not only for navigating to the desired page but also to transfer data from one page to another.
 
+As seen in the example below, the 'state' property of the ```Navlink``` tag passes blogs as a JSON object to the route specified in the 'to' property.
+```<NavLink to={`/view-blog/:`+blogCard.id} state={{data: newBlogs}} className={`${buttonStyling}`} onClick={() => {handleViewClick(blogCard.id);}}>```
+
 ### `Tailwind CSS`
 
 This web app uses tailwind css for styling.
