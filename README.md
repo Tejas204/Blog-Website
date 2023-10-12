@@ -42,12 +42,18 @@ useState is a Hook that lets you add React state to function components. This re
 
 The useEffect hook is used to pass data when certain variables are updated. For example, when a new blog is created, the useEffect hook will triggers to get the length of the array of blogs to render.
 
+### `useLocation Hook`
+
+This hook is a part of React Router DOM and is used to access data passed in the 'state' property of the ```NavLink``` tag of React Router DOM at the target location.
+
 ### `React Router DOM`
 
 This package is utilized for creating routes so that user can navigate to the login page, blogs page, create blog page, etc. The ```Navlink``` tag proves to be useful not only for navigating to the desired page but also to transfer data from one page to another.
 
 As seen in the example below, the 'state' property of the ```Navlink``` tag passes blogs as a JSON object to the route specified in the 'to' property.
-```<NavLink to={`/view-blog/:`+blogCard.id} state={{data: newBlogs}} className={`${buttonStyling}`} onClick={() => {handleViewClick(blogCard.id);}}>```
+```ruby
+<NavLink to={`/view-blog/:`+blogCard.id} state={{data: newBlogs}} className={`${buttonStyling}`} onClick={() => {handleViewClick(blogCard.id);}}>
+```
 
 ### `Tailwind CSS`
 
