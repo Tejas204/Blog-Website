@@ -21,7 +21,7 @@ navigation, Firebase for authentication and Tailwind CSS for styling.
       - React Router DOM
       - Tailwind CSS
       - React icons
-3. ```num run start``` -- Command to start the project
+3. ```npm run start``` -- Command to start the project
 
 ## Details
 
